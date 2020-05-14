@@ -128,7 +128,7 @@ class Graphics():
         self.axis.set_title("Motor dinámico: Velocidad vs Tiempo")
         self.axis.set_xlabel("Tiempo (delta_t en segundos)")
         self.axis.set_ylabel("Velocidad (0-255)")
-        self.axis.set_ylim([-1, 255])    #   Set Y limits between 0 and 255
+        self.axis.set_ylim([-1, 260])    #   Set Y limits between 0 and 255
         #   Get data
         vel, torque = self.conexion.get_scale()
         #   Only keep self.time_show seconds window of data
