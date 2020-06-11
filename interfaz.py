@@ -27,13 +27,14 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('GooCanvas', '2.0')
 from gi.repository import Gtk, GooCanvas
 from conexion import Conexion
+from client import Client
 from matplotlib.backends.backend_gtk3agg import (
     FigureCanvasGTK3Agg as FigureCanvas)
 from matplotlib.figure import Figure
 from matplotlib import animation
 
 class Sliders(Gtk.Frame):
-    def __init__(self, watch_slider):
+    def __init__(self):
         super(Sliders, self).__init__(
             label = "Control")
         
@@ -64,8 +65,8 @@ class Sliders(Gtk.Frame):
 
     #   Method that sets an observer function to
     #   the specified slider, specified by name
-    def set_observer(watch_slider, slider):
-        watch_slider(self.scales[slider])
+    def set_observer(self, watch_slider, slider):
+        watch_slider(self.scales[slider], slider)
 
 class Plot(Gtk.Frame):
     def __init__(self, canvas):
@@ -79,7 +80,7 @@ class Plot(Gtk.Frame):
         self.add(scroller)
 
 class MainWindow(Gtk.Window):
-	def __init__(self, sliders, canvas):
+	def __init__(self, canvas, sliders):
 	    super(MainWindow, self).__init__()
 	    self.connect("destroy", lambda x: Gtk.main_quit())
 	    self.set_size_request(400, 300)
@@ -106,7 +107,7 @@ class Graphics():
         self.canvas = FigureCanvas(self.fig)
         self.conexion = conexion
         #   Variable that stores the time duration of intervals for animation in miliseconds
-        self.time_interval = 50
+        self.time_interval = 50 * 50
         #   Variable that stores how many seconds we are showing in animation
         self.time_show = 10
 
@@ -146,12 +147,22 @@ class Graphics():
         self.axis.legend(['Speed', 'Torque'])
 
 def main(args):
-    conexion = Conexion()
+    #   Create socket client and inject to conexion
+    client = Client('localhost', 8080)
+    conexion = Conexion(client)
+    #   Create sliders and set them to be obversverd by conexion
+    sliders = Sliders()
+    sliders.set_observer(conexion.watch_slider, 'p')
+    sliders.set_observer(conexion.watch_slider, 'i')
+    sliders.set_observer(conexion.watch_slider, 'd')
+    sliders.set_observer(conexion.watch_slider, 'v')
+    #   Create graph and get canvas
     graphics = Graphics(conexion)
     graphics.create_animation()
     canvas = graphics.canvas
     canvas.set_size_request(800, 600)
-    mainwdw = MainWindow(conexion.watch_slider, canvas)
+    #   Create Main Window
+    mainwdw = MainWindow(sliders, canvas)
     mainwdw.run()
 
 if __name__ == '__main__':

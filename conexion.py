@@ -1,4 +1,5 @@
 #   Class that intermediates between GUI and Motor
+#   Attention: before use, it needs sliders to be properly set
 class Conexion():
     def __init__(self, client):
         #   Variable that points to each one of the four sliders
@@ -23,7 +24,9 @@ class Conexion():
     #   socket. It parses and sets self.cSpeed and self.cTorque
     def read_data (self, data):
         #   Expected format: 'int,int'.format(real_speed, real_torque)
-        res = [int(s) for s in data.split(',', 1) if s.isdigit()]   #   Get 2 integer numbers, separated by coma without spaces
+        str_data = data.decode()
+        #   TODO: Some checking for ints in range
+        res = [int(s) for s in str_data.split(',', 1)]   #   Get 2 integer numbers, separated by coma without spaces
         self.cSpeed = res[0]        
         self.cTorque = res[1]
 

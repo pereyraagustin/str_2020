@@ -66,7 +66,7 @@ class Client():
         return True                                # Queremos quedar activos
 
     def send(self, msg):
-        self.socket.send(msg)
+        self.socket.send(msg.encode())
 
     def show_status(self, msg):
         """ Show status changes from this class, either on the terminal,
