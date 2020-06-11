@@ -17,3 +17,7 @@
 
 ##  Para usar
 Abrir la terminal en la carpeta *str_2020*, y correr el comando **python3 interfaz.py**
+
+##TODO:
+* Refactorizar codigo (esquema get_speed->calcular tque nuevo->set_torque)
+* Pasar torque y speed de int a unsigned byte.

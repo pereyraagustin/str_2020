@@ -41,28 +41,31 @@ class Sliders(Gtk.Frame):
         
         grid = Gtk.Grid(
                     margin = 4)	
-        scales = {}
+        self.scales = {}
         for x, (ref, vmin, vmax, step, label, hasbtn) in enumerate((
                     ("p", 0, 5, 0.01, "P", False),
                     ("i", 0, 5, 0.01, "I", False),
                     ("d", 0, 5, 0.01, "D", False),
                     ("v", 0, 255, 1, "Vel", True))):
-            scales[ref] = Gtk.Scale.new_with_range(
+            self.scales[ref] = Gtk.Scale.new_with_range(
                             Gtk.Orientation.VERTICAL,
                             vmin,#Min
                             vmax,#Max
                             step)#Paso				
-            scales[ref].set_vexpand(True)
-            scales[ref].set_inverted(True)
-            grid.attach(scales[ref], x, 0, 1, 1)
+            self.scales[ref].set_vexpand(True)
+            self.scales[ref].set_inverted(True)
+            grid.attach(self.scales[ref], x, 0, 1, 1)
             grid.attach(Gtk.Label(label = label), x, 1, 1, 1)
             
             if hasbtn:
                 btn = Gtk.ToggleButton(label = "No")
-                grid.attach(btn, x, 2, 1, 1)    
-        watch_slider(scales["v"])
-        
+                grid.attach(btn, x, 2, 1, 1)            
         self.add(grid)
+
+    #   Method that sets an observer function to
+    #   the specified slider, specified by name
+    def set_observer(watch_slider, slider):
+        watch_slider(self.scales[slider])
 
 class Plot(Gtk.Frame):
     def __init__(self, canvas):
@@ -76,15 +79,15 @@ class Plot(Gtk.Frame):
         self.add(scroller)
 
 class MainWindow(Gtk.Window):
-	def __init__(self, watch_slider, canvas):
+	def __init__(self, sliders, canvas):
 	    super(MainWindow, self).__init__()
 	    self.connect("destroy", lambda x: Gtk.main_quit())
 	    self.set_size_request(400, 300)
 	    
 	    grid = Gtk.Grid()
 	    self.plot = Plot(canvas)
-	    sliders = Sliders(watch_slider)
-	    grid.attach(sliders, 0, 0, 1, 1)
+	    self.sliders = sliders
+	    grid.attach(self.sliders, 0, 0, 1, 1)
 	    grid.attach(self.plot, 1, 0, 1, 1)
 	    
 	    #Meterlo adentro de la ventana
@@ -130,7 +133,7 @@ class Graphics():
         self.axis.set_ylabel("Velocidad (0-255)")
         self.axis.set_ylim([-1, 260])    #   Set Y limits between 0 and 255
         #   Get data
-        vel, torque = self.conexion.get_scale()
+        vel, torque = self.conexion.get_updated_data()
         #   Only keep self.time_show seconds window of data
         #   Overwrite last value
         self.velDynamic.pop(0)
