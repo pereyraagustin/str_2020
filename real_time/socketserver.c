@@ -28,7 +28,7 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
 	address->sin_addr.s_addr = host; 
 	address->sin_port = htons( port ); 
 	
-	// Forcefully attaching socket to the port 8080 
+	// Forcefully attaching socket to the port
 	if (bind(server_fd, (struct sockaddr *)address, 
 								sizeof(*address))<0){ 
 		perror("bind failed"); 
