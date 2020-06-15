@@ -1,5 +1,5 @@
 // Server side C/C++ program to demonstrate Socket programming 
-//  Source: https://www.geeksforgeeks.org/socket-programming-cc/
+// Source: https://www.geeksforgeeks.org/socket-programming-cc/
 #include "socketserver.h"
 #include <unistd.h> 
 #include <stdio.h> 
@@ -13,14 +13,14 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
     int opt = 1;
     // Creating socket file descriptor 
 	if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) { 
-		perror("Socket failed"); 
+		perror("Socket failed."); 
 		exit(EXIT_FAILURE); 
 	} 
 	
 	// Forcefully attaching socket to the port 8080 
 	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, 
 												&opt, sizeof(opt))) {
-		perror("Setsockopt failed"); 
+		perror("Setsockopt failed."); 
 		exit(EXIT_FAILURE); 
 	} 
 	// AF_INET = IPV4
@@ -31,7 +31,7 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
 	// Forcefully attaching socket to the port
 	if (bind(server_fd, (struct sockaddr *)address, 
 								sizeof(*address))<0){ 
-		perror("bind failed"); 
+		perror("Bind failed"); 
 		exit(EXIT_FAILURE); 
 	}  
     return server_fd;   
@@ -42,12 +42,12 @@ int get_connected_socket(int server_fd, struct sockaddr_in *address){
     int new_socket;
     int addrlen = sizeof(address);
 	if (listen(server_fd, 3) < 0) { 
-		perror("listen"); 
+		perror("Error while listening on server."); 
 		exit(EXIT_FAILURE); 
 	} 
 	if ((new_socket = accept(server_fd, (struct sockaddr *)address, 
 					(socklen_t*)&addrlen))<0){ 
-		perror("accept"); 
+		perror("Error while accepting connection of server.");  
 		exit(EXIT_FAILURE); 
 	}
     return new_socket;

@@ -5,14 +5,14 @@
 #include "pid.h"
 #include "motor.h"
 #include <sys/socket.h>
+#include <netinet/in.h>
 #include "socketserver.h"
 
 int main(int argc, char *argv[]) {
     // Initialize 
     int cant = 5;
-    int i, fd_rtc, res, fd_socket, fd_connected_socket;
+    int i, fd_rtc, res, fd_socket, fd_connected_socket, max_fd;
     fd_set readfds;
-    struct timeval timeout = {5, 0};
     char read_buffer[1024] = {0};
     // Initialize motor with torque and velocity
     init_motor(255, 0.015, 15.0);
@@ -27,8 +27,6 @@ int main(int argc, char *argv[]) {
 
 
     fd_rtc = rtc_init(2);
-    //FD_SET(0, &readfds);
-    //FD_SET(fd_socket, &readfds);
 
     //  Initialize pid with delta_t = 2 secs.
     init_pid(2, 255, 0);
@@ -37,7 +35,10 @@ int main(int argc, char *argv[]) {
     for (i = 0; i < cant; i++) {
         FD_ZERO(&readfds);
         FD_SET(fd_rtc, &readfds);
-        res = select(3, &readfds, NULL, NULL, &timeout);
+        FD_SET(fd_socket, &readfds);
+        max_fd = fd_socket + 1; //  Set till which fd to look
+        res = select(max_fd, &readfds, NULL, NULL, NULL);
+        fflush(stdout);
         if (res < 0) {
             printf("Error on select");
             fflush(stdout);
@@ -52,22 +53,23 @@ int main(int argc, char *argv[]) {
             set_torque(*torque_t);
             printf("Desired Speed: %d, Torque: %d, Speed: %d\n", 10, *torque_t, *vel_t);
             fflush(stdout);
-        } /*else if (FD_ISSET(fd_socket, &readfds)) {
+        } else if (FD_ISSET(fd_socket, &readfds)) {
             //  Leer conexion entrante
             fd_connected_socket = get_connected_socket(fd_socket, &address);
             //  Leer lo que entra en el socket
             res = recv(fd_connected_socket, read_buffer, 1024, 0);
             if (res < 0) {
                 printf("Error while reading socket");
-                return;
+                return 0;
             } else {
                 printf("%s\n", read_buffer);
             }
-        }*/
+        }
         else {
             printf("%d", res);
             fflush(stdout);
         }
     }
     rtc_close();
+    return 0;
 }

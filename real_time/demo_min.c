@@ -32,20 +32,14 @@ int main() {
         return 0;
     }
     //  RTC END
-    FD_ZERO(&readfds);
-    FD_SET(rtc_fd, &readfds);
-    res = select(2, &readfds, NULL, NULL, NULL);
-    if (res == -1) {
-        printf("Error on select");
-        fflush(stdout);
-        return 0;
-    } else {
-        printf("All good.\n");
-        if(FD_ISSET(0, &readfds)) {
-            printf("FD is set\n");
-        } else {
-            printf("FD is NOT set\n");
-        }
-        fflush(stdout);
-    }
+    
+    //  READ RTC BEGIN
+    long data;
+    printf("a\n");
+    fflush(stdout);
+    res = read(rtc_fd, &data, sizeof(data));
+    printf("b");
+    fflush(stdout);
+    //  READ RTC END
+    return 0;
 }
