@@ -44,7 +44,7 @@ int get_connected_socket(int server_fd, struct sockaddr_in *address){
 	if (listen(server_fd, 3) < 0) { 
 		perror("listen"); 
 		exit(EXIT_FAILURE); 
-	} 
+	} // MOVER AL SOCKET INIT
 	if ((new_socket = accept(server_fd, (struct sockaddr *)address, 
 					(socklen_t*)&addrlen))<0){ 
 		perror("accept"); 
