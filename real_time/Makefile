@@ -9,8 +9,8 @@ test_udp: test_udp.c motor_udp.o
 	gcc test_udp.c motor_udp.o -o test_udp -Wall
 	rm -rf *.o
 
-demo_min: demo_min.c
-	gcc demo_min.c -o demo_min -Wall
+demo_min: demo_min.c socketserver.o
+	gcc demo_min.c socketserver.o -o demo_min -Wall
 	rm -rf *.o
 
 rtc.o: rtc.c rtc.h

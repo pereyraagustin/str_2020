@@ -5,6 +5,9 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <unistd.h>
+#include "socketserver.h"
+#include <netinet/in.h>
 
 #define RTC_NAME "/dev/rtc0"
 
@@ -13,39 +16,17 @@ int main() {
     int res;
     //  File descriptors
     int rtc_fd;
-    //  RTC BEGIN
-    rtc_fd = open(RTC_NAME, O_RDONLY);
-    if (rtc_fd < 0) {
-        printf("%d", errno);
-        return 0;
-    }
-    res = ioctl(rtc_fd, RTC_IRQP_SET, 2);
-    if (res < 0) {
-        printf("Error while setting time on rtc");
-        fflush(stdout);
-        return 0;
-    }
-    res = ioctl(rtc_fd, RTC_PIE_ON, 0);
-    if (res < 0) {
-        printf("Error enabling interruptions");
-        fflush(stdout);
-        return 0;
-    }
-    //  RTC END
-    FD_ZERO(&readfds);
-    FD_SET(rtc_fd, &readfds);
-    res = select(2, &readfds, NULL, NULL, NULL);
-    if (res == -1) {
-        printf("Error on select");
-        fflush(stdout);
-        return 0;
-    } else {
-        printf("All good.\n");
-        if(FD_ISSET(0, &readfds)) {
-            printf("FD is set\n");
-        } else {
-            printf("FD is NOT set\n");
-        }
-        fflush(stdout);
-    }
+    int fd_socket;
+    int fd_connected_socket;
+    //
+    char read_buffer[1024] = {0};
+    struct sockaddr_in address;
+    fd_socket = socket_init(INADDR_ANY, 8080, &address);
+    fd_connected_socket = get_connected_socket(fd_socket, &address);
+    res = recv(fd_connected_socket, read_buffer, 1024, 0);
+    printf("%d", res);
+    fflush(stdout);
+    printf("%s", read_buffer);
+    fflush(stdout);
+
 }
