@@ -23,6 +23,7 @@ class Conexion():
     #   Method to be called when data is received from
     #   socket. It parses and sets self.cSpeed and self.cTorque
     def read_data (self, data):
+        print(data)
         #   Expected format: 'int,int'.format(real_speed, real_torque)
         str_data = data.decode()
         #   TODO: Some checking for ints in range

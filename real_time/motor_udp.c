@@ -20,7 +20,7 @@ float current_s;
 int sockfd;
 struct sockaddr_in servaddr; 
 
-void init_motor(int _s_max, float _sens, float _inertia) {
+int init_motor(int _s_max, float _sens, float _inertia) {
     s_max = _s_max;
     sens = _sens;
     inertia = _inertia;
@@ -38,31 +38,32 @@ void init_motor(int _s_max, float _sens, float _inertia) {
     // Filling server information 
     servaddr.sin_family = AF_INET; 
     servaddr.sin_port = htons(5678); 
-    servaddr.sin_addr.s_addr = inet_addr("181.90.60.24"); 
-      
+    servaddr.sin_addr.s_addr = inet_addr("181.1.15.75"); 
+    
+    return sockfd;
 }
 
 void set_torque(int _torque){
     int n; 
     int res, len;
     char msg[11];
-    char str[12];
-    char buffer[MAXLINE];
     sprintf(msg, "torque,%d", _torque);
-    sendto(sockfd, (const char *)msg, strlen(msg), 
+    sendto(sockfd, msg, strlen(msg), 
         MSG_CONFIRM, (const struct sockaddr *) &servaddr,  
-            sizeof(servaddr)); 
-    res = recv(sockfd, (char *)buffer, MAXLINE, 0);
-    if (res < 0) {
-        printf("Error while reading socket");
-    } else { 
-        current_s = atoi(&buffer[6]);
-    }
-   
+            sizeof(servaddr));    
 }
 
 int get_speed(){
-    return current_s;
+    int res;
+    char buffer[MAXLINE];
+    res = recv(sockfd, (char *)buffer, MAXLINE, 0);
+    if (res < 0) {
+        printf("Error while reading socket");
+        fflush(stdout);
+        return -1;
+    } else { 
+        return atoi(&buffer[6]);
+    }
 }
 
 void close_connection() {

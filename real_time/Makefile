@@ -1,8 +1,12 @@
 all:pid_demo
 
 #TODO: Ver como se hace bien un makefile, tipo: https://stackoverflow.com/questions/11993318/gcc-not-linking-files
-pid_demo: demo.c rtc.o pid.o motor.o utils.o socketserver.o
-	gcc demo.c rtc.o pid.o motor.o utils.o socketserver.o -o pid_demo -lm -Wall
+demo_sim: demo.c rtc.o pid.o motor.o utils.o socketserver.o
+	gcc demo.c rtc.o pid.o motor.o utils.o socketserver.o -o demo_sim -lm -Wall
+	rm -rf *.o
+
+demo_udp: demo.c rtc.o pid.o motor_udp.o utils.o socketserver.o
+	gcc demo.c rtc.o pid.o motor_udp.o utils.o socketserver.o -o demo_udp -lm -Wall
 	rm -rf *.o
 
 test_udp: test_udp.c motor_udp.o

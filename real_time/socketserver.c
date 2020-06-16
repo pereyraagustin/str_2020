@@ -47,7 +47,7 @@ int get_connected_socket(int server_fd, struct sockaddr_in *address){
     int addrlen = sizeof(address);
 	if ((new_socket = accept(server_fd, (struct sockaddr *)address, 
 					(socklen_t*)&addrlen))<0){ 
-		perror("accept"); 
+		perror("Error on accepting socket"); 
 		exit(EXIT_FAILURE); 
 	}
     return new_socket;

@@ -18,7 +18,7 @@ int clamp(int n, int min, int max) {
 void parse(char* buffer, int* desired_speed, float* kp, float* ki, float* kd) {
     char *pt;
     int b;
-    float ** floatpointers;
+    float * floatpointers[3];
     floatpointers[0] = kp;
     floatpointers[1] = ki;
     floatpointers[2] = kd;
