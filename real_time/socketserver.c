@@ -34,6 +34,10 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
 		perror("bind failed"); 
 		exit(EXIT_FAILURE); 
 	}  
+    if (listen(server_fd, 3) < 0) { 
+		perror("listen"); 
+		exit(EXIT_FAILURE); 
+	}
     return server_fd;   
 }
 
@@ -41,10 +45,6 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
 int get_connected_socket(int server_fd, struct sockaddr_in *address){
     int new_socket;
     int addrlen = sizeof(address);
-	if (listen(server_fd, 3) < 0) { 
-		perror("listen"); 
-		exit(EXIT_FAILURE); 
-	} // MOVER AL SOCKET INIT
 	if ((new_socket = accept(server_fd, (struct sockaddr *)address, 
 					(socklen_t*)&addrlen))<0){ 
 		perror("accept"); 

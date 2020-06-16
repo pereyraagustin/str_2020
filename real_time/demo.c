@@ -7,6 +7,7 @@
 #include <sys/socket.h>
 #include "socketserver.h"
 #include <netinet/in.h>
+#include "utils.h"
 
 int main(int argc, char *argv[]) {
     // Initialize 
@@ -23,6 +24,11 @@ int main(int argc, char *argv[]) {
     int a = 0, b = 0;
     int* torque_t = &a;
     int* vel_t = &b;
+    float *kp, *ki, *kd;
+    float j=0.0, k=1.0, c=2.0;
+    kp = &k;
+    ki = &j;
+    kd = &c;
 
     //  Initialize socket and wait for connection
     struct sockaddr_in address;
@@ -72,7 +78,8 @@ int main(int argc, char *argv[]) {
                 printf("Error while reading socket");
                 return 0;
             } else {
-                printf("%s\n", read_buffer);
+                parse(read_buffer, vel_t, kp, ki, kd);
+                printf("%d,%f,%f,%f", *vel_t, *kp, *ki, *kd);
             }
         }
         else {
