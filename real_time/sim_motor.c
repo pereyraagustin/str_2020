@@ -7,11 +7,12 @@ float sens;
 float inertia;
 float current_s;
 
-void init_motor(int _s_max, float _sens, float _inertia) {
+int init_motor(int _s_max, float _sens, float _inertia) {
     s_max = _s_max;
     sens = _sens;
     inertia = _inertia;
     current_s = 0.0;
+    return -1;
 }
 
 void set_torque(int _torque){

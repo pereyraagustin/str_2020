@@ -4,7 +4,7 @@
 /**
 *   Funcion para establecer el tope y la sensibilidad del motor.
 */
-void init_motor(int v_max, float sens, float inertia);
+int init_motor(int v_max, float sens, float inertia);
 void set_torque(int torque);
 int get_speed();
 #endif
