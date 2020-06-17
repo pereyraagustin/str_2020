@@ -33,6 +33,55 @@ from matplotlib.backends.backend_gtk3agg import (
 from matplotlib.figure import Figure
 from matplotlib import animation
 
+'''
+Class that creates labels that contain data of current torque and speed,
+to show throught GUI.
+This data is updated manually throught update(self) method.
+'''
+class InfoLabels(Gtk.Frame):
+    def __init__(self):
+        super(InfoLabels, self).__init__(
+            label = "Estado Actual")
+
+        grid = Gtk.Grid(
+                    margin = 4)
+
+        # TODO: Make it adaptative
+        grid.set_column_spacing(9)
+
+        # Variables to store current speed and torque
+        self.cSpeed = 0
+        self.cTorque = 0
+
+        # Set labels
+        self.labelSpeed = Gtk.Label(label = "Velocidad")
+        self.labelTorque = Gtk.Label(label = "Torque")
+        self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.cSpeed))
+        self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.cTorque))
+
+        # Justify
+        self.labelSpeed.set_justify(Gtk.Justification.LEFT)
+        self.labelTorque.set_justify(Gtk.Justification.LEFT)
+        self.labelValueSpeed.set_justify(Gtk.Justification.RIGHT)
+        self.labelValueTorque.set_justify(Gtk.Justification.RIGHT)
+
+        # Set into grid
+        for y, labelPair in enumerate(((self.labelSpeed, self.labelValueSpeed),
+                                        (self.labelTorque, self.labelValueTorque))):
+            for x, label in enumerate(labelPair):
+                grid.attach(label, x, y, 1, 1)
+
+        self.add(grid)
+
+    # Method to manually update speed and torque data
+    def update(self, cSpeed, cTorque):
+        self.cSpeed = cSpeed
+        self.cTorque = cTorque
+        self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.cSpeed))
+        self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.cTorque))
+        
+
+
 class Sliders(Gtk.Frame):
     def __init__(self):
         super(Sliders, self).__init__(
@@ -42,12 +91,14 @@ class Sliders(Gtk.Frame):
         
         grid = Gtk.Grid(
                     margin = 4)	
+        # TODO: Make it adaptative
+        grid.set_column_spacing(23)
         self.scales = {}
         for x, (ref, vmin, vmax, step, label, hasbtn) in enumerate((
-                    ("p", 0, 5, 0.01, "P", False),
-                    ("i", 0, 5, 0.01, "I", False),
-                    ("d", 0, 5, 0.01, "D", False),
-                    ("v", 0, 255, 1, "Vel", True))):
+                    ("p", 0, 5, 0.001, "Kp", False),
+                    ("i", 0, 5, 0.001, "Ki", False),
+                    ("d", 0, 5, 0.001, "Kd", False),
+                    ("v", 0, 255, 1, "Vel", False))):
             self.scales[ref] = Gtk.Scale.new_with_range(
                             Gtk.Orientation.VERTICAL,
                             vmin,#Min
@@ -80,24 +131,28 @@ class Plot(Gtk.Frame):
         self.add(scroller)
 
 class MainWindow(Gtk.Window):
-	def __init__(self, canvas, sliders):
-	    super(MainWindow, self).__init__()
-	    self.connect("destroy", lambda x: Gtk.main_quit())
-	    self.set_size_request(400, 300)
-	    
-	    grid = Gtk.Grid()
-	    self.plot = Plot(canvas)
-	    self.sliders = sliders
-	    grid.attach(self.sliders, 0, 0, 1, 1)
-	    grid.attach(self.plot, 1, 0, 1, 1)
-	    
-	    #Meterlo adentro de la ventana
-	    self.add(grid)
-	    
-	    self.show_all()
-		
-	def run(self):
-	    Gtk.main()
+    def __init__(self, canvas, sliders, labels):
+        super(MainWindow, self).__init__()
+        self.connect("destroy", lambda x: Gtk.main_quit())
+        self.set_size_request(400, 300)
+
+        mainGrid = Gtk.Grid()
+        managementGrid = Gtk.Grid()
+        self.plot = Plot(canvas)
+        self.sliders = sliders
+        self.labels = labels
+        managementGrid.attach(self.sliders, 0, 0, 1, 1)
+        managementGrid.attach(self.labels, 0, 1, 1, 1)
+        mainGrid.attach(managementGrid, 0, 0, 1, 1)
+        mainGrid.attach(self.plot, 1, 0, 1, 1)
+
+        #Meterlo adentro de la ventana
+        self.add(mainGrid)
+
+        self.show_all()
+	
+    def run(self):
+        Gtk.main()
 
 class Graphics():	
 
@@ -132,7 +187,9 @@ class Graphics():
         self.axis.set_title("Motor dinámico: Velocidad vs Tiempo")
         self.axis.set_xlabel("Tiempo (delta_t en segundos)")
         self.axis.set_ylabel("Velocidad (0-255)")
-        self.axis.set_ylim([-1, 260])    #   Set Y limits between 0 and 255
+        self.axis.set_ylim([-1, 290])    #   Set Y limits between 0 and 255
+                                         #   In this case, we use -1 to be able to visualize the bottom
+                                         #   and 290 to let the legend not to bother the lines
         #   Get data
         vel, torque = self.conexion.get_updated_data()
         #   Only keep self.time_show seconds window of data
@@ -144,7 +201,7 @@ class Graphics():
         self.axis.plot(self.time, self.velDynamic, 'r')
         self.axis.plot(self.time, self.torqueDynamic, 'y')
         #   Set legends here because before plotting doesn't work
-        self.axis.legend(['Speed', 'Torque'])
+        self.axis.legend(['Speed', 'Torque'], loc='upper right')
 
 def main(args):
     #   Create socket client and inject to conexion
@@ -161,8 +218,10 @@ def main(args):
     graphics.create_animation()
     canvas = graphics.canvas
     canvas.set_size_request(800, 600)
+    #   Create labels with current speed and torque
+    labels = InfoLabels()
     #   Create Main Window
-    mainwdw = MainWindow(sliders, canvas)
+    mainwdw = MainWindow(canvas, sliders, labels)
     mainwdw.run()
 
 if __name__ == '__main__':

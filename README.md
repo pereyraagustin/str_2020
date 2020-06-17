@@ -61,3 +61,4 @@ Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020* (`c
 * Refactorizar codigo (esquema get_speed->calcular tque nuevo->set_torque)
 * Pasar torque y speed de int a unsigned byte.
 * Documentar tests y debuggin.
+* Interaz: adaptacion de espacio entre columnas automatico?
