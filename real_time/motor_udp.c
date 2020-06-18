@@ -38,7 +38,7 @@ int init_motor(int _s_max, float _sens, float _inertia) {
     // Filling server information 
     servaddr.sin_family = AF_INET; 
     servaddr.sin_port = htons(5678); 
-    servaddr.sin_addr.s_addr = inet_addr("181.1.15.75"); 
+    servaddr.sin_addr.s_addr = inet_addr("181.1.105.222"); 
     
     return sockfd;
 }

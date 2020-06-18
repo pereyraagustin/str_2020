@@ -41,7 +41,7 @@ This data is updated manually throught update(self) method.
 class InfoLabels(Gtk.Frame):
     def __init__(self):
         super(InfoLabels, self).__init__(
-            label = "Estado Actual")
+            label = "Current State")
 
         grid = Gtk.Grid(
                     margin = 4)
@@ -54,7 +54,7 @@ class InfoLabels(Gtk.Frame):
         self.cTorque = 0
 
         # Set labels
-        self.labelSpeed = Gtk.Label(label = "Velocidad")
+        self.labelSpeed = Gtk.Label(label = "Speed")
         self.labelTorque = Gtk.Label(label = "Torque")
         self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.cSpeed))
         self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.cTorque))
@@ -103,9 +103,9 @@ class Sliders(Gtk.Frame):
         self.scales = {}
         for x, (ref, vmin, vmax, step, label, hasbtn) in enumerate((
                     ("p", 0, 5, 0.001, "Kp", False),
-                    ("i", 0, 5, 0.001, "Ki", False),
+                    ("i", 0, 5, 0.0001, "Ki", False),
                     ("d", 0, 5, 0.001, "Kd", False),
-                    ("v", 0, 255, 1, "Vel", False))):
+                    ("v", 0, 255, 1, "Speed", False))):
             self.scales[ref] = Gtk.Scale.new_with_range(
                             Gtk.Orientation.VERTICAL,
                             vmin,#Min
@@ -144,7 +144,7 @@ class MainWindow(Gtk.Window):
         self.set_size_request(400, 300)
 
         #   Variables for updating data
-        self.interval = 500
+        self.interval = 100
         self.conexion = conexion
 
         mainGrid = Gtk.Grid()
@@ -203,12 +203,11 @@ class Graphics():
         #   Clear animation axis
         self.axis.clear()
         #   Rewrite axis
-        self.axis.set_title("Motor dinámico: Velocidad vs Tiempo")
-        self.axis.set_xlabel("Tiempo (delta_t en segundos)")
-        self.axis.set_ylabel("Velocidad (0-255)")
-        self.axis.set_ylim([-1, 290])    #   Set Y limits between 0 and 255
+        self.axis.set_title("Dynamic Motor: Speed vs Time")
+        self.axis.set_xlabel("Time (delta_t in seconds)")
+        self.axis.set_ylabel("Speed/Torque (0-255)")
+        self.axis.set_ylim([-1, 150])    #   Set Y limits between 0 and 255
                                          #   In this case, we use -1 to be able to visualize the bottom
-                                         #   and 290 to let the legend not to bother the lines
         #   Get data
         vel, torque = self.conexion.get_updated_data()
         #   Only keep self.time_show seconds window of data

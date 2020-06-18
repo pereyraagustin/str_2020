@@ -13,6 +13,7 @@
 #include "utils.h"
 
 #define MAX_MSG 1024
+#define RTC_TICK 32
 
 int main(int argc, char *argv[]) {
     // Initialize
@@ -42,9 +43,9 @@ int main(int argc, char *argv[]) {
     fd_socket = socket_init(INADDR_ANY, 8080, &address);
 
 
-    fd_rtc = rtc_init(2);
-    //  Initialize pid with delta_t = 2 secs.
-    init_pid(2, 255, 0);
+    fd_rtc = rtc_init(RTC_TICK);
+    //  Initialize pid with delta_t = 1/RTC_TICK secs.
+    init_pid(1.0 / RTC_TICK, 255, 0);
     set_variables(1.0, 0.5, 1.0);
 
     while(1) {
@@ -88,8 +89,9 @@ int main(int argc, char *argv[]) {
                 printf("Error while reading socket: %d", errno);
                 return 0;
             } else {
-                //  Get variables from socket
+                //  Get variables from socket and set
                 parse(read_buffer, desired_v, kp, ki, kd);
+                set_variables(*kp, *ki, *kd);
                 //  Write to PID and get current speed and torque
                 compute_pid(*desired_v, torque_t, vel_t);
                 set_torque(*torque_t);

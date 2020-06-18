@@ -84,6 +84,7 @@ int main(int argc, char *argv[]) {
             } else {
                 //  Get variables from socket
                 parse(read_buffer, desired_v, kp, ki, kd);
+                set_variables(*kp, *ki, *kd);
                 //  Write to PID and get current speed and torque
                 *vel_t = get_speed();
                 compute_pid(*desired_v, torque_t, vel_t);
