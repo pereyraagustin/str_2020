@@ -64,6 +64,13 @@ class InfoLabels(Gtk.Frame):
         self.labelTorque.set_justify(Gtk.Justification.LEFT)
         self.labelValueSpeed.set_justify(Gtk.Justification.RIGHT)
         self.labelValueTorque.set_justify(Gtk.Justification.RIGHT)
+        # Align
+        # To the right
+        self.labelSpeed.set_halign(Gtk.Align.START)
+        self.labelTorque.set_halign(Gtk.Align.START)
+        # To the left
+        self.labelValueSpeed.set_halign(Gtk.Align.END)
+        self.labelValueTorque.set_halign(Gtk.Align.END)
 
         # Set into grid
         for y, labelPair in enumerate(((self.labelSpeed, self.labelValueSpeed),

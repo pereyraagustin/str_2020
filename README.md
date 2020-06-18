@@ -62,4 +62,3 @@ Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020* (`c
 * Pasar torque y speed de int a unsigned byte.
 * Documentar tests y debuggin.
 * Interfaz: adaptacion de espacio entre columnas automatico?
-* Interfaz: actualizar vel y torque por clock
