@@ -169,7 +169,7 @@ class MainWindow(Gtk.Window):
         Gtk.main()
 
     def update_labels(self):
-        cSpeed, cTorque = self.conexion.get_updated_data()
+        cSpeed, cTorque = self.conexion.read_last_data()   #   Just read the last data that was gotten, don't update
         self.labels.update(cSpeed, cTorque)
         return True
 
@@ -181,7 +181,7 @@ class Graphics():
         self.canvas = FigureCanvas(self.fig)
         self.conexion = conexion
         #   Variable that stores the time duration of intervals for animation in miliseconds
-        self.time_interval = 50 * 50
+        self.time_interval = 50
         #   Variable that stores how many seconds we are showing in animation
         self.time_show = 10
 

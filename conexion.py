@@ -50,6 +50,15 @@ class Conexion():
         #   Return read data
         return (self.cSpeed, self.cTorque)
 
+    '''
+    Method that returns the last read speed and torque. It is usefull if we want to read
+    multiple times, that are close in time between each other (let's say around less than 50 milisecs between reads)
+    In that case, as reading too fast could cause trouble when decoding from the socket, it is better to use
+    the method get_updated_data just once, and then use this method, that should have good enough data.
+    '''
+    def read_last_data(self):
+        return (self.cSpeed, self.cTorque)
+
 ##  Test classes
 class MockSlider():
     def __init__(self, returned_value):
