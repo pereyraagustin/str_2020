@@ -25,7 +25,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('GooCanvas', '2.0')
-from gi.repository import Gtk, GooCanvas
+from gi.repository import Gtk, GooCanvas, GLib
 from conexion import Conexion
 from client import Client
 from matplotlib.backends.backend_gtk3agg import (
@@ -77,8 +77,8 @@ class InfoLabels(Gtk.Frame):
     def update(self, cSpeed, cTorque):
         self.cSpeed = cSpeed
         self.cTorque = cTorque
-        self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.cSpeed))
-        self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.cTorque))
+        self.labelValueSpeed.set_label("{:d}".format(self.cSpeed))
+        self.labelValueTorque.set_label("{:d}".format(self.cTorque))
         
 
 
@@ -131,10 +131,14 @@ class Plot(Gtk.Frame):
         self.add(scroller)
 
 class MainWindow(Gtk.Window):
-    def __init__(self, canvas, sliders, labels):
+    def __init__(self, canvas, sliders, labels, conexion):
         super(MainWindow, self).__init__()
         self.connect("destroy", lambda x: Gtk.main_quit())
         self.set_size_request(400, 300)
+
+        #   Variables for updating data
+        self.interval = 500
+        self.conexion = conexion
 
         mainGrid = Gtk.Grid()
         managementGrid = Gtk.Grid()
@@ -149,10 +153,18 @@ class MainWindow(Gtk.Window):
         #Meterlo adentro de la ventana
         self.add(mainGrid)
 
+        #   Update each N miliseconds
+        GLib.timeout_add(self.interval, self.update_labels)
+
         self.show_all()
 	
     def run(self):
         Gtk.main()
+
+    def update_labels(self):
+        cSpeed, cTorque = self.conexion.get_updated_data()
+        self.labels.update(cSpeed, cTorque)
+        return True
 
 class Graphics():	
 
@@ -221,7 +233,7 @@ def main(args):
     #   Create labels with current speed and torque
     labels = InfoLabels()
     #   Create Main Window
-    mainwdw = MainWindow(canvas, sliders, labels)
+    mainwdw = MainWindow(canvas, sliders, labels, conexion)
     mainwdw.run()
 
 if __name__ == '__main__':
