@@ -1,7 +1,12 @@
-#   Class that intermediates between GUI and Motor
-#   Attention: before use, it needs sliders to be properly set
-class Conexion():
+class Connection():
+    """Class that intermediates between GUI and motor through TCP socket. Be careful, as before use
+    it needs sliders to be properly set.
+
+    :param client: Socket client to connect to the motor.
+    :type Client: class:`Client`
+    """
     def __init__(self, client):
+        """Constructor method"""
         #   Variable that points to each one of the four sliders
         #   p:  Kp, i:  Ki, d:  Kd, v:  desired speed
         self.sliders = {'p': None, 'i': None, 'd': None, 'v': None}
@@ -18,11 +23,24 @@ class Conexion():
     
     #   Sets pointer to slider
     def watch_slider (self, slider, name):
+        """Saves pointer to slider, under the declared name, so it will be able to read its value
+        when sending data to the engine.
+
+        :param slider: The slider to be read in future iterations. It can represent one of the four
+        variables that the PID connected to the engine will use: kp, ki, kd, or desired_speed
+        :type sliders: class:`gui.Sliders`
+        :param name: The name of the passed slider. It can be: p, i, d or v
+        :type name: str
+        """
         self.sliders[name] = slider
 
-    #   Method to be called when data is received from
-    #   socket. It parses and sets self.cSpeed and self.cTorque
     def read_data (self, data):
+        """Called when data is received from socket. It parses and sets self.cSpeed and
+        self.cTorque.
+
+        :param data: The bytes of data read from the socket.
+        :type data: bytes
+        """
         print(data)
         #   Expected format: 'int,int'.format(real_speed, real_torque)
         str_data = data.decode()
@@ -31,10 +49,14 @@ class Conexion():
         self.cSpeed = res[0]        
         self.cTorque = res[1]
 
-    #   Sends new Kp, Ki, Kd, Desired Speed through socket
-    #   and returns current speed and torque read from socket
-    #   or (0, 0) if values were not initialized with it
     def get_updated_data (self):
+        """Send new Kp, Ki, Kd, Desired Speed through socket and get current speed and torque
+        read from socket or (0, 0) if values were not initialized with it.
+
+        :return: Tuple of (current_speed, current_torque) read from socket, or (0, 0) if nothing
+        was received
+        :rtype: tuple (int, int)
+        """
         #   Read values from sliders
         #   TODO: Check if sliders are None
         speed = self.sliders['v'].get_value()
@@ -50,13 +72,17 @@ class Conexion():
         #   Return read data
         return (self.cSpeed, self.cTorque)
 
-    '''
-    Method that returns the last read speed and torque. It is usefull if we want to read
-    multiple times, that are close in time between each other (let's say around less than 50 milisecs between reads)
-    In that case, as reading too fast could cause trouble when decoding from the socket, it is better to use
-    the method get_updated_data just once, and then use this method, that should have good enough data.
-    '''
     def read_last_data(self):
+        '''Method that returns the last read speed and torque. It is usefull if we want to read
+        multiple times, that are close in time between each other (let's say around less than 50
+        milisecs between reads). In that case, as reading too fast could cause trouble when
+        decoding from the socket, it is better to use the method get_updated_data just once, and
+        then use this method, that should have good enough data.
+
+        :return: Tuple of (current_speed, current_torque) read from socket, or (0, 0) if nothing
+        was received
+        :rtype: tuple (int, int)
+        '''
         return (self.cSpeed, self.cTorque)
 
 ##  Test classes
@@ -89,7 +115,7 @@ class MockClientSocket():
         self.show_data_cb(msg)
 
 def test():
-    #   Create MockSlider, and MockSocketClient, pass to Conexion
+    #   Create MockSlider, and MockSocketClient, pass to Connection
     #   and try to get and read torque and speed
     countError = 0
     kp = 12.3
@@ -98,18 +124,18 @@ def test():
     v = 234
     mockSliders = { 'kp': MockSlider(kp), 'ki': MockSlider(ki), 'kd': MockSlider(kd), 'v': MockSlider(v)}
     mockSocket = MockClientSocket()
-    #   Set Conexion with sliders
-    conexion = Conexion(mockSocket)
-    conexion.watch_slider(mockSliders['kp'], 'p')
-    conexion.watch_slider(mockSliders['ki'], 'i')
-    conexion.watch_slider(mockSliders['kd'], 'd')
-    conexion.watch_slider(mockSliders['v'], 'v')
+    #   Set Connection with sliders
+    connection = Connection(mockSocket)
+    connection.watch_slider(mockSliders['kp'], 'p')
+    connection.watch_slider(mockSliders['ki'], 'i')
+    connection.watch_slider(mockSliders['kd'], 'd')
+    connection.watch_slider(mockSliders['v'], 'v')
     #   Test if read_data works
     rd_string = '200,100'
     print('Testing read_data...')
     mockSocket.receive_msg(rd_string)
-    if (conexion.cSpeed == 200):
-        if (conexion.cTorque == 100):
+    if (connection.cSpeed == 200):
+        if (connection.cTorque == 100):
             print('read_data test passed')
         else:
             print('ERROR: cTorque not as expected')
@@ -119,7 +145,7 @@ def test():
         countError += 1
     #   Test if get_updated_data sends and returns correct data
     expected_send_data = '{:.0f},{:.2f},{:.2f},{:.2f}'.format(v, kp, ki, kd)
-    cSpeed, cTorque = conexion.get_updated_data()
+    cSpeed, cTorque = connection.get_updated_data()
     if (mockSocket.send_data == expected_send_data):
         print('Sended data well formated')
         if (cSpeed == 200):

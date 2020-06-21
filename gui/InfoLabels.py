@@ -2,13 +2,12 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-'''
-Class that creates labels that contain data of current torque and speed,
-to show throught GUI.
-This data is updated manually throught update(self) method.
-'''
 class InfoLabels(Gtk.Frame):
+    '''Class that creates labels that contain data of current torque and speed, to show throught
+    GUI. This data is updated manually throught update(self) method.
+    '''
     def __init__(self):
+        """Constructor method"""
         super(InfoLabels, self).__init__(
             label = "Current State")
 
@@ -19,14 +18,14 @@ class InfoLabels(Gtk.Frame):
         grid.set_column_spacing(9)
 
         # Variables to store current speed and torque
-        self.cSpeed = 0
-        self.cTorque = 0
+        self.current_speed = 0
+        self.current_torque = 0
 
         # Set labels
         self.labelSpeed = Gtk.Label(label = "Speed")
         self.labelTorque = Gtk.Label(label = "Torque")
-        self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.cSpeed))
-        self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.cTorque))
+        self.labelValueSpeed = Gtk.Label(label = "{:d}".format(self.current_speed))
+        self.labelValueTorque = Gtk.Label(label = "{:d}".format(self.current_torque))
 
         # Justify
         self.labelSpeed.set_justify(Gtk.Justification.LEFT)
@@ -49,9 +48,14 @@ class InfoLabels(Gtk.Frame):
 
         self.add(grid)
 
-    # Method to manually update speed and torque data
-    def update(self, cSpeed, cTorque):
-        self.cSpeed = cSpeed
-        self.cTorque = cTorque
-        self.labelValueSpeed.set_label("{:d}".format(self.cSpeed))
-        self.labelValueTorque.set_label("{:d}".format(self.cTorque))
+    def update(self, current_speed, current_torque):
+        """Method to manually update speed and torque data.
+
+        :param current_speed: The speed to set the label text to
+        :type current_speed: int
+        :param current_torque: The torque to set the label text to
+        :type current_torque: int"""
+        self.current_speed = current_speed
+        self.current_torque = current_torque
+        self.labelValueSpeed.set_label("{:d}".format(self.current_speed))
+        self.labelValueTorque.set_label("{:d}".format(self.current_torque))

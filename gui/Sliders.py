@@ -3,6 +3,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 class Sliders(Gtk.Frame):
+    """Class that creates the four sliders needed to control the PID variables p (proportional),
+    i (integral), d (derivative), and v (the desired speed)."""
     def __init__(self):
         super(Sliders, self).__init__(
             label = "Control")
@@ -34,7 +36,12 @@ class Sliders(Gtk.Frame):
                 grid.attach(btn, x, 2, 1, 1)            
         self.add(grid)
 
-    #   Method that sets an observer function to
-    #   the specified slider, specified by name
     def set_observer(self, watch_slider, slider):
+        """Set the observer method to watch the specified slider.
+
+        :param watch_slider: The function to pass the slider and the slider name so it keeps
+        track of it. It is expected to receive two parameters, in the order: (slider, slider_name)
+        :type watch_slider: function
+        :param slider: The name of the slider to observe
+        :type slider: str"""
         watch_slider(self.scales[slider], slider)

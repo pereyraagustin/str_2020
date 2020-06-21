@@ -31,26 +31,29 @@ HOST = "localhost"
 PORT = 8080
 
 class Client():
-    """ The Client class takes care of our communications by socket.
+    """ The Client class takes care of communications through sockets.
+
+    :param host: The IP address of the host to connect to
+    :type host: str
+    :param port: The port number to connect to
+    :type port: str
     """
     def __init__(self, host, port):
         """ Create the socket, but do NOT connect yet. That way we
-            can still change some parameters of the 
+            can still change some parameters.
         """
         self.host = host
         self.port = port
         self.socket = skt.socket(skt.AF_INET, skt.SOCK_STREAM)
-                                                   # Construir el zocalo
+                                                   # Build socket
         self.show_status_cb = None
         self.show_data_cb = None
         self.data = '\n'
 
     def connect(self):
-        """ Now really try to connect to the server.
-            I really need to add an exception handler in case the server
-            is not on-line.
+        """Try to connect to the server.
         """
-        self.socket.connect((HOST, PORT))
+        self.socket.connect((self.host, self.port))
         self.socket.setblocking(False)
         self.fd = self.socket.fileno()             # Obtener el file descriptor
         self.show_status("Connected to " + self.host)
@@ -59,18 +62,28 @@ class Client():
                                                    # de datos recibidos
 
     def process_input(self, skt, cond):
-        """ This function is called asynchronously when data is received.
+        """Function that is called asynchronously when data is received.
+
+        :return: Value that indicates if the client will keep its connection
+        :rtype: boolean
         """
         msg = self.socket.recv(100)                # Recibir el mensage de la red
         self.show_data(msg)                        # Enviar los datos a show_data
         return True                                # Queremos quedar activos
 
     def send(self, msg):
+        """Send message through socket.
+
+        :param msg: The message to send
+        :type msg: str"""
         self.socket.send(msg.encode())
 
     def show_status(self, msg):
-        """ Show status changes from this class, either on the terminal,
-            or else by calling the callback installed by set_status_show().
+        """Show status changes from this class, either on the terminal,
+           or else by calling the callback installed by `Client.set_status_show()`.
+
+        :param msg: The status message to show
+        :type msg: str
         """
         if self.show_status_cb == None:
             print("Status: ", msg)
@@ -78,8 +91,11 @@ class Client():
             self.show_status_cb(msg)
 
     def show_data(self, msg):
-        """ Show received messages, either on the terminal,
-            or else by calling the callback installed by set_data_show().
+        """Show received messages, either on the terminal,
+        or else by calling the callback installed by `Client.set_data_show()`.
+
+        :param msg: The received message to show
+        :type msg: bytes
         """
         if self.show_data_cb == None:
             print("Data: ", msg)
@@ -87,9 +103,17 @@ class Client():
             self.show_data_cb(msg)
 
     def set_status_show(self, show_status_cb):
+        """Set the callback function to show status.
+
+        :param show_status_cd: The callback function
+        :type show_status_cd: function"""
         self.show_status_cb = show_status_cb
 
     def set_data_show(self, show_data_cb):
+        """Set the callback function to show data.
+
+        :param show_data_cd: The callback function
+        :type show_data_cd: function"""
         self.show_data_cb = show_data_cb
 
 
