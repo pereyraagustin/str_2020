@@ -16,7 +16,7 @@ void set_torque(int torque);
 /**
 * Get the current speed of the motor
 *
-* returns current_speed Integer that represents the speed of the motor at the call time
+* @returns current_speed Integer that represents the speed of the motor at the call time
 */
 int get_speed();
 #endif
