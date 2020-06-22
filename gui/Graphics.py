@@ -27,7 +27,7 @@ class Graphics():
 
     def create_animation(self):
         """Start animation loop to refresh graph."""
-        animation.FuncAnimation(self.fig, self.animate, init_func=self.init,
+        self.anim = animation.FuncAnimation(self.fig, self.animate, init_func=self.init,
                                        interval=self.time_interval)
 
     def init(self):

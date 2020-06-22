@@ -1,3 +1,5 @@
+import logging
+
 class Connection():
     """Class that intermediates between GUI and motor through TCP socket. Be careful, as before use
     it needs sliders to be properly set.
@@ -41,7 +43,7 @@ class Connection():
         :param data: The bytes of data read from the socket.
         :type data: bytes
         """
-        print(data)
+        logging.debug("Received data at Connection.read_data: {}".format(data))
         #   Expected format: 'int,int'.format(real_speed, real_torque)
         str_data = data.decode()
         #   TODO: Some checking for ints in range
@@ -59,6 +61,7 @@ class Connection():
         """
         #   Read values from sliders
         #   TODO: Check if sliders are None
+        logging.info("Connection.get_updated_data called.")
         speed = self.sliders['v'].get_value()
         kp = self.sliders['p'].get_value()
         ki = self.sliders['i'].get_value()

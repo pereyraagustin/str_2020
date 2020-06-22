@@ -117,10 +117,11 @@ class Client():
         self.show_data_cb = show_data_cb
 
 
-def main():
+def test():
     client = Client(HOST, PORT)        # and the communications package
     client.connect()                   # and try to do the real connection
+    client.send("Test message\n")
     return 0
 
 if __name__ == '__main__':
-    main()
+    test()

@@ -50,15 +50,22 @@ Primero correr el módulo de tiempo real (PID + RTC + Motor). Para ello, según 
 `sudo ./demo_udp`
 
 * Motor Simulado:
-`cd real_time/`
-`make demo_sim`
-`sudo ./demo_sim`
+`cd real_time/`  
+`make demo_sim`  
+`sudo ./demo_sim`  
 
 Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020* (`cd ../`), y correr el comando 
 `python3 interfaz.py`
+
+## Solución de problemas
+A continuación se presenta una pequeña guía de cómo analizar la fuente de algunos problemas que podrían ocurrir al intentar arrancar la aplicación o al realizar cambios en la misma.
+
+### Gráfico de la interfaz no funcionando
+Usar `netcat -l 8080`, abrir la interfaz y mover los deslizadores. Si en la terminal donde está netcat no aparece nada, la conexión al socket no se está realizando. Es probable que el problema se encuentre en las clases *Client.py* o *Connection.py*. Menos probable pero también posible es que la clase *Graphics.py* no esté consultando los datos como debería, en la función *animate(...)*.
 
 ## TODO:
 * Refactorizar codigo (esquema get_speed->calcular tque nuevo->set_torque)
 * Pasar torque y speed de int a unsigned byte.
 * Documentar tests y debuggin.
 * Interfaz: adaptacion de espacio entre columnas automatico?
+* Pasar print a logging

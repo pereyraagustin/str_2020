@@ -29,11 +29,30 @@ from gui.MainWindow import MainWindow
 from gui.Sliders import Sliders
 from gui.InfoLabels import InfoLabels
 from gui.Plot import Plot
+import logging
+import re
 
-def main():
+def main(argv):
     """Function that creates the interface in charge of managing the engine that is connected
     through a socket at localhost:8080.
+
+    :param argv: The command line arguments to be processes. It expects nothing or --log=LOG_LEVEL
+    where LOG_LEVEL can be DEBUG, INFO, WARNING, ERROR or CRITICAL, upper or lower case. If not
+    passed, the default value is WARNING
+    :type argv: str
     """
+    #   Get logging arguments through command line arguments as dictionary.
+    #   The '(?P<>)' part is for named groups, see: https://docs.python.org/3/howto/regex.html
+    log_pattern = r"--log=(?P<log_level>DEBUG\b|INFO\b|WARNING\b|ERROR\b|CRITICAL\b)"
+    regex = re.compile(log_pattern, flags=re.I)
+    argv_string = ' '.join(argv)    #   Get as one string to match pattern
+    result = regex.search(argv_string)
+    if (result == None):
+        log_level = "WARNING"
+    else:
+        log_level = result.groupdict()['log_level'].upper()
+    #   Set logging config
+    logging.basicConfig(level=log_level)
     #   Create socket client and inject to connection
     client = Client('localhost', 8080)
     connection = Connection(client)
@@ -58,4 +77,4 @@ def main():
 
 if __name__ == '__main__':
     import sys
-    sys.exit(main())
+    sys.exit(main(sys.argv))
