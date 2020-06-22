@@ -6,15 +6,6 @@ void init_pid(double delta_t, int _max_torque, int _min_torque);
 void set_variables(double kp, double ki, double kd);
 void compute_pid(int desired_v, int* torque_t, int vel_t);
 
-/* Dudas:
-1. delta T va por parametros?
-2. delta T seria float?
-3. Declaramos old_error en un init?
-4. delta T en segundos?
-5. Esperamos entre set_torque y get_speed? No, esperamos afuera
-6. Torque es entero?
-*/
-
 double kp = DEFAULT_KP;
 double ki = DEFAULT_KI;
 double kd = DEFAULT_KD;
