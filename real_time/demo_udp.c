@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/select.h>
-#include "rtc.h"
-#include "pid.h"
-#include "motor.h"
-#include <sys/socket.h>
-#include "socketserver.h"
 #include <netinet/in.h>
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
-#include "utils.h"
+#include <sys/socket.h>
+#include "motor/motor.h"
+#include "server/socketserver.h"
+#include "utils/utils.h"
+#include "rtc/rtc.h"
+#include "pid/pid.h"
 
 #define MAX_MSG 1024
 #define RTC_TICK 32

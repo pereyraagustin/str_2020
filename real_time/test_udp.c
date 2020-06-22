@@ -1,8 +1,9 @@
-#include "motor.h"
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/select.h>
 #include <errno.h>
+
+#include "motor/motor.h"
 
 //  Test of MotorUDP
 int main(int argc, char *argv[]) {

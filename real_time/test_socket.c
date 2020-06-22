@@ -6,8 +6,9 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <unistd.h>
-#include "socketserver.h"
 #include <netinet/in.h>
+
+#include "server/socketserver.h"
 
 #define RTC_NAME "/dev/rtc0"
 
