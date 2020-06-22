@@ -4,7 +4,7 @@
 
 void init_pid(double delta_t, int _max_torque, int _min_torque);
 void set_variables(double kp, double ki, double kd);
-void compute_pid(int desired_v, int* torque_t, int* vel_t);
+void compute_pid(int desired_v, int* torque_t, int vel_t);
 
 /* Dudas:
 1. delta T va por parametros?
@@ -37,11 +37,11 @@ void set_variables(double _kp, double _ki, double _kd) {
     kd = _kd;
 }
 
-void compute_pid(int desired_v, int* torque_t, int* vel_t){
+void compute_pid(int desired_v, int* torque_t, int vel_t){
     double temp_torque;
 
     //  Acumular error
-    double new_error = (desired_v - *vel_t);
+    double new_error = (desired_v - vel_t);
     sum_error = new_error + sum_error;
     //  Calcular error viejo
     if ( delta_t > 0 ) {

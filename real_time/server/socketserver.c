@@ -1,5 +1,4 @@
-// Server side C/C++ program to demonstrate Socket programming 
-//  Source: https://www.geeksforgeeks.org/socket-programming-cc/
+// Source: https://www.geeksforgeeks.org/socket-programming-cc/
 #include "socketserver.h"
 #include <unistd.h> 
 #include <stdio.h> 
@@ -17,7 +16,7 @@ int socket_init(int host, int port, struct sockaddr_in *address) {
 		exit(EXIT_FAILURE); 
 	} 
 	
-	// Forcefully attaching socket to the port 8080 
+	// Forcefully attaching socket to the port
 	if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, 
 												&opt, sizeof(opt))) {
 		perror("Setsockopt failed"); 

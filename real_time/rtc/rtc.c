@@ -15,10 +15,12 @@ int rtc_fd;
 int rtc_init(int speed) {
     int res;
     rtc_fd = open(RTC_NAME, O_RDONLY);
+    //  Set clock time
     res = ioctl(rtc_fd, RTC_IRQP_SET, speed);
+    //  Enable interruptions
     res = ioctl(rtc_fd, RTC_PIE_ON, 0);
     if(res<0){
-       printf("Error on init of RTC: %d",errno);
+       printf("Error on init of RTC: Errno=%d",errno);
        fflush(stdout);
     }
     return rtc_fd;
