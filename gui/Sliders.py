@@ -20,7 +20,7 @@ class Sliders(Gtk.Frame):
                     ("p", 0, 5, 0.001, "Kp", False),
                     ("i", 0, 5, 0.0001, "Ki", False),
                     ("d", 0, 5, 0.001, "Kd", False),
-                    ("v", 0, 255, 1, "Speed", False))):
+                    ("v", 0, 255, 20, "Speed", False))):
             self.scales[ref] = Gtk.Scale.new_with_range(
                             Gtk.Orientation.VERTICAL,
                             vmin,#Min

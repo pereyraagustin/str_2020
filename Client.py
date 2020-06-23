@@ -68,7 +68,7 @@ class Client():
         :return: Value that indicates if the client will keep its connection
         :rtype: boolean
         """
-        logging.info("At Client.py: Data received from socket")
+        logging.debug("At Client.py: Data received from socket")
         msg = self.socket.recv(100)                # Recibir el mensage de la red
         self.show_data(msg)                        # Enviar los datos a show_data
         return True                                # Queremos quedar activos

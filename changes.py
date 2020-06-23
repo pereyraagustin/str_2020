@@ -33,7 +33,7 @@ def test_steady_speed():
     the current speed and torque.
     """
     #   Create socket client and inject to connection
-    client = Client('localhost', 7890)
+    client = Client('localhost', 8080)
     client.connect()
     client.send("Connezioneee miaaa")
     a = 0

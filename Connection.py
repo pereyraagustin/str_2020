@@ -61,7 +61,7 @@ class Connection():
         """
         #   Read values from sliders
         #   TODO: Check if sliders are None
-        logging.info("Connection.get_updated_data called.")
+        logging.debug("At Connection.py: Connection.get_updated_data called.")
         speed = self.sliders['v'].get_value()
         kp = self.sliders['p'].get_value()
         ki = self.sliders['i'].get_value()

@@ -43,11 +43,13 @@ class MainWindow(Gtk.Window):
         self.show_all()
 	
     def run(self):
-        """Run the GUI"""
+        """Run the GUI
+        """
         Gtk.main()
 
     def update_labels(self):
-        """Function that will be called periodically to update labels with current data"""
+        """Function that will be called periodically to update labels with current data
+        """
         cSpeed, cTorque = self.connection.read_last_data()   #   Just read the last data that was gotten, don't update
         self.labels.update(cSpeed, cTorque)
         return True
