@@ -1,7 +1,6 @@
 #include "motor.h"
 #include <arpa/inet.h>
 #include <string.h>
-#include <utils.h>
 #include <netinet/in.h>
 #include <sys/socket.h> 
 #include <stdlib.h>
