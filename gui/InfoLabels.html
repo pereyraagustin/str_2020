@@ -1,0 +1,1189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module InfoLabels</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>InfoLabels</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/mnt/disco/Documentos/Facultad/QuintoA%C3%B1o/1Sem/SistemasTiempoReal/str_2020/gui/InfoLabels.py">/mnt/disco/Documentos/Facultad/QuintoAño/1Sem/SistemasTiempoReal/str_2020/gui/InfoLabels.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="gi.repository.Gtk.html">gi.repository.Gtk</a><br>
+</td><td width="25%" valign=top><a href="gi.html">gi</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a>(<a href="gi.repository.Gtk.html#Bin">gi.repository.Gtk.Bin</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="InfoLabels.html#InfoLabels">InfoLabels</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="InfoLabels">class <strong>InfoLabels</strong></a>(<a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;that&nbsp;creates&nbsp;labels&nbsp;that&nbsp;contain&nbsp;data&nbsp;of&nbsp;current&nbsp;torque&nbsp;and&nbsp;speed,&nbsp;to&nbsp;show&nbsp;throught<br>
+GUI.&nbsp;This&nbsp;data&nbsp;is&nbsp;updated&nbsp;manually&nbsp;throught&nbsp;<a href="#InfoLabels-update">update</a>(self)&nbsp;method.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="InfoLabels.html#InfoLabels">InfoLabels</a></dd>
+<dd><a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a></dd>
+<dd><a href="gi.repository.Gtk.html#Bin">gi.repository.Gtk.Bin</a></dd>
+<dd><a href="gi.overrides.Gtk.html#Container">gi.overrides.Gtk.Container</a></dd>
+<dd>gi.repository.Gtk.Container</dd>
+<dd><a href="gi.overrides.Gtk.html#Widget">gi.overrides.Gtk.Widget</a></dd>
+<dd>gi.repository.Gtk.Widget</dd>
+<dd><a href="gi.repository.GObject.html#InitiallyUnowned">gi.repository.GObject.InitiallyUnowned</a></dd>
+<dd><a href="gi.overrides.GObject.html#Object">gi.overrides.GObject.Object</a></dd>
+<dd>gi.repository.GObject.Object</dd>
+<dd><a href="gi._gi.html#GObject">gi._gi.GObject</a></dd>
+<dd><a href="gi.repository.Atk.html#ImplementorIface">gi.repository.Atk.ImplementorIface</a></dd>
+<dd><a href="gi.repository.Gtk.html#Buildable">gi.repository.Gtk.Buildable</a></dd>
+<dd>gobject.GInterface</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="InfoLabels-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;method</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-update"><strong>update</strong></a>(self, current_speed, current_torque)</dt><dd><tt>Method&nbsp;to&nbsp;manually&nbsp;update&nbsp;speed&nbsp;and&nbsp;torque&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;current_speed:&nbsp;The&nbsp;speed&nbsp;to&nbsp;set&nbsp;the&nbsp;label&nbsp;text&nbsp;to<br>
+:type&nbsp;current_speed:&nbsp;int<br>
+:param&nbsp;current_torque:&nbsp;The&nbsp;torque&nbsp;to&nbsp;set&nbsp;the&nbsp;label&nbsp;text&nbsp;to<br>
+:type&nbsp;current_torque:&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__gtype__</strong> = &lt;GType InfoLabels+InfoLabels (94053957486304)&gt;</dl>
+
+<hr>
+Methods inherited from <a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a>:<br>
+<dl><dt><a name="InfoLabels-do_compute_child_allocation"><strong>do_compute_child_allocation</strong></a> = compute_child_allocation(...)</dt><dd><tt>compute_child_allocation(self,&nbsp;allocation:Gdk.Rectangle)</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a>:<br>
+<dl><dt><strong>bin</strong></dt>
+</dl>
+<dl><dt><strong>priv</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="gi.repository.Gtk.html#Frame">gi.repository.Gtk.Frame</a>:<br>
+<dl><dt><strong>__gsignals__</strong> = {}</dl>
+
+<dl><dt><strong>__info__</strong> = ObjectInfo(Frame)</dl>
+
+<dl><dt><strong>get_label</strong> = gi.FunctionInfo(get_label)<dd><tt><a href="#InfoLabels-get_label">get_label</a>(self)&nbsp;-&gt;&nbsp;str&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_label_align</strong> = gi.FunctionInfo(get_label_align)<dd><tt><a href="#InfoLabels-get_label_align">get_label_align</a>(self)&nbsp;-&gt;&nbsp;xalign:float,&nbsp;yalign:float</tt></dl>
+
+<dl><dt><strong>get_label_widget</strong> = gi.FunctionInfo(get_label_widget)<dd><tt><a href="#InfoLabels-get_label_widget">get_label_widget</a>(self)&nbsp;-&gt;&nbsp;Gtk.Widget&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_shadow_type</strong> = gi.FunctionInfo(get_shadow_type)<dd><tt><a href="#InfoLabels-get_shadow_type">get_shadow_type</a>(self)&nbsp;-&gt;&nbsp;Gtk.ShadowType</tt></dl>
+
+<dl><dt><strong>new</strong> = gi.FunctionInfo(new)<dd><tt><a href="#InfoLabels-new">new</a>(label:str=None)&nbsp;-&gt;&nbsp;Gtk.Widget</tt></dl>
+
+<dl><dt><strong>set_label</strong> = gi.FunctionInfo(set_label)<dd><tt><a href="#InfoLabels-set_label">set_label</a>(self,&nbsp;label:str=None)</tt></dl>
+
+<dl><dt><strong>set_label_align</strong> = gi.FunctionInfo(set_label_align)<dd><tt><a href="#InfoLabels-set_label_align">set_label_align</a>(self,&nbsp;xalign:float,&nbsp;yalign:float)</tt></dl>
+
+<dl><dt><strong>set_label_widget</strong> = gi.FunctionInfo(set_label_widget)<dd><tt><a href="#InfoLabels-set_label_widget">set_label_widget</a>(self,&nbsp;label_widget:Gtk.Widget=None)</tt></dl>
+
+<dl><dt><strong>set_shadow_type</strong> = gi.FunctionInfo(set_shadow_type)<dd><tt><a href="#InfoLabels-set_shadow_type">set_shadow_type</a>(self,&nbsp;type:Gtk.ShadowType)</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="gi.repository.Gtk.html#Bin">gi.repository.Gtk.Bin</a>:<br>
+<dl><dt><strong>container</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="gi.repository.Gtk.html#Bin">gi.repository.Gtk.Bin</a>:<br>
+<dl><dt><strong>get_child</strong> = gi.FunctionInfo(get_child)<dd><tt><a href="#InfoLabels-get_child">get_child</a>(self)&nbsp;-&gt;&nbsp;Gtk.Widget&nbsp;or&nbsp;None</tt></dl>
+
+<hr>
+Methods inherited from <a href="gi.overrides.Gtk.html#Container">gi.overrides.Gtk.Container</a>:<br>
+<dl><dt><a name="InfoLabels-__bool__"><strong>__bool__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="InfoLabels-__contains__"><strong>__contains__</strong></a>(self, child)</dt></dl>
+
+<dl><dt><a name="InfoLabels-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="InfoLabels-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="InfoLabels-__nonzero__"><strong>__nonzero__</strong></a> = <a href="#InfoLabels-__bool__">__bool__</a>(self)</dt></dl>
+
+<dl><dt><a name="InfoLabels-child_get"><strong>child_get</strong></a>(self, child, *prop_names)</dt><dd><tt>Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;child&nbsp;property&nbsp;values&nbsp;for&nbsp;the&nbsp;given&nbsp;names.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-child_get_property"><strong>child_get_property</strong></a>(self, child, property_name, value=None)</dt><dd><tt><a href="#InfoLabels-child_get_property">child_get_property</a>(self,&nbsp;child:Gtk.Widget,&nbsp;property_name:str,&nbsp;value:GObject.Value)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-child_set"><strong>child_set</strong></a>(self, child, **kwargs)</dt><dd><tt>Set&nbsp;a&nbsp;child&nbsp;properties&nbsp;on&nbsp;the&nbsp;given&nbsp;child&nbsp;to&nbsp;key/value&nbsp;pairs.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-get_focus_chain"><strong>get_focus_chain</strong></a>(...)</dt><dd><tt><a href="#InfoLabels-get_focus_chain">get_focus_chain</a>(self)&nbsp;-&gt;&nbsp;bool,&nbsp;focusable_widgets:list</tt></dd></dl>
+
+<hr>
+Methods inherited from gi.repository.Gtk.Container:<br>
+<dl><dt><a name="InfoLabels-do_add"><strong>do_add</strong></a> = add(...)</dt><dd><tt><a href="#InfoLabels-add">add</a>(self,&nbsp;widget:Gtk.Widget)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_check_resize"><strong>do_check_resize</strong></a> = check_resize(...)</dt><dd><tt><a href="#InfoLabels-check_resize">check_resize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_child_type"><strong>do_child_type</strong></a> = child_type(...)</dt><dd><tt><a href="#InfoLabels-child_type">child_type</a>(self)&nbsp;-&gt;&nbsp;GType</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_composite_name"><strong>do_composite_name</strong></a> = composite_name(...)</dt><dd><tt>composite_name(self,&nbsp;child:Gtk.Widget)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_forall"><strong>do_forall</strong></a> = forall(...)</dt><dd><tt><a href="#InfoLabels-forall">forall</a>(self,&nbsp;include_internals:bool,&nbsp;callback:Gtk.Callback,&nbsp;callback_data=None)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_child_property"><strong>do_get_child_property</strong></a> = get_child_property(...)</dt><dd><tt>get_child_property(self,&nbsp;child:Gtk.Widget,&nbsp;property_id:int,&nbsp;value:GObject.Value,&nbsp;pspec:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_path_for_child"><strong>do_get_path_for_child</strong></a> = get_path_for_child(...)</dt><dd><tt><a href="#InfoLabels-get_path_for_child">get_path_for_child</a>(self,&nbsp;child:Gtk.Widget)&nbsp;-&gt;&nbsp;Gtk.WidgetPath</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_remove"><strong>do_remove</strong></a> = remove(...)</dt><dd><tt><a href="#InfoLabels-remove">remove</a>(self,&nbsp;widget:Gtk.Widget)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_set_child_property"><strong>do_set_child_property</strong></a> = set_child_property(...)</dt><dd><tt>set_child_property(self,&nbsp;child:Gtk.Widget,&nbsp;property_id:int,&nbsp;value:GObject.Value,&nbsp;pspec:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_set_focus_child"><strong>do_set_focus_child</strong></a> = set_focus_child(...)</dt><dd><tt><a href="#InfoLabels-set_focus_child">set_focus_child</a>(self,&nbsp;child:Gtk.Widget=None)</tt></dd></dl>
+
+<hr>
+Class methods inherited from gi.repository.Gtk.Container:<br>
+<dl><dt><a name="InfoLabels-find_child_property"><strong>find_child_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-find_child_property">find_child_property</a>(self,&nbsp;property_name:str)&nbsp;-&gt;&nbsp;GObject.ParamSpec&nbsp;or&nbsp;None</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-handle_border_width"><strong>handle_border_width</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-handle_border_width">handle_border_width</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-install_child_properties"><strong>install_child_properties</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-install_child_properties">install_child_properties</a>(self,&nbsp;pspecs:list)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-install_child_property"><strong>install_child_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-install_child_property">install_child_property</a>(self,&nbsp;property_id:int,&nbsp;pspec:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-list_child_properties"><strong>list_child_properties</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-list_child_properties">list_child_properties</a>(self)&nbsp;-&gt;&nbsp;list,&nbsp;n_properties:int</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from gi.repository.Gtk.Container:<br>
+<dl><dt><strong>widget</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from gi.repository.Gtk.Container:<br>
+<dl><dt><strong>add</strong> = gi.FunctionInfo(add)<dd><tt><a href="#InfoLabels-add">add</a>(self,&nbsp;widget:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>check_resize</strong> = gi.FunctionInfo(check_resize)<dd><tt><a href="#InfoLabels-check_resize">check_resize</a>(self)</tt></dl>
+
+<dl><dt><strong>child_notify</strong> = gi.FunctionInfo(child_notify)<dd><tt><a href="#InfoLabels-child_notify">child_notify</a>(self,&nbsp;child:Gtk.Widget,&nbsp;child_property:str)</tt></dl>
+
+<dl><dt><strong>child_notify_by_pspec</strong> = gi.FunctionInfo(child_notify_by_pspec)<dd><tt><a href="#InfoLabels-child_notify_by_pspec">child_notify_by_pspec</a>(self,&nbsp;child:Gtk.Widget,&nbsp;pspec:GObject.ParamSpec)</tt></dl>
+
+<dl><dt><strong>child_set_property</strong> = gi.FunctionInfo(child_set_property)<dd><tt><a href="#InfoLabels-child_set_property">child_set_property</a>(self,&nbsp;child:Gtk.Widget,&nbsp;property_name:str,&nbsp;value:GObject.Value)</tt></dl>
+
+<dl><dt><strong>child_type</strong> = gi.FunctionInfo(child_type)<dd><tt><a href="#InfoLabels-child_type">child_type</a>(self)&nbsp;-&gt;&nbsp;GType</tt></dl>
+
+<dl><dt><strong>forall</strong> = gi.FunctionInfo(forall)<dd><tt><a href="#InfoLabels-forall">forall</a>(self,&nbsp;callback:Gtk.Callback,&nbsp;callback_data=None)</tt></dl>
+
+<dl><dt><strong>foreach</strong> = gi.FunctionInfo(foreach)<dd><tt><a href="#InfoLabels-foreach">foreach</a>(self,&nbsp;callback:Gtk.Callback,&nbsp;callback_data=None)</tt></dl>
+
+<dl><dt><strong>get_border_width</strong> = gi.FunctionInfo(get_border_width)<dd><tt><a href="#InfoLabels-get_border_width">get_border_width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_children</strong> = gi.FunctionInfo(get_children)<dd><tt><a href="#InfoLabels-get_children">get_children</a>(self)&nbsp;-&gt;&nbsp;list</tt></dl>
+
+<dl><dt><strong>get_focus_child</strong> = gi.FunctionInfo(get_focus_child)<dd><tt><a href="#InfoLabels-get_focus_child">get_focus_child</a>(self)&nbsp;-&gt;&nbsp;Gtk.Widget&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_focus_hadjustment</strong> = gi.FunctionInfo(get_focus_hadjustment)<dd><tt><a href="#InfoLabels-get_focus_hadjustment">get_focus_hadjustment</a>(self)&nbsp;-&gt;&nbsp;Gtk.Adjustment&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_focus_vadjustment</strong> = gi.FunctionInfo(get_focus_vadjustment)<dd><tt><a href="#InfoLabels-get_focus_vadjustment">get_focus_vadjustment</a>(self)&nbsp;-&gt;&nbsp;Gtk.Adjustment&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_path_for_child</strong> = gi.FunctionInfo(get_path_for_child)<dd><tt><a href="#InfoLabels-get_path_for_child">get_path_for_child</a>(self,&nbsp;child:Gtk.Widget)&nbsp;-&gt;&nbsp;Gtk.WidgetPath</tt></dl>
+
+<dl><dt><strong>get_resize_mode</strong> = gi.FunctionInfo(get_resize_mode)<dd><tt><a href="#InfoLabels-get_resize_mode">get_resize_mode</a>(self)&nbsp;-&gt;&nbsp;Gtk.ResizeMode</tt></dl>
+
+<dl><dt><strong>propagate_draw</strong> = gi.FunctionInfo(propagate_draw)<dd><tt><a href="#InfoLabels-propagate_draw">propagate_draw</a>(self,&nbsp;child:Gtk.Widget,&nbsp;cr:cairo.Context)</tt></dl>
+
+<dl><dt><strong>remove</strong> = gi.FunctionInfo(remove)<dd><tt><a href="#InfoLabels-remove">remove</a>(self,&nbsp;widget:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>resize_children</strong> = gi.FunctionInfo(resize_children)<dd><tt><a href="#InfoLabels-resize_children">resize_children</a>(self)</tt></dl>
+
+<dl><dt><strong>set_border_width</strong> = gi.FunctionInfo(set_border_width)<dd><tt><a href="#InfoLabels-set_border_width">set_border_width</a>(self,&nbsp;border_width:int)</tt></dl>
+
+<dl><dt><strong>set_focus_chain</strong> = gi.FunctionInfo(set_focus_chain)<dd><tt><a href="#InfoLabels-set_focus_chain">set_focus_chain</a>(self,&nbsp;focusable_widgets:list)</tt></dl>
+
+<dl><dt><strong>set_focus_child</strong> = gi.FunctionInfo(set_focus_child)<dd><tt><a href="#InfoLabels-set_focus_child">set_focus_child</a>(self,&nbsp;child:Gtk.Widget=None)</tt></dl>
+
+<dl><dt><strong>set_focus_hadjustment</strong> = gi.FunctionInfo(set_focus_hadjustment)<dd><tt><a href="#InfoLabels-set_focus_hadjustment">set_focus_hadjustment</a>(self,&nbsp;adjustment:Gtk.Adjustment)</tt></dl>
+
+<dl><dt><strong>set_focus_vadjustment</strong> = gi.FunctionInfo(set_focus_vadjustment)<dd><tt><a href="#InfoLabels-set_focus_vadjustment">set_focus_vadjustment</a>(self,&nbsp;adjustment:Gtk.Adjustment)</tt></dl>
+
+<dl><dt><strong>set_reallocate_redraws</strong> = gi.FunctionInfo(set_reallocate_redraws)<dd><tt><a href="#InfoLabels-set_reallocate_redraws">set_reallocate_redraws</a>(self,&nbsp;needs_redraws:bool)</tt></dl>
+
+<dl><dt><strong>set_resize_mode</strong> = gi.FunctionInfo(set_resize_mode)<dd><tt><a href="#InfoLabels-set_resize_mode">set_resize_mode</a>(self,&nbsp;resize_mode:Gtk.ResizeMode)</tt></dl>
+
+<dl><dt><strong>unset_focus_chain</strong> = gi.FunctionInfo(unset_focus_chain)<dd><tt><a href="#InfoLabels-unset_focus_chain">unset_focus_chain</a>(self)</tt></dl>
+
+<hr>
+Methods inherited from <a href="gi.overrides.Gtk.html#Widget">gi.overrides.Gtk.Widget</a>:<br>
+<dl><dt><a name="InfoLabels-drag_dest_set_target_list"><strong>drag_dest_set_target_list</strong></a>(self, target_list)</dt><dd><tt><a href="#InfoLabels-drag_dest_set_target_list">drag_dest_set_target_list</a>(self,&nbsp;target_list:Gtk.TargetList=None)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-drag_source_set_target_list"><strong>drag_source_set_target_list</strong></a>(self, target_list)</dt><dd><tt><a href="#InfoLabels-drag_source_set_target_list">drag_source_set_target_list</a>(self,&nbsp;target_list:Gtk.TargetList=None)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-freeze_child_notify"><strong>freeze_child_notify</strong></a>(self)</dt><dd><tt><a href="#InfoLabels-freeze_child_notify">freeze_child_notify</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-style_get_property"><strong>style_get_property</strong></a>(self, property_name, value=None)</dt><dd><tt><a href="#InfoLabels-style_get_property">style_get_property</a>(self,&nbsp;property_name:str,&nbsp;value:GObject.Value)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-translate_coordinates"><strong>translate_coordinates</strong></a>(...)</dt><dd><tt><a href="#InfoLabels-translate_coordinates">translate_coordinates</a>(self,&nbsp;dest_widget:Gtk.Widget,&nbsp;src_x:int,&nbsp;src_y:int)&nbsp;-&gt;&nbsp;bool,&nbsp;dest_x:int,&nbsp;dest_y:int</tt></dd></dl>
+
+<hr>
+Methods inherited from gi.repository.Gtk.Widget:<br>
+<dl><dt><a name="InfoLabels-do_adjust_baseline_allocation"><strong>do_adjust_baseline_allocation</strong></a> = adjust_baseline_allocation(...)</dt><dd><tt>adjust_baseline_allocation(self,&nbsp;baseline:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_adjust_baseline_request"><strong>do_adjust_baseline_request</strong></a> = adjust_baseline_request(...)</dt><dd><tt>adjust_baseline_request(self,&nbsp;minimum_baseline:int,&nbsp;natural_baseline:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_adjust_size_allocation"><strong>do_adjust_size_allocation</strong></a> = adjust_size_allocation(...)</dt><dd><tt>adjust_size_allocation(self,&nbsp;orientation:Gtk.Orientation,&nbsp;minimum_size:int,&nbsp;natural_size:int,&nbsp;allocated_pos:int,&nbsp;allocated_size:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_adjust_size_request"><strong>do_adjust_size_request</strong></a> = adjust_size_request(...)</dt><dd><tt>adjust_size_request(self,&nbsp;orientation:Gtk.Orientation,&nbsp;minimum_size:int,&nbsp;natural_size:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_button_press_event"><strong>do_button_press_event</strong></a> = button_press_event(...)</dt><dd><tt>button_press_event(self,&nbsp;event:Gdk.EventButton)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_button_release_event"><strong>do_button_release_event</strong></a> = button_release_event(...)</dt><dd><tt>button_release_event(self,&nbsp;event:Gdk.EventButton)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_can_activate_accel"><strong>do_can_activate_accel</strong></a> = can_activate_accel(...)</dt><dd><tt><a href="#InfoLabels-can_activate_accel">can_activate_accel</a>(self,&nbsp;signal_id:int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_child_notify"><strong>do_child_notify</strong></a> = child_notify(...)</dt><dd><tt><a href="#InfoLabels-child_notify">child_notify</a>(self,&nbsp;child_property:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_composited_changed"><strong>do_composited_changed</strong></a> = composited_changed(...)</dt><dd><tt>composited_changed(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_compute_expand"><strong>do_compute_expand</strong></a> = compute_expand(...)</dt><dd><tt><a href="#InfoLabels-compute_expand">compute_expand</a>(self,&nbsp;hexpand_p:bool,&nbsp;vexpand_p:bool)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_configure_event"><strong>do_configure_event</strong></a> = configure_event(...)</dt><dd><tt>configure_event(self,&nbsp;event:Gdk.EventConfigure)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_damage_event"><strong>do_damage_event</strong></a> = damage_event(...)</dt><dd><tt>damage_event(self,&nbsp;event:Gdk.EventExpose)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_delete_event"><strong>do_delete_event</strong></a> = delete_event(...)</dt><dd><tt>delete_event(self,&nbsp;event:Gdk.EventAny)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_destroy"><strong>do_destroy</strong></a> = destroy(...)</dt><dd><tt><a href="#InfoLabels-destroy">destroy</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_destroy_event"><strong>do_destroy_event</strong></a> = destroy_event(...)</dt><dd><tt>destroy_event(self,&nbsp;event:Gdk.EventAny)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_direction_changed"><strong>do_direction_changed</strong></a> = direction_changed(...)</dt><dd><tt>direction_changed(self,&nbsp;previous_direction:Gtk.TextDirection)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_dispatch_child_properties_changed"><strong>do_dispatch_child_properties_changed</strong></a> = dispatch_child_properties_changed(...)</dt><dd><tt>dispatch_child_properties_changed(self,&nbsp;n_pspecs:int,&nbsp;pspecs:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_begin"><strong>do_drag_begin</strong></a> = drag_begin(...)</dt><dd><tt><a href="#InfoLabels-drag_begin">drag_begin</a>(self,&nbsp;context:Gdk.DragContext)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_data_delete"><strong>do_drag_data_delete</strong></a> = drag_data_delete(...)</dt><dd><tt>drag_data_delete(self,&nbsp;context:Gdk.DragContext)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_data_get"><strong>do_drag_data_get</strong></a> = drag_data_get(...)</dt><dd><tt>drag_data_get(self,&nbsp;context:Gdk.DragContext,&nbsp;selection_data:Gtk.SelectionData,&nbsp;info:int,&nbsp;time_:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_data_received"><strong>do_drag_data_received</strong></a> = drag_data_received(...)</dt><dd><tt>drag_data_received(self,&nbsp;context:Gdk.DragContext,&nbsp;x:int,&nbsp;y:int,&nbsp;selection_data:Gtk.SelectionData,&nbsp;info:int,&nbsp;time_:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_drop"><strong>do_drag_drop</strong></a> = drag_drop(...)</dt><dd><tt>drag_drop(self,&nbsp;context:Gdk.DragContext,&nbsp;x:int,&nbsp;y:int,&nbsp;time_:int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_end"><strong>do_drag_end</strong></a> = drag_end(...)</dt><dd><tt>drag_end(self,&nbsp;context:Gdk.DragContext)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_failed"><strong>do_drag_failed</strong></a> = drag_failed(...)</dt><dd><tt>drag_failed(self,&nbsp;context:Gdk.DragContext,&nbsp;result:Gtk.DragResult)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_leave"><strong>do_drag_leave</strong></a> = drag_leave(...)</dt><dd><tt>drag_leave(self,&nbsp;context:Gdk.DragContext,&nbsp;time_:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_drag_motion"><strong>do_drag_motion</strong></a> = drag_motion(...)</dt><dd><tt>drag_motion(self,&nbsp;context:Gdk.DragContext,&nbsp;x:int,&nbsp;y:int,&nbsp;time_:int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_draw"><strong>do_draw</strong></a> = draw(...)</dt><dd><tt><a href="#InfoLabels-draw">draw</a>(self,&nbsp;cr:cairo.Context)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_enter_notify_event"><strong>do_enter_notify_event</strong></a> = enter_notify_event(...)</dt><dd><tt>enter_notify_event(self,&nbsp;event:Gdk.EventCrossing)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_event"><strong>do_event</strong></a> = event(...)</dt><dd><tt><a href="#InfoLabels-event">event</a>(self,&nbsp;event:Gdk.Event)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_focus"><strong>do_focus</strong></a> = focus(...)</dt><dd><tt>focus(self,&nbsp;direction:Gtk.DirectionType)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_focus_in_event"><strong>do_focus_in_event</strong></a> = focus_in_event(...)</dt><dd><tt>focus_in_event(self,&nbsp;event:Gdk.EventFocus)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_focus_out_event"><strong>do_focus_out_event</strong></a> = focus_out_event(...)</dt><dd><tt>focus_out_event(self,&nbsp;event:Gdk.EventFocus)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_accessible"><strong>do_get_accessible</strong></a> = get_accessible(...)</dt><dd><tt><a href="#InfoLabels-get_accessible">get_accessible</a>(self)&nbsp;-&gt;&nbsp;Atk.Object</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_preferred_height"><strong>do_get_preferred_height</strong></a> = get_preferred_height(...)</dt><dd><tt><a href="#InfoLabels-get_preferred_height">get_preferred_height</a>(self)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_preferred_height_and_baseline_for_width"><strong>do_get_preferred_height_and_baseline_for_width</strong></a> = get_preferred_height_and_baseline_for_width(...)</dt><dd><tt><a href="#InfoLabels-get_preferred_height_and_baseline_for_width">get_preferred_height_and_baseline_for_width</a>(self,&nbsp;width:int)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int,&nbsp;minimum_baseline:int,&nbsp;natural_baseline:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_preferred_height_for_width"><strong>do_get_preferred_height_for_width</strong></a> = get_preferred_height_for_width(...)</dt><dd><tt><a href="#InfoLabels-get_preferred_height_for_width">get_preferred_height_for_width</a>(self,&nbsp;width:int)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_preferred_width"><strong>do_get_preferred_width</strong></a> = get_preferred_width(...)</dt><dd><tt><a href="#InfoLabels-get_preferred_width">get_preferred_width</a>(self)&nbsp;-&gt;&nbsp;minimum_width:int,&nbsp;natural_width:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_preferred_width_for_height"><strong>do_get_preferred_width_for_height</strong></a> = get_preferred_width_for_height(...)</dt><dd><tt><a href="#InfoLabels-get_preferred_width_for_height">get_preferred_width_for_height</a>(self,&nbsp;height:int)&nbsp;-&gt;&nbsp;minimum_width:int,&nbsp;natural_width:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_get_request_mode"><strong>do_get_request_mode</strong></a> = get_request_mode(...)</dt><dd><tt><a href="#InfoLabels-get_request_mode">get_request_mode</a>(self)&nbsp;-&gt;&nbsp;Gtk.SizeRequestMode</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_grab_broken_event"><strong>do_grab_broken_event</strong></a> = grab_broken_event(...)</dt><dd><tt>grab_broken_event(self,&nbsp;event:Gdk.EventGrabBroken)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_grab_focus"><strong>do_grab_focus</strong></a> = grab_focus(...)</dt><dd><tt><a href="#InfoLabels-grab_focus">grab_focus</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_grab_notify"><strong>do_grab_notify</strong></a> = grab_notify(...)</dt><dd><tt>grab_notify(self,&nbsp;was_grabbed:bool)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_hide"><strong>do_hide</strong></a> = hide(...)</dt><dd><tt><a href="#InfoLabels-hide">hide</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_hierarchy_changed"><strong>do_hierarchy_changed</strong></a> = hierarchy_changed(...)</dt><dd><tt>hierarchy_changed(self,&nbsp;previous_toplevel:Gtk.Widget)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_key_press_event"><strong>do_key_press_event</strong></a> = key_press_event(...)</dt><dd><tt>key_press_event(self,&nbsp;event:Gdk.EventKey)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_key_release_event"><strong>do_key_release_event</strong></a> = key_release_event(...)</dt><dd><tt>key_release_event(self,&nbsp;event:Gdk.EventKey)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_keynav_failed"><strong>do_keynav_failed</strong></a> = keynav_failed(...)</dt><dd><tt><a href="#InfoLabels-keynav_failed">keynav_failed</a>(self,&nbsp;direction:Gtk.DirectionType)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_leave_notify_event"><strong>do_leave_notify_event</strong></a> = leave_notify_event(...)</dt><dd><tt>leave_notify_event(self,&nbsp;event:Gdk.EventCrossing)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_map"><strong>do_map</strong></a> = map(...)</dt><dd><tt><a href="#InfoLabels-map">map</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_map_event"><strong>do_map_event</strong></a> = map_event(...)</dt><dd><tt>map_event(self,&nbsp;event:Gdk.EventAny)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_mnemonic_activate"><strong>do_mnemonic_activate</strong></a> = mnemonic_activate(...)</dt><dd><tt><a href="#InfoLabels-mnemonic_activate">mnemonic_activate</a>(self,&nbsp;group_cycling:bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_motion_notify_event"><strong>do_motion_notify_event</strong></a> = motion_notify_event(...)</dt><dd><tt>motion_notify_event(self,&nbsp;event:Gdk.EventMotion)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_move_focus"><strong>do_move_focus</strong></a> = move_focus(...)</dt><dd><tt>move_focus(self,&nbsp;direction:Gtk.DirectionType)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_parent_set"><strong>do_parent_set</strong></a> = parent_set(...)</dt><dd><tt>parent_set(self,&nbsp;previous_parent:Gtk.Widget)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_popup_menu"><strong>do_popup_menu</strong></a> = popup_menu(...)</dt><dd><tt>popup_menu(self)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_property_notify_event"><strong>do_property_notify_event</strong></a> = property_notify_event(...)</dt><dd><tt>property_notify_event(self,&nbsp;event:Gdk.EventProperty)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_proximity_in_event"><strong>do_proximity_in_event</strong></a> = proximity_in_event(...)</dt><dd><tt>proximity_in_event(self,&nbsp;event:Gdk.EventProximity)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_proximity_out_event"><strong>do_proximity_out_event</strong></a> = proximity_out_event(...)</dt><dd><tt>proximity_out_event(self,&nbsp;event:Gdk.EventProximity)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_query_tooltip"><strong>do_query_tooltip</strong></a> = query_tooltip(...)</dt><dd><tt>query_tooltip(self,&nbsp;x:int,&nbsp;y:int,&nbsp;keyboard_tooltip:bool,&nbsp;tooltip:Gtk.Tooltip)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_queue_draw_region"><strong>do_queue_draw_region</strong></a> = queue_draw_region(...)</dt><dd><tt><a href="#InfoLabels-queue_draw_region">queue_draw_region</a>(self,&nbsp;region:cairo.Region)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_realize"><strong>do_realize</strong></a> = realize(...)</dt><dd><tt><a href="#InfoLabels-realize">realize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_screen_changed"><strong>do_screen_changed</strong></a> = screen_changed(...)</dt><dd><tt>screen_changed(self,&nbsp;previous_screen:Gdk.Screen)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_scroll_event"><strong>do_scroll_event</strong></a> = scroll_event(...)</dt><dd><tt>scroll_event(self,&nbsp;event:Gdk.EventScroll)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_selection_clear_event"><strong>do_selection_clear_event</strong></a> = selection_clear_event(...)</dt><dd><tt>selection_clear_event(self,&nbsp;event:Gdk.EventSelection)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_selection_get"><strong>do_selection_get</strong></a> = selection_get(...)</dt><dd><tt>selection_get(self,&nbsp;selection_data:Gtk.SelectionData,&nbsp;info:int,&nbsp;time_:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_selection_notify_event"><strong>do_selection_notify_event</strong></a> = selection_notify_event(...)</dt><dd><tt>selection_notify_event(self,&nbsp;event:Gdk.EventSelection)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_selection_received"><strong>do_selection_received</strong></a> = selection_received(...)</dt><dd><tt>selection_received(self,&nbsp;selection_data:Gtk.SelectionData,&nbsp;time_:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_selection_request_event"><strong>do_selection_request_event</strong></a> = selection_request_event(...)</dt><dd><tt>selection_request_event(self,&nbsp;event:Gdk.EventSelection)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_show"><strong>do_show</strong></a> = show(...)</dt><dd><tt><a href="#InfoLabels-show">show</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_show_all"><strong>do_show_all</strong></a> = show_all(...)</dt><dd><tt><a href="#InfoLabels-show_all">show_all</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_show_help"><strong>do_show_help</strong></a> = show_help(...)</dt><dd><tt>show_help(self,&nbsp;help_type:Gtk.WidgetHelpType)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_size_allocate"><strong>do_size_allocate</strong></a> = size_allocate(...)</dt><dd><tt><a href="#InfoLabels-size_allocate">size_allocate</a>(self,&nbsp;allocation:Gdk.Rectangle)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_state_changed"><strong>do_state_changed</strong></a> = state_changed(...)</dt><dd><tt>state_changed(self,&nbsp;previous_state:Gtk.StateType)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_state_flags_changed"><strong>do_state_flags_changed</strong></a> = state_flags_changed(...)</dt><dd><tt>state_flags_changed(self,&nbsp;previous_state_flags:Gtk.StateFlags)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_style_set"><strong>do_style_set</strong></a> = style_set(...)</dt><dd><tt>style_set(self,&nbsp;previous_style:Gtk.Style)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_style_updated"><strong>do_style_updated</strong></a> = style_updated(...)</dt><dd><tt>style_updated(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_touch_event"><strong>do_touch_event</strong></a> = touch_event(...)</dt><dd><tt>touch_event(self,&nbsp;event:Gdk.EventTouch)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_unmap"><strong>do_unmap</strong></a> = unmap(...)</dt><dd><tt><a href="#InfoLabels-unmap">unmap</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_unmap_event"><strong>do_unmap_event</strong></a> = unmap_event(...)</dt><dd><tt>unmap_event(self,&nbsp;event:Gdk.EventAny)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_unrealize"><strong>do_unrealize</strong></a> = unrealize(...)</dt><dd><tt><a href="#InfoLabels-unrealize">unrealize</a>(self)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_visibility_notify_event"><strong>do_visibility_notify_event</strong></a> = visibility_notify_event(...)</dt><dd><tt>visibility_notify_event(self,&nbsp;event:Gdk.EventVisibility)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-do_window_state_event"><strong>do_window_state_event</strong></a> = window_state_event(...)</dt><dd><tt>window_state_event(self,&nbsp;event:Gdk.EventWindowState)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<hr>
+Class methods inherited from gi.repository.Gtk.Widget:<br>
+<dl><dt><a name="InfoLabels-bind_template_callback_full"><strong>bind_template_callback_full</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-bind_template_callback_full">bind_template_callback_full</a>(self,&nbsp;callback_name:str,&nbsp;callback_symbol:GObject.Callback)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-bind_template_child_full"><strong>bind_template_child_full</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-bind_template_child_full">bind_template_child_full</a>(self,&nbsp;name:str,&nbsp;internal_child:bool,&nbsp;struct_offset:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-find_style_property"><strong>find_style_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-find_style_property">find_style_property</a>(self,&nbsp;property_name:str)&nbsp;-&gt;&nbsp;GObject.ParamSpec</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-get_css_name"><strong>get_css_name</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-get_css_name">get_css_name</a>(self)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-install_style_property"><strong>install_style_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-install_style_property">install_style_property</a>(self,&nbsp;pspec:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-list_style_properties"><strong>list_style_properties</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-list_style_properties">list_style_properties</a>(self)&nbsp;-&gt;&nbsp;list,&nbsp;n_properties:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_accessible_role"><strong>set_accessible_role</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_accessible_role">set_accessible_role</a>(self,&nbsp;role:Atk.Role)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_accessible_type"><strong>set_accessible_type</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_accessible_type">set_accessible_type</a>(self,&nbsp;type:GType)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_connect_func"><strong>set_connect_func</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_connect_func">set_connect_func</a>(self,&nbsp;connect_func:Gtk.BuilderConnectFunc,&nbsp;connect_data=None)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_css_name"><strong>set_css_name</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_css_name">set_css_name</a>(self,&nbsp;name:str)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_template"><strong>set_template</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_template">set_template</a>(self,&nbsp;template_bytes:GLib.Bytes)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-set_template_from_resource"><strong>set_template_from_resource</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-set_template_from_resource">set_template_from_resource</a>(self,&nbsp;resource_name:str)</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from gi.repository.Gtk.Widget:<br>
+<dl><dt><strong>parent_instance</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from gi.repository.Gtk.Widget:<br>
+<dl><dt><strong>activate</strong> = gi.FunctionInfo(activate)<dd><tt><a href="#InfoLabels-activate">activate</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>add_accelerator</strong> = gi.FunctionInfo(add_accelerator)<dd><tt><a href="#InfoLabels-add_accelerator">add_accelerator</a>(self,&nbsp;accel_signal:str,&nbsp;accel_group:Gtk.AccelGroup,&nbsp;accel_key:int,&nbsp;accel_mods:Gdk.ModifierType,&nbsp;accel_flags:Gtk.AccelFlags)</tt></dl>
+
+<dl><dt><strong>add_device_events</strong> = gi.FunctionInfo(add_device_events)<dd><tt><a href="#InfoLabels-add_device_events">add_device_events</a>(self,&nbsp;device:Gdk.Device,&nbsp;events:Gdk.EventMask)</tt></dl>
+
+<dl><dt><strong>add_events</strong> = gi.FunctionInfo(add_events)<dd><tt><a href="#InfoLabels-add_events">add_events</a>(self,&nbsp;events:int)</tt></dl>
+
+<dl><dt><strong>add_mnemonic_label</strong> = gi.FunctionInfo(add_mnemonic_label)<dd><tt><a href="#InfoLabels-add_mnemonic_label">add_mnemonic_label</a>(self,&nbsp;label:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>add_tick_callback</strong> = gi.FunctionInfo(add_tick_callback)<dd><tt><a href="#InfoLabels-add_tick_callback">add_tick_callback</a>(self,&nbsp;callback:Gtk.TickCallback,&nbsp;user_data=None)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>can_activate_accel</strong> = gi.FunctionInfo(can_activate_accel)<dd><tt><a href="#InfoLabels-can_activate_accel">can_activate_accel</a>(self,&nbsp;signal_id:int)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>child_focus</strong> = gi.FunctionInfo(child_focus)<dd><tt><a href="#InfoLabels-child_focus">child_focus</a>(self,&nbsp;direction:Gtk.DirectionType)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>class_path</strong> = gi.FunctionInfo(class_path)<dd><tt><a href="#InfoLabels-class_path">class_path</a>(self)&nbsp;-&gt;&nbsp;path_length:int,&nbsp;path:str,&nbsp;path_reversed:str</tt></dl>
+
+<dl><dt><strong>compute_expand</strong> = gi.FunctionInfo(compute_expand)<dd><tt><a href="#InfoLabels-compute_expand">compute_expand</a>(self,&nbsp;orientation:Gtk.Orientation)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>create_pango_context</strong> = gi.FunctionInfo(create_pango_context)<dd><tt><a href="#InfoLabels-create_pango_context">create_pango_context</a>(self)&nbsp;-&gt;&nbsp;Pango.Context</tt></dl>
+
+<dl><dt><strong>create_pango_layout</strong> = gi.FunctionInfo(create_pango_layout)<dd><tt><a href="#InfoLabels-create_pango_layout">create_pango_layout</a>(self,&nbsp;text:str=None)&nbsp;-&gt;&nbsp;Pango.Layout</tt></dl>
+
+<dl><dt><strong>destroy</strong> = gi.FunctionInfo(destroy)<dd><tt><a href="#InfoLabels-destroy">destroy</a>(self)</tt></dl>
+
+<dl><dt><strong>destroyed</strong> = gi.FunctionInfo(destroyed)<dd><tt><a href="#InfoLabels-destroyed">destroyed</a>(self,&nbsp;widget_pointer:Gtk.Widget)&nbsp;-&gt;&nbsp;widget_pointer:Gtk.Widget</tt></dl>
+
+<dl><dt><strong>device_is_shadowed</strong> = gi.FunctionInfo(device_is_shadowed)<dd><tt><a href="#InfoLabels-device_is_shadowed">device_is_shadowed</a>(self,&nbsp;device:Gdk.Device)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>drag_begin</strong> = gi.FunctionInfo(drag_begin)<dd><tt><a href="#InfoLabels-drag_begin">drag_begin</a>(self,&nbsp;targets:Gtk.TargetList,&nbsp;actions:Gdk.DragAction,&nbsp;button:int,&nbsp;event:Gdk.Event=None)&nbsp;-&gt;&nbsp;Gdk.DragContext</tt></dl>
+
+<dl><dt><strong>drag_begin_with_coordinates</strong> = gi.FunctionInfo(drag_begin_with_coordinates)<dd><tt><a href="#InfoLabels-drag_begin_with_coordinates">drag_begin_with_coordinates</a>(self,&nbsp;targets:Gtk.TargetList,&nbsp;actions:Gdk.DragAction,&nbsp;button:int,&nbsp;event:Gdk.Event=None,&nbsp;x:int,&nbsp;y:int)&nbsp;-&gt;&nbsp;Gdk.DragContext</tt></dl>
+
+<dl><dt><strong>drag_check_threshold</strong> = gi.FunctionInfo(drag_check_threshold)<dd><tt><a href="#InfoLabels-drag_check_threshold">drag_check_threshold</a>(self,&nbsp;start_x:int,&nbsp;start_y:int,&nbsp;current_x:int,&nbsp;current_y:int)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>drag_dest_add_image_targets</strong> = gi.FunctionInfo(drag_dest_add_image_targets)<dd><tt><a href="#InfoLabels-drag_dest_add_image_targets">drag_dest_add_image_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_dest_add_text_targets</strong> = gi.FunctionInfo(drag_dest_add_text_targets)<dd><tt><a href="#InfoLabels-drag_dest_add_text_targets">drag_dest_add_text_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_dest_add_uri_targets</strong> = gi.FunctionInfo(drag_dest_add_uri_targets)<dd><tt><a href="#InfoLabels-drag_dest_add_uri_targets">drag_dest_add_uri_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_dest_find_target</strong> = gi.FunctionInfo(drag_dest_find_target)<dd><tt><a href="#InfoLabels-drag_dest_find_target">drag_dest_find_target</a>(self,&nbsp;context:Gdk.DragContext,&nbsp;target_list:Gtk.TargetList=None)&nbsp;-&gt;&nbsp;Gdk.Atom</tt></dl>
+
+<dl><dt><strong>drag_dest_get_target_list</strong> = gi.FunctionInfo(drag_dest_get_target_list)<dd><tt><a href="#InfoLabels-drag_dest_get_target_list">drag_dest_get_target_list</a>(self)&nbsp;-&gt;&nbsp;Gtk.TargetList&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>drag_dest_get_track_motion</strong> = gi.FunctionInfo(drag_dest_get_track_motion)<dd><tt><a href="#InfoLabels-drag_dest_get_track_motion">drag_dest_get_track_motion</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>drag_dest_set</strong> = gi.FunctionInfo(drag_dest_set)<dd><tt><a href="#InfoLabels-drag_dest_set">drag_dest_set</a>(self,&nbsp;flags:Gtk.DestDefaults,&nbsp;targets:list=None,&nbsp;actions:Gdk.DragAction)</tt></dl>
+
+<dl><dt><strong>drag_dest_set_proxy</strong> = gi.FunctionInfo(drag_dest_set_proxy)<dd><tt><a href="#InfoLabels-drag_dest_set_proxy">drag_dest_set_proxy</a>(self,&nbsp;proxy_window:Gdk.Window,&nbsp;protocol:Gdk.DragProtocol,&nbsp;use_coordinates:bool)</tt></dl>
+
+<dl><dt><strong>drag_dest_set_track_motion</strong> = gi.FunctionInfo(drag_dest_set_track_motion)<dd><tt><a href="#InfoLabels-drag_dest_set_track_motion">drag_dest_set_track_motion</a>(self,&nbsp;track_motion:bool)</tt></dl>
+
+<dl><dt><strong>drag_dest_unset</strong> = gi.FunctionInfo(drag_dest_unset)<dd><tt><a href="#InfoLabels-drag_dest_unset">drag_dest_unset</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_get_data</strong> = gi.FunctionInfo(drag_get_data)<dd><tt><a href="#InfoLabels-drag_get_data">drag_get_data</a>(self,&nbsp;context:Gdk.DragContext,&nbsp;target:Gdk.Atom,&nbsp;time_:int)</tt></dl>
+
+<dl><dt><strong>drag_highlight</strong> = gi.FunctionInfo(drag_highlight)<dd><tt><a href="#InfoLabels-drag_highlight">drag_highlight</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_source_add_image_targets</strong> = gi.FunctionInfo(drag_source_add_image_targets)<dd><tt><a href="#InfoLabels-drag_source_add_image_targets">drag_source_add_image_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_source_add_text_targets</strong> = gi.FunctionInfo(drag_source_add_text_targets)<dd><tt><a href="#InfoLabels-drag_source_add_text_targets">drag_source_add_text_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_source_add_uri_targets</strong> = gi.FunctionInfo(drag_source_add_uri_targets)<dd><tt><a href="#InfoLabels-drag_source_add_uri_targets">drag_source_add_uri_targets</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_source_get_target_list</strong> = gi.FunctionInfo(drag_source_get_target_list)<dd><tt><a href="#InfoLabels-drag_source_get_target_list">drag_source_get_target_list</a>(self)&nbsp;-&gt;&nbsp;Gtk.TargetList&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>drag_source_set</strong> = gi.FunctionInfo(drag_source_set)<dd><tt><a href="#InfoLabels-drag_source_set">drag_source_set</a>(self,&nbsp;start_button_mask:Gdk.ModifierType,&nbsp;targets:list=None,&nbsp;actions:Gdk.DragAction)</tt></dl>
+
+<dl><dt><strong>drag_source_set_icon_gicon</strong> = gi.FunctionInfo(drag_source_set_icon_gicon)<dd><tt><a href="#InfoLabels-drag_source_set_icon_gicon">drag_source_set_icon_gicon</a>(self,&nbsp;icon:Gio.Icon)</tt></dl>
+
+<dl><dt><strong>drag_source_set_icon_name</strong> = gi.FunctionInfo(drag_source_set_icon_name)<dd><tt><a href="#InfoLabels-drag_source_set_icon_name">drag_source_set_icon_name</a>(self,&nbsp;icon_name:str)</tt></dl>
+
+<dl><dt><strong>drag_source_set_icon_pixbuf</strong> = gi.FunctionInfo(drag_source_set_icon_pixbuf)<dd><tt><a href="#InfoLabels-drag_source_set_icon_pixbuf">drag_source_set_icon_pixbuf</a>(self,&nbsp;pixbuf:GdkPixbuf.Pixbuf)</tt></dl>
+
+<dl><dt><strong>drag_source_set_icon_stock</strong> = gi.FunctionInfo(drag_source_set_icon_stock)<dd><tt><a href="#InfoLabels-drag_source_set_icon_stock">drag_source_set_icon_stock</a>(self,&nbsp;stock_id:str)</tt></dl>
+
+<dl><dt><strong>drag_source_unset</strong> = gi.FunctionInfo(drag_source_unset)<dd><tt><a href="#InfoLabels-drag_source_unset">drag_source_unset</a>(self)</tt></dl>
+
+<dl><dt><strong>drag_unhighlight</strong> = gi.FunctionInfo(drag_unhighlight)<dd><tt><a href="#InfoLabels-drag_unhighlight">drag_unhighlight</a>(self)</tt></dl>
+
+<dl><dt><strong>draw</strong> = gi.FunctionInfo(draw)<dd><tt><a href="#InfoLabels-draw">draw</a>(self,&nbsp;cr:cairo.Context)</tt></dl>
+
+<dl><dt><strong>ensure_style</strong> = gi.FunctionInfo(ensure_style)<dd><tt><a href="#InfoLabels-ensure_style">ensure_style</a>(self)</tt></dl>
+
+<dl><dt><strong>error_bell</strong> = gi.FunctionInfo(error_bell)<dd><tt><a href="#InfoLabels-error_bell">error_bell</a>(self)</tt></dl>
+
+<dl><dt><strong>event</strong> = gi.FunctionInfo(event)<dd><tt><a href="#InfoLabels-event">event</a>(self,&nbsp;event:Gdk.Event)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_accessible</strong> = gi.FunctionInfo(get_accessible)<dd><tt><a href="#InfoLabels-get_accessible">get_accessible</a>(self)&nbsp;-&gt;&nbsp;Atk.Object</tt></dl>
+
+<dl><dt><strong>get_action_group</strong> = gi.FunctionInfo(get_action_group)<dd><tt><a href="#InfoLabels-get_action_group">get_action_group</a>(self,&nbsp;prefix:str)&nbsp;-&gt;&nbsp;Gio.ActionGroup&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_allocated_baseline</strong> = gi.FunctionInfo(get_allocated_baseline)<dd><tt><a href="#InfoLabels-get_allocated_baseline">get_allocated_baseline</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_allocated_height</strong> = gi.FunctionInfo(get_allocated_height)<dd><tt><a href="#InfoLabels-get_allocated_height">get_allocated_height</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_allocated_size</strong> = gi.FunctionInfo(get_allocated_size)<dd><tt><a href="#InfoLabels-get_allocated_size">get_allocated_size</a>(self)&nbsp;-&gt;&nbsp;allocation:Gdk.Rectangle,&nbsp;baseline:int</tt></dl>
+
+<dl><dt><strong>get_allocated_width</strong> = gi.FunctionInfo(get_allocated_width)<dd><tt><a href="#InfoLabels-get_allocated_width">get_allocated_width</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_allocation</strong> = gi.FunctionInfo(get_allocation)<dd><tt><a href="#InfoLabels-get_allocation">get_allocation</a>(self)&nbsp;-&gt;&nbsp;allocation:Gdk.Rectangle</tt></dl>
+
+<dl><dt><strong>get_ancestor</strong> = gi.FunctionInfo(get_ancestor)<dd><tt><a href="#InfoLabels-get_ancestor">get_ancestor</a>(self,&nbsp;widget_type:GType)&nbsp;-&gt;&nbsp;Gtk.Widget&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_app_paintable</strong> = gi.FunctionInfo(get_app_paintable)<dd><tt><a href="#InfoLabels-get_app_paintable">get_app_paintable</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_can_default</strong> = gi.FunctionInfo(get_can_default)<dd><tt><a href="#InfoLabels-get_can_default">get_can_default</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_can_focus</strong> = gi.FunctionInfo(get_can_focus)<dd><tt><a href="#InfoLabels-get_can_focus">get_can_focus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_child_requisition</strong> = gi.FunctionInfo(get_child_requisition)<dd><tt><a href="#InfoLabels-get_child_requisition">get_child_requisition</a>(self)&nbsp;-&gt;&nbsp;requisition:Gtk.Requisition</tt></dl>
+
+<dl><dt><strong>get_child_visible</strong> = gi.FunctionInfo(get_child_visible)<dd><tt><a href="#InfoLabels-get_child_visible">get_child_visible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_clip</strong> = gi.FunctionInfo(get_clip)<dd><tt><a href="#InfoLabels-get_clip">get_clip</a>(self)&nbsp;-&gt;&nbsp;clip:Gdk.Rectangle</tt></dl>
+
+<dl><dt><strong>get_clipboard</strong> = gi.FunctionInfo(get_clipboard)<dd><tt><a href="#InfoLabels-get_clipboard">get_clipboard</a>(self,&nbsp;selection:Gdk.Atom)&nbsp;-&gt;&nbsp;Gtk.Clipboard</tt></dl>
+
+<dl><dt><strong>get_composite_name</strong> = gi.FunctionInfo(get_composite_name)<dd><tt><a href="#InfoLabels-get_composite_name">get_composite_name</a>(self)&nbsp;-&gt;&nbsp;str</tt></dl>
+
+<dl><dt><strong>get_default_direction</strong> = gi.FunctionInfo(get_default_direction)<dd><tt><a href="#InfoLabels-get_default_direction">get_default_direction</a>()&nbsp;-&gt;&nbsp;Gtk.TextDirection</tt></dl>
+
+<dl><dt><strong>get_default_style</strong> = gi.FunctionInfo(get_default_style)<dd><tt><a href="#InfoLabels-get_default_style">get_default_style</a>()&nbsp;-&gt;&nbsp;Gtk.Style</tt></dl>
+
+<dl><dt><strong>get_device_enabled</strong> = gi.FunctionInfo(get_device_enabled)<dd><tt><a href="#InfoLabels-get_device_enabled">get_device_enabled</a>(self,&nbsp;device:Gdk.Device)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_device_events</strong> = gi.FunctionInfo(get_device_events)<dd><tt><a href="#InfoLabels-get_device_events">get_device_events</a>(self,&nbsp;device:Gdk.Device)&nbsp;-&gt;&nbsp;Gdk.EventMask</tt></dl>
+
+<dl><dt><strong>get_direction</strong> = gi.FunctionInfo(get_direction)<dd><tt><a href="#InfoLabels-get_direction">get_direction</a>(self)&nbsp;-&gt;&nbsp;Gtk.TextDirection</tt></dl>
+
+<dl><dt><strong>get_display</strong> = gi.FunctionInfo(get_display)<dd><tt><a href="#InfoLabels-get_display">get_display</a>(self)&nbsp;-&gt;&nbsp;Gdk.Display</tt></dl>
+
+<dl><dt><strong>get_double_buffered</strong> = gi.FunctionInfo(get_double_buffered)<dd><tt><a href="#InfoLabels-get_double_buffered">get_double_buffered</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_events</strong> = gi.FunctionInfo(get_events)<dd><tt><a href="#InfoLabels-get_events">get_events</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_focus_on_click</strong> = gi.FunctionInfo(get_focus_on_click)<dd><tt><a href="#InfoLabels-get_focus_on_click">get_focus_on_click</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_font_map</strong> = gi.FunctionInfo(get_font_map)<dd><tt><a href="#InfoLabels-get_font_map">get_font_map</a>(self)&nbsp;-&gt;&nbsp;Pango.FontMap&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_font_options</strong> = gi.FunctionInfo(get_font_options)<dd><tt><a href="#InfoLabels-get_font_options">get_font_options</a>(self)&nbsp;-&gt;&nbsp;cairo.FontOptions&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_frame_clock</strong> = gi.FunctionInfo(get_frame_clock)<dd><tt><a href="#InfoLabels-get_frame_clock">get_frame_clock</a>(self)&nbsp;-&gt;&nbsp;Gdk.FrameClock&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_halign</strong> = gi.FunctionInfo(get_halign)<dd><tt><a href="#InfoLabels-get_halign">get_halign</a>(self)&nbsp;-&gt;&nbsp;Gtk.Align</tt></dl>
+
+<dl><dt><strong>get_has_tooltip</strong> = gi.FunctionInfo(get_has_tooltip)<dd><tt><a href="#InfoLabels-get_has_tooltip">get_has_tooltip</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_has_window</strong> = gi.FunctionInfo(get_has_window)<dd><tt><a href="#InfoLabels-get_has_window">get_has_window</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_hexpand</strong> = gi.FunctionInfo(get_hexpand)<dd><tt><a href="#InfoLabels-get_hexpand">get_hexpand</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_hexpand_set</strong> = gi.FunctionInfo(get_hexpand_set)<dd><tt><a href="#InfoLabels-get_hexpand_set">get_hexpand_set</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_mapped</strong> = gi.FunctionInfo(get_mapped)<dd><tt><a href="#InfoLabels-get_mapped">get_mapped</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_margin_bottom</strong> = gi.FunctionInfo(get_margin_bottom)<dd><tt><a href="#InfoLabels-get_margin_bottom">get_margin_bottom</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_margin_end</strong> = gi.FunctionInfo(get_margin_end)<dd><tt><a href="#InfoLabels-get_margin_end">get_margin_end</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_margin_left</strong> = gi.FunctionInfo(get_margin_left)<dd><tt><a href="#InfoLabels-get_margin_left">get_margin_left</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_margin_right</strong> = gi.FunctionInfo(get_margin_right)<dd><tt><a href="#InfoLabels-get_margin_right">get_margin_right</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_margin_start</strong> = gi.FunctionInfo(get_margin_start)<dd><tt><a href="#InfoLabels-get_margin_start">get_margin_start</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_margin_top</strong> = gi.FunctionInfo(get_margin_top)<dd><tt><a href="#InfoLabels-get_margin_top">get_margin_top</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_modifier_mask</strong> = gi.FunctionInfo(get_modifier_mask)<dd><tt><a href="#InfoLabels-get_modifier_mask">get_modifier_mask</a>(self,&nbsp;intent:Gdk.ModifierIntent)&nbsp;-&gt;&nbsp;Gdk.ModifierType</tt></dl>
+
+<dl><dt><strong>get_modifier_style</strong> = gi.FunctionInfo(get_modifier_style)<dd><tt><a href="#InfoLabels-get_modifier_style">get_modifier_style</a>(self)&nbsp;-&gt;&nbsp;Gtk.RcStyle</tt></dl>
+
+<dl><dt><strong>get_name</strong> = gi.FunctionInfo(get_name)<dd><tt><a href="#InfoLabels-get_name">get_name</a>(self)&nbsp;-&gt;&nbsp;str</tt></dl>
+
+<dl><dt><strong>get_no_show_all</strong> = gi.FunctionInfo(get_no_show_all)<dd><tt><a href="#InfoLabels-get_no_show_all">get_no_show_all</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_opacity</strong> = gi.FunctionInfo(get_opacity)<dd><tt><a href="#InfoLabels-get_opacity">get_opacity</a>(self)&nbsp;-&gt;&nbsp;float</tt></dl>
+
+<dl><dt><strong>get_pango_context</strong> = gi.FunctionInfo(get_pango_context)<dd><tt><a href="#InfoLabels-get_pango_context">get_pango_context</a>(self)&nbsp;-&gt;&nbsp;Pango.Context</tt></dl>
+
+<dl><dt><strong>get_parent</strong> = gi.FunctionInfo(get_parent)<dd><tt><a href="#InfoLabels-get_parent">get_parent</a>(self)&nbsp;-&gt;&nbsp;Gtk.Widget&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_parent_window</strong> = gi.FunctionInfo(get_parent_window)<dd><tt><a href="#InfoLabels-get_parent_window">get_parent_window</a>(self)&nbsp;-&gt;&nbsp;Gdk.Window&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_path</strong> = gi.FunctionInfo(get_path)<dd><tt><a href="#InfoLabels-get_path">get_path</a>(self)&nbsp;-&gt;&nbsp;Gtk.WidgetPath</tt></dl>
+
+<dl><dt><strong>get_pointer</strong> = gi.FunctionInfo(get_pointer)<dd><tt><a href="#InfoLabels-get_pointer">get_pointer</a>(self)&nbsp;-&gt;&nbsp;x:int,&nbsp;y:int</tt></dl>
+
+<dl><dt><strong>get_preferred_height</strong> = gi.FunctionInfo(get_preferred_height)<dd><tt><a href="#InfoLabels-get_preferred_height">get_preferred_height</a>(self)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int</tt></dl>
+
+<dl><dt><strong>get_preferred_height_and_baseline_for_width</strong> = gi.FunctionInfo(get_preferred_height_and_baseline_for_width)<dd><tt><a href="#InfoLabels-get_preferred_height_and_baseline_for_width">get_preferred_height_and_baseline_for_width</a>(self,&nbsp;width:int)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int,&nbsp;minimum_baseline:int,&nbsp;natural_baseline:int</tt></dl>
+
+<dl><dt><strong>get_preferred_height_for_width</strong> = gi.FunctionInfo(get_preferred_height_for_width)<dd><tt><a href="#InfoLabels-get_preferred_height_for_width">get_preferred_height_for_width</a>(self,&nbsp;width:int)&nbsp;-&gt;&nbsp;minimum_height:int,&nbsp;natural_height:int</tt></dl>
+
+<dl><dt><strong>get_preferred_size</strong> = gi.FunctionInfo(get_preferred_size)<dd><tt><a href="#InfoLabels-get_preferred_size">get_preferred_size</a>(self)&nbsp;-&gt;&nbsp;minimum_size:Gtk.Requisition,&nbsp;natural_size:Gtk.Requisition</tt></dl>
+
+<dl><dt><strong>get_preferred_width</strong> = gi.FunctionInfo(get_preferred_width)<dd><tt><a href="#InfoLabels-get_preferred_width">get_preferred_width</a>(self)&nbsp;-&gt;&nbsp;minimum_width:int,&nbsp;natural_width:int</tt></dl>
+
+<dl><dt><strong>get_preferred_width_for_height</strong> = gi.FunctionInfo(get_preferred_width_for_height)<dd><tt><a href="#InfoLabels-get_preferred_width_for_height">get_preferred_width_for_height</a>(self,&nbsp;height:int)&nbsp;-&gt;&nbsp;minimum_width:int,&nbsp;natural_width:int</tt></dl>
+
+<dl><dt><strong>get_realized</strong> = gi.FunctionInfo(get_realized)<dd><tt><a href="#InfoLabels-get_realized">get_realized</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_receives_default</strong> = gi.FunctionInfo(get_receives_default)<dd><tt><a href="#InfoLabels-get_receives_default">get_receives_default</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_request_mode</strong> = gi.FunctionInfo(get_request_mode)<dd><tt><a href="#InfoLabels-get_request_mode">get_request_mode</a>(self)&nbsp;-&gt;&nbsp;Gtk.SizeRequestMode</tt></dl>
+
+<dl><dt><strong>get_requisition</strong> = gi.FunctionInfo(get_requisition)<dd><tt><a href="#InfoLabels-get_requisition">get_requisition</a>(self)&nbsp;-&gt;&nbsp;requisition:Gtk.Requisition</tt></dl>
+
+<dl><dt><strong>get_root_window</strong> = gi.FunctionInfo(get_root_window)<dd><tt><a href="#InfoLabels-get_root_window">get_root_window</a>(self)&nbsp;-&gt;&nbsp;Gdk.Window</tt></dl>
+
+<dl><dt><strong>get_scale_factor</strong> = gi.FunctionInfo(get_scale_factor)<dd><tt><a href="#InfoLabels-get_scale_factor">get_scale_factor</a>(self)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>get_screen</strong> = gi.FunctionInfo(get_screen)<dd><tt><a href="#InfoLabels-get_screen">get_screen</a>(self)&nbsp;-&gt;&nbsp;Gdk.Screen</tt></dl>
+
+<dl><dt><strong>get_sensitive</strong> = gi.FunctionInfo(get_sensitive)<dd><tt><a href="#InfoLabels-get_sensitive">get_sensitive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_settings</strong> = gi.FunctionInfo(get_settings)<dd><tt><a href="#InfoLabels-get_settings">get_settings</a>(self)&nbsp;-&gt;&nbsp;Gtk.Settings</tt></dl>
+
+<dl><dt><strong>get_size_request</strong> = gi.FunctionInfo(get_size_request)<dd><tt><a href="#InfoLabels-get_size_request">get_size_request</a>(self)&nbsp;-&gt;&nbsp;width:int,&nbsp;height:int</tt></dl>
+
+<dl><dt><strong>get_state</strong> = gi.FunctionInfo(get_state)<dd><tt><a href="#InfoLabels-get_state">get_state</a>(self)&nbsp;-&gt;&nbsp;Gtk.StateType</tt></dl>
+
+<dl><dt><strong>get_state_flags</strong> = gi.FunctionInfo(get_state_flags)<dd><tt><a href="#InfoLabels-get_state_flags">get_state_flags</a>(self)&nbsp;-&gt;&nbsp;Gtk.StateFlags</tt></dl>
+
+<dl><dt><strong>get_style</strong> = gi.FunctionInfo(get_style)<dd><tt><a href="#InfoLabels-get_style">get_style</a>(self)&nbsp;-&gt;&nbsp;Gtk.Style</tt></dl>
+
+<dl><dt><strong>get_style_context</strong> = gi.FunctionInfo(get_style_context)<dd><tt><a href="#InfoLabels-get_style_context">get_style_context</a>(self)&nbsp;-&gt;&nbsp;Gtk.StyleContext</tt></dl>
+
+<dl><dt><strong>get_support_multidevice</strong> = gi.FunctionInfo(get_support_multidevice)<dd><tt><a href="#InfoLabels-get_support_multidevice">get_support_multidevice</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_template_child</strong> = gi.FunctionInfo(get_template_child)<dd><tt><a href="#InfoLabels-get_template_child">get_template_child</a>(self,&nbsp;widget_type:GType,&nbsp;name:str)&nbsp;-&gt;&nbsp;GObject.Object</tt></dl>
+
+<dl><dt><strong>get_tooltip_markup</strong> = gi.FunctionInfo(get_tooltip_markup)<dd><tt><a href="#InfoLabels-get_tooltip_markup">get_tooltip_markup</a>(self)&nbsp;-&gt;&nbsp;str&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_tooltip_text</strong> = gi.FunctionInfo(get_tooltip_text)<dd><tt><a href="#InfoLabels-get_tooltip_text">get_tooltip_text</a>(self)&nbsp;-&gt;&nbsp;str&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>get_tooltip_window</strong> = gi.FunctionInfo(get_tooltip_window)<dd><tt><a href="#InfoLabels-get_tooltip_window">get_tooltip_window</a>(self)&nbsp;-&gt;&nbsp;Gtk.Window</tt></dl>
+
+<dl><dt><strong>get_toplevel</strong> = gi.FunctionInfo(get_toplevel)<dd><tt><a href="#InfoLabels-get_toplevel">get_toplevel</a>(self)&nbsp;-&gt;&nbsp;Gtk.Widget</tt></dl>
+
+<dl><dt><strong>get_valign</strong> = gi.FunctionInfo(get_valign)<dd><tt><a href="#InfoLabels-get_valign">get_valign</a>(self)&nbsp;-&gt;&nbsp;Gtk.Align</tt></dl>
+
+<dl><dt><strong>get_valign_with_baseline</strong> = gi.FunctionInfo(get_valign_with_baseline)<dd><tt><a href="#InfoLabels-get_valign_with_baseline">get_valign_with_baseline</a>(self)&nbsp;-&gt;&nbsp;Gtk.Align</tt></dl>
+
+<dl><dt><strong>get_vexpand</strong> = gi.FunctionInfo(get_vexpand)<dd><tt><a href="#InfoLabels-get_vexpand">get_vexpand</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_vexpand_set</strong> = gi.FunctionInfo(get_vexpand_set)<dd><tt><a href="#InfoLabels-get_vexpand_set">get_vexpand_set</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_visible</strong> = gi.FunctionInfo(get_visible)<dd><tt><a href="#InfoLabels-get_visible">get_visible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>get_visual</strong> = gi.FunctionInfo(get_visual)<dd><tt><a href="#InfoLabels-get_visual">get_visual</a>(self)&nbsp;-&gt;&nbsp;Gdk.Visual</tt></dl>
+
+<dl><dt><strong>get_window</strong> = gi.FunctionInfo(get_window)<dd><tt><a href="#InfoLabels-get_window">get_window</a>(self)&nbsp;-&gt;&nbsp;Gdk.Window&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>grab_add</strong> = gi.FunctionInfo(grab_add)<dd><tt><a href="#InfoLabels-grab_add">grab_add</a>(self)</tt></dl>
+
+<dl><dt><strong>grab_default</strong> = gi.FunctionInfo(grab_default)<dd><tt><a href="#InfoLabels-grab_default">grab_default</a>(self)</tt></dl>
+
+<dl><dt><strong>grab_focus</strong> = gi.FunctionInfo(grab_focus)<dd><tt><a href="#InfoLabels-grab_focus">grab_focus</a>(self)</tt></dl>
+
+<dl><dt><strong>grab_remove</strong> = gi.FunctionInfo(grab_remove)<dd><tt><a href="#InfoLabels-grab_remove">grab_remove</a>(self)</tt></dl>
+
+<dl><dt><strong>has_default</strong> = gi.FunctionInfo(has_default)<dd><tt><a href="#InfoLabels-has_default">has_default</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>has_focus</strong> = gi.FunctionInfo(has_focus)<dd><tt><a href="#InfoLabels-has_focus">has_focus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>has_grab</strong> = gi.FunctionInfo(has_grab)<dd><tt><a href="#InfoLabels-has_grab">has_grab</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>has_rc_style</strong> = gi.FunctionInfo(has_rc_style)<dd><tt><a href="#InfoLabels-has_rc_style">has_rc_style</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>has_screen</strong> = gi.FunctionInfo(has_screen)<dd><tt><a href="#InfoLabels-has_screen">has_screen</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>has_visible_focus</strong> = gi.FunctionInfo(has_visible_focus)<dd><tt><a href="#InfoLabels-has_visible_focus">has_visible_focus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>hide</strong> = gi.FunctionInfo(hide)<dd><tt><a href="#InfoLabels-hide">hide</a>(self)</tt></dl>
+
+<dl><dt><strong>hide_on_delete</strong> = gi.FunctionInfo(hide_on_delete)<dd><tt><a href="#InfoLabels-hide_on_delete">hide_on_delete</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>in_destruction</strong> = gi.FunctionInfo(in_destruction)<dd><tt><a href="#InfoLabels-in_destruction">in_destruction</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>init_template</strong> = gi.FunctionInfo(init_template)<dd><tt><a href="#InfoLabels-init_template">init_template</a>(self)</tt></dl>
+
+<dl><dt><strong>input_shape_combine_region</strong> = gi.FunctionInfo(input_shape_combine_region)<dd><tt><a href="#InfoLabels-input_shape_combine_region">input_shape_combine_region</a>(self,&nbsp;region:cairo.Region=None)</tt></dl>
+
+<dl><dt><strong>insert_action_group</strong> = gi.FunctionInfo(insert_action_group)<dd><tt><a href="#InfoLabels-insert_action_group">insert_action_group</a>(self,&nbsp;name:str,&nbsp;group:Gio.ActionGroup=None)</tt></dl>
+
+<dl><dt><strong>intersect</strong> = gi.FunctionInfo(intersect)<dd><tt><a href="#InfoLabels-intersect">intersect</a>(self,&nbsp;area:Gdk.Rectangle)&nbsp;-&gt;&nbsp;bool,&nbsp;intersection:Gdk.Rectangle</tt></dl>
+
+<dl><dt><strong>is_ancestor</strong> = gi.FunctionInfo(is_ancestor)<dd><tt><a href="#InfoLabels-is_ancestor">is_ancestor</a>(self,&nbsp;ancestor:Gtk.Widget)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_composited</strong> = gi.FunctionInfo(is_composited)<dd><tt><a href="#InfoLabels-is_composited">is_composited</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_drawable</strong> = gi.FunctionInfo(is_drawable)<dd><tt><a href="#InfoLabels-is_drawable">is_drawable</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_focus</strong> = gi.FunctionInfo(is_focus)<dd><tt><a href="#InfoLabels-is_focus">is_focus</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_sensitive</strong> = gi.FunctionInfo(is_sensitive)<dd><tt><a href="#InfoLabels-is_sensitive">is_sensitive</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_toplevel</strong> = gi.FunctionInfo(is_toplevel)<dd><tt><a href="#InfoLabels-is_toplevel">is_toplevel</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>is_visible</strong> = gi.FunctionInfo(is_visible)<dd><tt><a href="#InfoLabels-is_visible">is_visible</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>keynav_failed</strong> = gi.FunctionInfo(keynav_failed)<dd><tt><a href="#InfoLabels-keynav_failed">keynav_failed</a>(self,&nbsp;direction:Gtk.DirectionType)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>list_accel_closures</strong> = gi.FunctionInfo(list_accel_closures)<dd><tt><a href="#InfoLabels-list_accel_closures">list_accel_closures</a>(self)&nbsp;-&gt;&nbsp;list</tt></dl>
+
+<dl><dt><strong>list_action_prefixes</strong> = gi.FunctionInfo(list_action_prefixes)<dd><tt><a href="#InfoLabels-list_action_prefixes">list_action_prefixes</a>(self)&nbsp;-&gt;&nbsp;list</tt></dl>
+
+<dl><dt><strong>list_mnemonic_labels</strong> = gi.FunctionInfo(list_mnemonic_labels)<dd><tt><a href="#InfoLabels-list_mnemonic_labels">list_mnemonic_labels</a>(self)&nbsp;-&gt;&nbsp;list</tt></dl>
+
+<dl><dt><strong>map</strong> = gi.FunctionInfo(map)<dd><tt><a href="#InfoLabels-map">map</a>(self)</tt></dl>
+
+<dl><dt><strong>mnemonic_activate</strong> = gi.FunctionInfo(mnemonic_activate)<dd><tt><a href="#InfoLabels-mnemonic_activate">mnemonic_activate</a>(self,&nbsp;group_cycling:bool)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>modify_base</strong> = gi.FunctionInfo(modify_base)<dd><tt><a href="#InfoLabels-modify_base">modify_base</a>(self,&nbsp;state:Gtk.StateType,&nbsp;color:Gdk.Color=None)</tt></dl>
+
+<dl><dt><strong>modify_bg</strong> = gi.FunctionInfo(modify_bg)<dd><tt><a href="#InfoLabels-modify_bg">modify_bg</a>(self,&nbsp;state:Gtk.StateType,&nbsp;color:Gdk.Color=None)</tt></dl>
+
+<dl><dt><strong>modify_cursor</strong> = gi.FunctionInfo(modify_cursor)<dd><tt><a href="#InfoLabels-modify_cursor">modify_cursor</a>(self,&nbsp;primary:Gdk.Color=None,&nbsp;secondary:Gdk.Color=None)</tt></dl>
+
+<dl><dt><strong>modify_fg</strong> = gi.FunctionInfo(modify_fg)<dd><tt><a href="#InfoLabels-modify_fg">modify_fg</a>(self,&nbsp;state:Gtk.StateType,&nbsp;color:Gdk.Color=None)</tt></dl>
+
+<dl><dt><strong>modify_font</strong> = gi.FunctionInfo(modify_font)<dd><tt><a href="#InfoLabels-modify_font">modify_font</a>(self,&nbsp;font_desc:Pango.FontDescription=None)</tt></dl>
+
+<dl><dt><strong>modify_style</strong> = gi.FunctionInfo(modify_style)<dd><tt><a href="#InfoLabels-modify_style">modify_style</a>(self,&nbsp;style:Gtk.RcStyle)</tt></dl>
+
+<dl><dt><strong>modify_text</strong> = gi.FunctionInfo(modify_text)<dd><tt><a href="#InfoLabels-modify_text">modify_text</a>(self,&nbsp;state:Gtk.StateType,&nbsp;color:Gdk.Color=None)</tt></dl>
+
+<dl><dt><strong>override_background_color</strong> = gi.FunctionInfo(override_background_color)<dd><tt><a href="#InfoLabels-override_background_color">override_background_color</a>(self,&nbsp;state:Gtk.StateFlags,&nbsp;color:Gdk.RGBA=None)</tt></dl>
+
+<dl><dt><strong>override_color</strong> = gi.FunctionInfo(override_color)<dd><tt><a href="#InfoLabels-override_color">override_color</a>(self,&nbsp;state:Gtk.StateFlags,&nbsp;color:Gdk.RGBA=None)</tt></dl>
+
+<dl><dt><strong>override_cursor</strong> = gi.FunctionInfo(override_cursor)<dd><tt><a href="#InfoLabels-override_cursor">override_cursor</a>(self,&nbsp;cursor:Gdk.RGBA=None,&nbsp;secondary_cursor:Gdk.RGBA=None)</tt></dl>
+
+<dl><dt><strong>override_font</strong> = gi.FunctionInfo(override_font)<dd><tt><a href="#InfoLabels-override_font">override_font</a>(self,&nbsp;font_desc:Pango.FontDescription=None)</tt></dl>
+
+<dl><dt><strong>override_symbolic_color</strong> = gi.FunctionInfo(override_symbolic_color)<dd><tt><a href="#InfoLabels-override_symbolic_color">override_symbolic_color</a>(self,&nbsp;name:str,&nbsp;color:Gdk.RGBA=None)</tt></dl>
+
+<dl><dt><strong>path</strong> = gi.FunctionInfo(path)<dd><tt><a href="#InfoLabels-path">path</a>(self)&nbsp;-&gt;&nbsp;path_length:int,&nbsp;path:str,&nbsp;path_reversed:str</tt></dl>
+
+<dl><dt><strong>pop_composite_child</strong> = gi.FunctionInfo(pop_composite_child)<dd><tt><a href="#InfoLabels-pop_composite_child">pop_composite_child</a>()</tt></dl>
+
+<dl><dt><strong>push_composite_child</strong> = gi.FunctionInfo(push_composite_child)<dd><tt><a href="#InfoLabels-push_composite_child">push_composite_child</a>()</tt></dl>
+
+<dl><dt><strong>queue_allocate</strong> = gi.FunctionInfo(queue_allocate)<dd><tt><a href="#InfoLabels-queue_allocate">queue_allocate</a>(self)</tt></dl>
+
+<dl><dt><strong>queue_compute_expand</strong> = gi.FunctionInfo(queue_compute_expand)<dd><tt><a href="#InfoLabels-queue_compute_expand">queue_compute_expand</a>(self)</tt></dl>
+
+<dl><dt><strong>queue_draw</strong> = gi.FunctionInfo(queue_draw)<dd><tt><a href="#InfoLabels-queue_draw">queue_draw</a>(self)</tt></dl>
+
+<dl><dt><strong>queue_draw_area</strong> = gi.FunctionInfo(queue_draw_area)<dd><tt><a href="#InfoLabels-queue_draw_area">queue_draw_area</a>(self,&nbsp;x:int,&nbsp;y:int,&nbsp;width:int,&nbsp;height:int)</tt></dl>
+
+<dl><dt><strong>queue_draw_region</strong> = gi.FunctionInfo(queue_draw_region)<dd><tt><a href="#InfoLabels-queue_draw_region">queue_draw_region</a>(self,&nbsp;region:cairo.Region)</tt></dl>
+
+<dl><dt><strong>queue_resize</strong> = gi.FunctionInfo(queue_resize)<dd><tt><a href="#InfoLabels-queue_resize">queue_resize</a>(self)</tt></dl>
+
+<dl><dt><strong>queue_resize_no_redraw</strong> = gi.FunctionInfo(queue_resize_no_redraw)<dd><tt><a href="#InfoLabels-queue_resize_no_redraw">queue_resize_no_redraw</a>(self)</tt></dl>
+
+<dl><dt><strong>realize</strong> = gi.FunctionInfo(realize)<dd><tt><a href="#InfoLabels-realize">realize</a>(self)</tt></dl>
+
+<dl><dt><strong>region_intersect</strong> = gi.FunctionInfo(region_intersect)<dd><tt><a href="#InfoLabels-region_intersect">region_intersect</a>(self,&nbsp;region:cairo.Region)&nbsp;-&gt;&nbsp;cairo.Region</tt></dl>
+
+<dl><dt><strong>register_window</strong> = gi.FunctionInfo(register_window)<dd><tt><a href="#InfoLabels-register_window">register_window</a>(self,&nbsp;window:Gdk.Window)</tt></dl>
+
+<dl><dt><strong>remove_accelerator</strong> = gi.FunctionInfo(remove_accelerator)<dd><tt><a href="#InfoLabels-remove_accelerator">remove_accelerator</a>(self,&nbsp;accel_group:Gtk.AccelGroup,&nbsp;accel_key:int,&nbsp;accel_mods:Gdk.ModifierType)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>remove_mnemonic_label</strong> = gi.FunctionInfo(remove_mnemonic_label)<dd><tt><a href="#InfoLabels-remove_mnemonic_label">remove_mnemonic_label</a>(self,&nbsp;label:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>remove_tick_callback</strong> = gi.FunctionInfo(remove_tick_callback)<dd><tt><a href="#InfoLabels-remove_tick_callback">remove_tick_callback</a>(self,&nbsp;id:int)</tt></dl>
+
+<dl><dt><strong>render_icon</strong> = gi.FunctionInfo(render_icon)<dd><tt><a href="#InfoLabels-render_icon">render_icon</a>(self,&nbsp;stock_id:str,&nbsp;size:int,&nbsp;detail:str=None)&nbsp;-&gt;&nbsp;GdkPixbuf.Pixbuf&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>render_icon_pixbuf</strong> = gi.FunctionInfo(render_icon_pixbuf)<dd><tt><a href="#InfoLabels-render_icon_pixbuf">render_icon_pixbuf</a>(self,&nbsp;stock_id:str,&nbsp;size:int)&nbsp;-&gt;&nbsp;GdkPixbuf.Pixbuf&nbsp;or&nbsp;None</tt></dl>
+
+<dl><dt><strong>reparent</strong> = gi.FunctionInfo(reparent)<dd><tt><a href="#InfoLabels-reparent">reparent</a>(self,&nbsp;new_parent:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>reset_rc_styles</strong> = gi.FunctionInfo(reset_rc_styles)<dd><tt><a href="#InfoLabels-reset_rc_styles">reset_rc_styles</a>(self)</tt></dl>
+
+<dl><dt><strong>reset_style</strong> = gi.FunctionInfo(reset_style)<dd><tt><a href="#InfoLabels-reset_style">reset_style</a>(self)</tt></dl>
+
+<dl><dt><strong>send_expose</strong> = gi.FunctionInfo(send_expose)<dd><tt><a href="#InfoLabels-send_expose">send_expose</a>(self,&nbsp;event:Gdk.Event)&nbsp;-&gt;&nbsp;int</tt></dl>
+
+<dl><dt><strong>send_focus_change</strong> = gi.FunctionInfo(send_focus_change)<dd><tt><a href="#InfoLabels-send_focus_change">send_focus_change</a>(self,&nbsp;event:Gdk.Event)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>set_accel_path</strong> = gi.FunctionInfo(set_accel_path)<dd><tt><a href="#InfoLabels-set_accel_path">set_accel_path</a>(self,&nbsp;accel_path:str=None,&nbsp;accel_group:Gtk.AccelGroup=None)</tt></dl>
+
+<dl><dt><strong>set_allocation</strong> = gi.FunctionInfo(set_allocation)<dd><tt><a href="#InfoLabels-set_allocation">set_allocation</a>(self,&nbsp;allocation:Gdk.Rectangle)</tt></dl>
+
+<dl><dt><strong>set_app_paintable</strong> = gi.FunctionInfo(set_app_paintable)<dd><tt><a href="#InfoLabels-set_app_paintable">set_app_paintable</a>(self,&nbsp;app_paintable:bool)</tt></dl>
+
+<dl><dt><strong>set_can_default</strong> = gi.FunctionInfo(set_can_default)<dd><tt><a href="#InfoLabels-set_can_default">set_can_default</a>(self,&nbsp;can_default:bool)</tt></dl>
+
+<dl><dt><strong>set_can_focus</strong> = gi.FunctionInfo(set_can_focus)<dd><tt><a href="#InfoLabels-set_can_focus">set_can_focus</a>(self,&nbsp;can_focus:bool)</tt></dl>
+
+<dl><dt><strong>set_child_visible</strong> = gi.FunctionInfo(set_child_visible)<dd><tt><a href="#InfoLabels-set_child_visible">set_child_visible</a>(self,&nbsp;is_visible:bool)</tt></dl>
+
+<dl><dt><strong>set_clip</strong> = gi.FunctionInfo(set_clip)<dd><tt><a href="#InfoLabels-set_clip">set_clip</a>(self,&nbsp;clip:Gdk.Rectangle)</tt></dl>
+
+<dl><dt><strong>set_composite_name</strong> = gi.FunctionInfo(set_composite_name)<dd><tt><a href="#InfoLabels-set_composite_name">set_composite_name</a>(self,&nbsp;name:str)</tt></dl>
+
+<dl><dt><strong>set_default_direction</strong> = gi.FunctionInfo(set_default_direction)<dd><tt><a href="#InfoLabels-set_default_direction">set_default_direction</a>(dir:Gtk.TextDirection)</tt></dl>
+
+<dl><dt><strong>set_device_enabled</strong> = gi.FunctionInfo(set_device_enabled)<dd><tt><a href="#InfoLabels-set_device_enabled">set_device_enabled</a>(self,&nbsp;device:Gdk.Device,&nbsp;enabled:bool)</tt></dl>
+
+<dl><dt><strong>set_device_events</strong> = gi.FunctionInfo(set_device_events)<dd><tt><a href="#InfoLabels-set_device_events">set_device_events</a>(self,&nbsp;device:Gdk.Device,&nbsp;events:Gdk.EventMask)</tt></dl>
+
+<dl><dt><strong>set_direction</strong> = gi.FunctionInfo(set_direction)<dd><tt><a href="#InfoLabels-set_direction">set_direction</a>(self,&nbsp;dir:Gtk.TextDirection)</tt></dl>
+
+<dl><dt><strong>set_double_buffered</strong> = gi.FunctionInfo(set_double_buffered)<dd><tt><a href="#InfoLabels-set_double_buffered">set_double_buffered</a>(self,&nbsp;double_buffered:bool)</tt></dl>
+
+<dl><dt><strong>set_events</strong> = gi.FunctionInfo(set_events)<dd><tt><a href="#InfoLabels-set_events">set_events</a>(self,&nbsp;events:int)</tt></dl>
+
+<dl><dt><strong>set_focus_on_click</strong> = gi.FunctionInfo(set_focus_on_click)<dd><tt><a href="#InfoLabels-set_focus_on_click">set_focus_on_click</a>(self,&nbsp;focus_on_click:bool)</tt></dl>
+
+<dl><dt><strong>set_font_map</strong> = gi.FunctionInfo(set_font_map)<dd><tt><a href="#InfoLabels-set_font_map">set_font_map</a>(self,&nbsp;font_map:Pango.FontMap=None)</tt></dl>
+
+<dl><dt><strong>set_font_options</strong> = gi.FunctionInfo(set_font_options)<dd><tt><a href="#InfoLabels-set_font_options">set_font_options</a>(self,&nbsp;options:cairo.FontOptions=None)</tt></dl>
+
+<dl><dt><strong>set_halign</strong> = gi.FunctionInfo(set_halign)<dd><tt><a href="#InfoLabels-set_halign">set_halign</a>(self,&nbsp;align:Gtk.Align)</tt></dl>
+
+<dl><dt><strong>set_has_tooltip</strong> = gi.FunctionInfo(set_has_tooltip)<dd><tt><a href="#InfoLabels-set_has_tooltip">set_has_tooltip</a>(self,&nbsp;has_tooltip:bool)</tt></dl>
+
+<dl><dt><strong>set_has_window</strong> = gi.FunctionInfo(set_has_window)<dd><tt><a href="#InfoLabels-set_has_window">set_has_window</a>(self,&nbsp;has_window:bool)</tt></dl>
+
+<dl><dt><strong>set_hexpand</strong> = gi.FunctionInfo(set_hexpand)<dd><tt><a href="#InfoLabels-set_hexpand">set_hexpand</a>(self,&nbsp;expand:bool)</tt></dl>
+
+<dl><dt><strong>set_hexpand_set</strong> = gi.FunctionInfo(set_hexpand_set)<dd><tt><a href="#InfoLabels-set_hexpand_set">set_hexpand_set</a>(self,&nbsp;set:bool)</tt></dl>
+
+<dl><dt><strong>set_mapped</strong> = gi.FunctionInfo(set_mapped)<dd><tt><a href="#InfoLabels-set_mapped">set_mapped</a>(self,&nbsp;mapped:bool)</tt></dl>
+
+<dl><dt><strong>set_margin_bottom</strong> = gi.FunctionInfo(set_margin_bottom)<dd><tt><a href="#InfoLabels-set_margin_bottom">set_margin_bottom</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_margin_end</strong> = gi.FunctionInfo(set_margin_end)<dd><tt><a href="#InfoLabels-set_margin_end">set_margin_end</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_margin_left</strong> = gi.FunctionInfo(set_margin_left)<dd><tt><a href="#InfoLabels-set_margin_left">set_margin_left</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_margin_right</strong> = gi.FunctionInfo(set_margin_right)<dd><tt><a href="#InfoLabels-set_margin_right">set_margin_right</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_margin_start</strong> = gi.FunctionInfo(set_margin_start)<dd><tt><a href="#InfoLabels-set_margin_start">set_margin_start</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_margin_top</strong> = gi.FunctionInfo(set_margin_top)<dd><tt><a href="#InfoLabels-set_margin_top">set_margin_top</a>(self,&nbsp;margin:int)</tt></dl>
+
+<dl><dt><strong>set_name</strong> = gi.FunctionInfo(set_name)<dd><tt><a href="#InfoLabels-set_name">set_name</a>(self,&nbsp;name:str)</tt></dl>
+
+<dl><dt><strong>set_no_show_all</strong> = gi.FunctionInfo(set_no_show_all)<dd><tt><a href="#InfoLabels-set_no_show_all">set_no_show_all</a>(self,&nbsp;no_show_all:bool)</tt></dl>
+
+<dl><dt><strong>set_opacity</strong> = gi.FunctionInfo(set_opacity)<dd><tt><a href="#InfoLabels-set_opacity">set_opacity</a>(self,&nbsp;opacity:float)</tt></dl>
+
+<dl><dt><strong>set_parent</strong> = gi.FunctionInfo(set_parent)<dd><tt><a href="#InfoLabels-set_parent">set_parent</a>(self,&nbsp;parent:Gtk.Widget)</tt></dl>
+
+<dl><dt><strong>set_parent_window</strong> = gi.FunctionInfo(set_parent_window)<dd><tt><a href="#InfoLabels-set_parent_window">set_parent_window</a>(self,&nbsp;parent_window:Gdk.Window)</tt></dl>
+
+<dl><dt><strong>set_realized</strong> = gi.FunctionInfo(set_realized)<dd><tt><a href="#InfoLabels-set_realized">set_realized</a>(self,&nbsp;realized:bool)</tt></dl>
+
+<dl><dt><strong>set_receives_default</strong> = gi.FunctionInfo(set_receives_default)<dd><tt><a href="#InfoLabels-set_receives_default">set_receives_default</a>(self,&nbsp;receives_default:bool)</tt></dl>
+
+<dl><dt><strong>set_redraw_on_allocate</strong> = gi.FunctionInfo(set_redraw_on_allocate)<dd><tt><a href="#InfoLabels-set_redraw_on_allocate">set_redraw_on_allocate</a>(self,&nbsp;redraw_on_allocate:bool)</tt></dl>
+
+<dl><dt><strong>set_sensitive</strong> = gi.FunctionInfo(set_sensitive)<dd><tt><a href="#InfoLabels-set_sensitive">set_sensitive</a>(self,&nbsp;sensitive:bool)</tt></dl>
+
+<dl><dt><strong>set_size_request</strong> = gi.FunctionInfo(set_size_request)<dd><tt><a href="#InfoLabels-set_size_request">set_size_request</a>(self,&nbsp;width:int,&nbsp;height:int)</tt></dl>
+
+<dl><dt><strong>set_state</strong> = gi.FunctionInfo(set_state)<dd><tt><a href="#InfoLabels-set_state">set_state</a>(self,&nbsp;state:Gtk.StateType)</tt></dl>
+
+<dl><dt><strong>set_state_flags</strong> = gi.FunctionInfo(set_state_flags)<dd><tt><a href="#InfoLabels-set_state_flags">set_state_flags</a>(self,&nbsp;flags:Gtk.StateFlags,&nbsp;clear:bool)</tt></dl>
+
+<dl><dt><strong>set_style</strong> = gi.FunctionInfo(set_style)<dd><tt><a href="#InfoLabels-set_style">set_style</a>(self,&nbsp;style:Gtk.Style=None)</tt></dl>
+
+<dl><dt><strong>set_support_multidevice</strong> = gi.FunctionInfo(set_support_multidevice)<dd><tt><a href="#InfoLabels-set_support_multidevice">set_support_multidevice</a>(self,&nbsp;support_multidevice:bool)</tt></dl>
+
+<dl><dt><strong>set_tooltip_markup</strong> = gi.FunctionInfo(set_tooltip_markup)<dd><tt><a href="#InfoLabels-set_tooltip_markup">set_tooltip_markup</a>(self,&nbsp;markup:str=None)</tt></dl>
+
+<dl><dt><strong>set_tooltip_text</strong> = gi.FunctionInfo(set_tooltip_text)<dd><tt><a href="#InfoLabels-set_tooltip_text">set_tooltip_text</a>(self,&nbsp;text:str=None)</tt></dl>
+
+<dl><dt><strong>set_tooltip_window</strong> = gi.FunctionInfo(set_tooltip_window)<dd><tt><a href="#InfoLabels-set_tooltip_window">set_tooltip_window</a>(self,&nbsp;custom_window:Gtk.Window=None)</tt></dl>
+
+<dl><dt><strong>set_valign</strong> = gi.FunctionInfo(set_valign)<dd><tt><a href="#InfoLabels-set_valign">set_valign</a>(self,&nbsp;align:Gtk.Align)</tt></dl>
+
+<dl><dt><strong>set_vexpand</strong> = gi.FunctionInfo(set_vexpand)<dd><tt><a href="#InfoLabels-set_vexpand">set_vexpand</a>(self,&nbsp;expand:bool)</tt></dl>
+
+<dl><dt><strong>set_vexpand_set</strong> = gi.FunctionInfo(set_vexpand_set)<dd><tt><a href="#InfoLabels-set_vexpand_set">set_vexpand_set</a>(self,&nbsp;set:bool)</tt></dl>
+
+<dl><dt><strong>set_visible</strong> = gi.FunctionInfo(set_visible)<dd><tt><a href="#InfoLabels-set_visible">set_visible</a>(self,&nbsp;visible:bool)</tt></dl>
+
+<dl><dt><strong>set_visual</strong> = gi.FunctionInfo(set_visual)<dd><tt><a href="#InfoLabels-set_visual">set_visual</a>(self,&nbsp;visual:Gdk.Visual=None)</tt></dl>
+
+<dl><dt><strong>set_window</strong> = gi.FunctionInfo(set_window)<dd><tt><a href="#InfoLabels-set_window">set_window</a>(self,&nbsp;window:Gdk.Window)</tt></dl>
+
+<dl><dt><strong>shape_combine_region</strong> = gi.FunctionInfo(shape_combine_region)<dd><tt><a href="#InfoLabels-shape_combine_region">shape_combine_region</a>(self,&nbsp;region:cairo.Region=None)</tt></dl>
+
+<dl><dt><strong>show</strong> = gi.FunctionInfo(show)<dd><tt><a href="#InfoLabels-show">show</a>(self)</tt></dl>
+
+<dl><dt><strong>show_all</strong> = gi.FunctionInfo(show_all)<dd><tt><a href="#InfoLabels-show_all">show_all</a>(self)</tt></dl>
+
+<dl><dt><strong>show_now</strong> = gi.FunctionInfo(show_now)<dd><tt><a href="#InfoLabels-show_now">show_now</a>(self)</tt></dl>
+
+<dl><dt><strong>size_allocate</strong> = gi.FunctionInfo(size_allocate)<dd><tt><a href="#InfoLabels-size_allocate">size_allocate</a>(self,&nbsp;allocation:Gdk.Rectangle)</tt></dl>
+
+<dl><dt><strong>size_allocate_with_baseline</strong> = gi.FunctionInfo(size_allocate_with_baseline)<dd><tt><a href="#InfoLabels-size_allocate_with_baseline">size_allocate_with_baseline</a>(self,&nbsp;allocation:Gdk.Rectangle,&nbsp;baseline:int)</tt></dl>
+
+<dl><dt><strong>size_request</strong> = gi.FunctionInfo(size_request)<dd><tt><a href="#InfoLabels-size_request">size_request</a>(self)&nbsp;-&gt;&nbsp;requisition:Gtk.Requisition</tt></dl>
+
+<dl><dt><strong>style_attach</strong> = gi.FunctionInfo(style_attach)<dd><tt><a href="#InfoLabels-style_attach">style_attach</a>(self)</tt></dl>
+
+<dl><dt><strong>thaw_child_notify</strong> = gi.FunctionInfo(thaw_child_notify)<dd><tt><a href="#InfoLabels-thaw_child_notify">thaw_child_notify</a>(self)</tt></dl>
+
+<dl><dt><strong>trigger_tooltip_query</strong> = gi.FunctionInfo(trigger_tooltip_query)<dd><tt><a href="#InfoLabels-trigger_tooltip_query">trigger_tooltip_query</a>(self)</tt></dl>
+
+<dl><dt><strong>unmap</strong> = gi.FunctionInfo(unmap)<dd><tt><a href="#InfoLabels-unmap">unmap</a>(self)</tt></dl>
+
+<dl><dt><strong>unparent</strong> = gi.FunctionInfo(unparent)<dd><tt><a href="#InfoLabels-unparent">unparent</a>(self)</tt></dl>
+
+<dl><dt><strong>unrealize</strong> = gi.FunctionInfo(unrealize)<dd><tt><a href="#InfoLabels-unrealize">unrealize</a>(self)</tt></dl>
+
+<dl><dt><strong>unregister_window</strong> = gi.FunctionInfo(unregister_window)<dd><tt><a href="#InfoLabels-unregister_window">unregister_window</a>(self,&nbsp;window:Gdk.Window)</tt></dl>
+
+<dl><dt><strong>unset_state_flags</strong> = gi.FunctionInfo(unset_state_flags)<dd><tt><a href="#InfoLabels-unset_state_flags">unset_state_flags</a>(self,&nbsp;flags:Gtk.StateFlags)</tt></dl>
+
+<hr>
+Data descriptors inherited from <a href="gi.repository.GObject.html#InitiallyUnowned">gi.repository.GObject.InitiallyUnowned</a>:<br>
+<dl><dt><strong>g_type_instance</strong></dt>
+</dl>
+<dl><dt><strong>qdata</strong></dt>
+</dl>
+<dl><dt><strong>ref_count</strong></dt>
+</dl>
+<hr>
+Methods inherited from <a href="gi.overrides.GObject.html#Object">gi.overrides.GObject.Object</a>:<br>
+<dl><dt><a name="InfoLabels-__copy__"><strong>__copy__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-__deepcopy__"><strong>__deepcopy__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-bind_property"><strong>bind_property</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-bind_property_full"><strong>bind_property_full</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-chain"><strong>chain</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-compat_control"><strong>compat_control</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-connect"><strong>connect</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-connect_after"><strong>connect_after</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-connect_data"><strong>connect_data</strong></a>(self, detailed_signal, handler, *data, **kwargs)</dt><dd><tt>Connect&nbsp;a&nbsp;callback&nbsp;to&nbsp;the&nbsp;given&nbsp;signal&nbsp;with&nbsp;optional&nbsp;user&nbsp;data.<br>
+&nbsp;<br>
+:param&nbsp;str&nbsp;detailed_signal:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;detailed&nbsp;signal&nbsp;to&nbsp;connect&nbsp;to.<br>
+:param&nbsp;callable&nbsp;handler:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Callback&nbsp;handler&nbsp;to&nbsp;connect&nbsp;to&nbsp;the&nbsp;signal.<br>
+:param&nbsp;*data:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Variable&nbsp;data&nbsp;which&nbsp;is&nbsp;passed&nbsp;through&nbsp;to&nbsp;the&nbsp;signal&nbsp;handler.<br>
+:param&nbsp;GObject.ConnectFlags&nbsp;connect_flags:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Flags&nbsp;used&nbsp;for&nbsp;connection&nbsp;options.<br>
+:returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;signal&nbsp;id&nbsp;which&nbsp;can&nbsp;be&nbsp;used&nbsp;with&nbsp;disconnect.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-connect_object"><strong>connect_object</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-connect_object_after"><strong>connect_object_after</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-disconnect"><strong>disconnect</strong></a> = signal_handler_disconnect(...)</dt><dd><tt>signal_handler_disconnect(instance:GObject.Object,&nbsp;handler_id:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-disconnect_by_func"><strong>disconnect_by_func</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-emit"><strong>emit</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-emit_stop_by_name"><strong>emit_stop_by_name</strong></a> = <a href="#InfoLabels-stop_emission">stop_emission</a>(self, detailed_signal)</dt></dl>
+
+<dl><dt><a name="InfoLabels-force_floating"><strong>force_floating</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-freeze_notify"><strong>freeze_notify</strong></a>(self)</dt><dd><tt>Freezes&nbsp;the&nbsp;object's&nbsp;property-changed&nbsp;notification&nbsp;queue.<br>
+&nbsp;<br>
+:returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;context&nbsp;manager&nbsp;which&nbsp;optionally&nbsp;can&nbsp;be&nbsp;used&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;automatically&nbsp;thaw&nbsp;notifications.<br>
+&nbsp;<br>
+This&nbsp;will&nbsp;freeze&nbsp;the&nbsp;object&nbsp;so&nbsp;that&nbsp;"notify"&nbsp;signals&nbsp;are&nbsp;blocked&nbsp;until<br>
+the&nbsp;<a href="#InfoLabels-thaw_notify">thaw_notify</a>()&nbsp;method&nbsp;is&nbsp;called.<br>
+&nbsp;<br>
+..&nbsp;code-block::&nbsp;python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;obj.<a href="#InfoLabels-freeze_notify">freeze_notify</a>():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-get_data"><strong>get_data</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-get_properties"><strong>get_properties</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-get_property"><strong>get_property</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-get_qdata"><strong>get_qdata</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-handler_block"><strong>handler_block</strong></a> = signal_handler_block(obj, handler_id)</dt><dd><tt>Blocks&nbsp;the&nbsp;signal&nbsp;handler&nbsp;from&nbsp;being&nbsp;invoked&nbsp;until<br>
+<a href="#InfoLabels-handler_unblock">handler_unblock</a>()&nbsp;is&nbsp;called.<br>
+&nbsp;<br>
+:param&nbsp;GObject.Object&nbsp;obj:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Object&nbsp;instance&nbsp;to&nbsp;block&nbsp;handlers&nbsp;for.<br>
+:param&nbsp;int&nbsp;handler_id:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Id&nbsp;of&nbsp;signal&nbsp;to&nbsp;block.<br>
+:returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;context&nbsp;manager&nbsp;which&nbsp;optionally&nbsp;can&nbsp;be&nbsp;used&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;automatically&nbsp;unblock&nbsp;the&nbsp;handler:<br>
+&nbsp;<br>
+..&nbsp;code-block::&nbsp;python<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;GObject.signal_handler_block(obj,&nbsp;id):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-handler_block_by_func"><strong>handler_block_by_func</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-handler_disconnect"><strong>handler_disconnect</strong></a> = signal_handler_disconnect(...)</dt><dd><tt>signal_handler_disconnect(instance:GObject.Object,&nbsp;handler_id:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-handler_is_connected"><strong>handler_is_connected</strong></a> = signal_handler_is_connected(...)</dt><dd><tt>signal_handler_is_connected(instance:GObject.Object,&nbsp;handler_id:int)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-handler_unblock"><strong>handler_unblock</strong></a> = signal_handler_unblock(...)</dt><dd><tt>signal_handler_unblock(instance:GObject.Object,&nbsp;handler_id:int)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-handler_unblock_by_func"><strong>handler_unblock_by_func</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-interface_find_property"><strong>interface_find_property</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-interface_install_property"><strong>interface_install_property</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-interface_list_properties"><strong>interface_list_properties</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-notify_by_pspec"><strong>notify_by_pspec</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-ref"><strong>ref</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-ref_sink"><strong>ref_sink</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-replace_data"><strong>replace_data</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-replace_qdata"><strong>replace_qdata</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-run_dispose"><strong>run_dispose</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-set_data"><strong>set_data</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-set_properties"><strong>set_properties</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-set_property"><strong>set_property</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InfoLabels-steal_data"><strong>steal_data</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-steal_qdata"><strong>steal_qdata</strong></a> = <a href="#InfoLabels-_unsupported_data_method">_unsupported_data_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-stop_emission"><strong>stop_emission</strong></a>(self, detailed_signal)</dt><dd><tt>Deprecated,&nbsp;please&nbsp;use&nbsp;stop_emission_by_name.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-stop_emission_by_name"><strong>stop_emission_by_name</strong></a> = signal_stop_emission_by_name(...)</dt><dd><tt>signal_stop_emission_by_name(instance:GObject.Object,&nbsp;detailed_signal:str)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-unref"><strong>unref</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-watch_closure"><strong>watch_closure</strong></a> = <a href="#InfoLabels-_unsupported_method">_unsupported_method</a>(self, *args, **kargs)</dt></dl>
+
+<dl><dt><a name="InfoLabels-weak_ref"><strong>weak_ref</strong></a>(...)</dt></dl>
+
+<hr>
+Class methods inherited from gi.repository.GObject.Object:<br>
+<dl><dt><a name="InfoLabels-find_property"><strong>find_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-find_property">find_property</a>(self,&nbsp;property_name:str)&nbsp;-&gt;&nbsp;GObject.ParamSpec</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-install_properties"><strong>install_properties</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-install_properties">install_properties</a>(self,&nbsp;pspecs:list)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-install_property"><strong>install_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-install_property">install_property</a>(self,&nbsp;property_id:int,&nbsp;pspec:GObject.ParamSpec)</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-list_properties"><strong>list_properties</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-list_properties">list_properties</a>(self)&nbsp;-&gt;&nbsp;list,&nbsp;n_properties:int</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-override_property"><strong>override_property</strong></a>(...)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#GObjectMeta">gi.types.GObjectMeta</a></font></font></dt><dd><tt><a href="#InfoLabels-override_property">override_property</a>(self,&nbsp;property_id:int,&nbsp;name:str)</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from gi.repository.GObject.Object:<br>
+<dl><dt><strong>getv</strong> = gi.FunctionInfo(getv)<dd><tt><a href="#InfoLabels-getv">getv</a>(self,&nbsp;names:list,&nbsp;values:list)</tt></dl>
+
+<dl><dt><strong>is_floating</strong> = gi.FunctionInfo(is_floating)<dd><tt><a href="#InfoLabels-is_floating">is_floating</a>(self)&nbsp;-&gt;&nbsp;bool</tt></dl>
+
+<dl><dt><strong>newv</strong> = gi.FunctionInfo(newv)<dd><tt><a href="#InfoLabels-newv">newv</a>(object_type:GType,&nbsp;parameters:list)&nbsp;-&gt;&nbsp;GObject.Object</tt></dl>
+
+<dl><dt><strong>notify</strong> = gi.FunctionInfo(notify)<dd><tt><a href="#InfoLabels-notify">notify</a>(self,&nbsp;property_name:str)</tt></dl>
+
+<dl><dt><strong>thaw_notify</strong> = gi.FunctionInfo(thaw_notify)<dd><tt><a href="#InfoLabels-thaw_notify">thaw_notify</a>(self)</tt></dl>
+
+<hr>
+Methods inherited from <a href="gi._gi.html#GObject">gi._gi.GObject</a>:<br>
+<dl><dt><a name="InfoLabels-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__eq__"><strong>__eq__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self==value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__ge__"><strong>__ge__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;=value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__gt__"><strong>__gt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&gt;value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__hash__"><strong>__hash__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;hash(self).</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__le__"><strong>__le__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;=value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__lt__"><strong>__lt__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self&lt;value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__ne__"><strong>__ne__</strong></a>(self, value, /)</dt><dd><tt>Return&nbsp;self!=value.</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="InfoLabels-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<hr>
+Static methods inherited from <a href="gi._gi.html#GObject">gi._gi.GObject</a>:<br>
+<dl><dt><a name="InfoLabels-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="gi.types.html#_GObjectMetaBase">gi.types._GObjectMetaBase</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="gi._gi.html#GObject">gi._gi.GObject</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__gpointer__</strong></dt>
+</dl>
+<dl><dt><strong>__grefcount__</strong></dt>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="gi._gi.html#GObject">gi._gi.GObject</a>:<br>
+<dl><dt><strong>__gdoc__</strong> = 'Object InfoLabels+InfoLabels<font color="#c040c0">\n\n</font>Class that creates...window<font color="#c040c0">\n\n</font>Signals from GObject:<font color="#c040c0">\n</font>  notify (GParam)<font color="#c040c0">\n\n</font>'</dl>
+
+<dl><dt><strong>props</strong> = &lt;gi._gi.GProps object&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="gi.repository.Atk.html#ImplementorIface">gi.repository.Atk.ImplementorIface</a>:<br>
+<dl><dt><strong>__weakref__</strong> = &lt;weakref at 0x7f165477e4a0; to 'GObjectMeta' at 0x558aa4c44810 (InfoLabels)&gt;</dl>
+
+<hr>
+Data and other attributes inherited from <a href="gi.repository.Gtk.html#Buildable">gi.repository.Gtk.Buildable</a>:<br>
+<dl><dt><strong>add_child</strong> = gi.FunctionInfo(add_child)<dd><tt><a href="#InfoLabels-add_child">add_child</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;child:GObject.Object,&nbsp;type:str=None)</tt></dl>
+
+<dl><dt><strong>construct_child</strong> = gi.FunctionInfo(construct_child)<dd><tt><a href="#InfoLabels-construct_child">construct_child</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;name:str)&nbsp;-&gt;&nbsp;GObject.Object</tt></dl>
+
+<dl><dt><strong>custom_finished</strong> = gi.FunctionInfo(custom_finished)<dd><tt><a href="#InfoLabels-custom_finished">custom_finished</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;child:GObject.Object=None,&nbsp;tagname:str,&nbsp;data=None)</tt></dl>
+
+<dl><dt><strong>custom_tag_end</strong> = gi.FunctionInfo(custom_tag_end)<dd><tt><a href="#InfoLabels-custom_tag_end">custom_tag_end</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;child:GObject.Object=None,&nbsp;tagname:str,&nbsp;data=None)</tt></dl>
+
+<dl><dt><strong>custom_tag_start</strong> = gi.FunctionInfo(custom_tag_start)<dd><tt><a href="#InfoLabels-custom_tag_start">custom_tag_start</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;child:GObject.Object=None,&nbsp;tagname:str)&nbsp;-&gt;&nbsp;bool,&nbsp;parser:GLib.MarkupParser,&nbsp;data</tt></dl>
+
+<dl><dt><strong>get_internal_child</strong> = gi.FunctionInfo(get_internal_child)<dd><tt><a href="#InfoLabels-get_internal_child">get_internal_child</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;childname:str)&nbsp;-&gt;&nbsp;GObject.Object</tt></dl>
+
+<dl><dt><strong>parser_finished</strong> = gi.FunctionInfo(parser_finished)<dd><tt><a href="#InfoLabels-parser_finished">parser_finished</a>(self,&nbsp;builder:Gtk.Builder)</tt></dl>
+
+<dl><dt><strong>set_buildable_property</strong> = gi.FunctionInfo(set_buildable_property)<dd><tt><a href="#InfoLabels-set_buildable_property">set_buildable_property</a>(self,&nbsp;builder:Gtk.Builder,&nbsp;name:str,&nbsp;value:GObject.Value)</tt></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

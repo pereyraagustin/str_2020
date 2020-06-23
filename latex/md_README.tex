@@ -1,0 +1,57 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysection{Descripción}\label{md_README_autotoc_md1}
+Proyecto hecho bajo el marco de la materia {\itshape Sistemas en Tiempo Real}, que consiste en el manejo a través de una interfaz gráfica de la velocidad de un motor. El proyecto consiste en tres módulos\+:
+
+
+\begin{DoxyEnumerate}
+\item Interfaz\+: implementada en python3, pone a disposición del usuario la modificación de la velocidad deseada, y las variables P, I, D del módulo P\+ID, que se encarga de calibrar el torque del motor.
+\item Tiempo Real\+: que combina un módulo de P\+ID para calibrar el torque del motor en función de la velocidad actual y la deseada, un módulo R\+TC para realizar controles cíclicos del motor, y un módulo de control del motor. Éste módulo de control del motor está implementado de dos formas\+:
+\begin{DoxyItemize}
+\item Un simulador del motor.
+\item Un controlador del motor que se comunica por U\+DP con el motor real.
+\end{DoxyItemize}
+\item El motor real, que se utiliza sólo si se usa el módulo de {\itshape tiempo real} correspondiente, y que se espera está expuesto a través de un servidor a Internet, esperando comandos por U\+DP.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md2}{}\doxysection{Protocolo de comunicación}\label{md_README_autotoc_md2}
+La interfaz envía por el socket T\+CP una cadena de caracteres con el formato\+: \textquotesingle{}velocidad deseada,kp,ki,kd\textquotesingle{} Donde la velocidad deseada es un entero en el rango inclusivo \mbox{[}0,255\mbox{]}, y kp, ki, kd son números de punto flotante.
+
+El servidor envía a la interfaz como respuesta a dicha información la cadena de formato\+: \textquotesingle{}velocidad real,torque real\textquotesingle{} Donde ambos son enteros en el rango inclusivo \mbox{[}0,255\mbox{]}.
+
+El servidor envía al motor la cadena con el formato\+: \textquotesingle{}torque,{\itshape valor}\textquotesingle{}
+
+Y recibe del motor la cadena\+: \textquotesingle{}speed,{\itshape valor}\textquotesingle{}\hypertarget{md_README_autotoc_md3}{}\doxysection{Grupo de trabajo}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Integrantes\+: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
+\item Profesor\+: Coppens John.
+\item Materia\+: Sistemas en Tiempo Real.
+\item Año\+: 2020.
+\item Universidad\+: U\+N\+D\+E\+F-\/\+C\+R\+U\+C-\/\+I\+UA.
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{Requerimientos}\label{md_README_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Python3 o superior.
+\item Librerías\+: Gtk, Goo\+Canvas.
+\item gcc
+\item Makefile
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md5}{}\doxysection{Para usar}\label{md_README_autotoc_md5}
+Primero correr el módulo de tiempo real (P\+ID + R\+TC + Motor). Para ello, según el motor que se desée usar, se deberán correr los comandos\+:
+
+
+\begin{DoxyItemize}
+\item Motor U\+DP\+: {\ttfamily cd real\+\_\+time/} {\ttfamily make demo\+\_\+udp} {\ttfamily sudo ./demo\+\_\+udp}
+\item Motor Simulado\+: {\ttfamily cd real\+\_\+time/} ~\newline
+ {\ttfamily make demo\+\_\+sim} ~\newline
+ {\ttfamily sudo ./demo\+\_\+sim} ~\newline
+
+\end{DoxyItemize}
+
+Luego, para utilizar la interfaz, abrir la terminal en la carpeta {\itshape str\+\_\+2020} ({\ttfamily cd ../}), y correr el comando {\ttfamily python3 interfaz.\+py}\hypertarget{md_README_autotoc_md6}{}\doxysection{Solución de problemas}\label{md_README_autotoc_md6}
+A continuación se presenta una pequeña guía de cómo analizar la fuente de algunos problemas que podrían ocurrir al intentar arrancar la aplicación o al realizar cambios en la misma.\hypertarget{md_README_autotoc_md7}{}\doxysubsection{Gráfico de la interfaz no funcionando}\label{md_README_autotoc_md7}
+Usar {\ttfamily netcat -\/l 8080}, abrir la interfaz y mover los deslizadores. Si en la terminal donde está netcat no aparece nada, la conexión al socket no se está realizando. Es probable que el problema se encuentre en las clases {\itshape Client.\+py} o {\itshape Connection.\+py}. Menos probable pero también posible es que la clase {\itshape Graphics.\+py} no esté consultando los datos como debería, en la función {\itshape animate(...)}.\hypertarget{md_README_autotoc_md8}{}\doxysection{T\+O\+D\+O\+:}\label{md_README_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Refactorizar codigo (esquema get\+\_\+speed-\/$>$calcular tque nuevo-\/$>$set\+\_\+torque)
+\item Pasar torque y speed de int a unsigned byte.
+\item Documentar tests y debuggin.
+\item Interfaz\+: adaptacion de espacio entre columnas automatico?
+\item Pasar print a logging 
+\end{DoxyItemize}

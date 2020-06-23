@@ -2,3 +2,6 @@ __pycache__/
 *.o
 *.exe
 .vscode
+html/
+*.html
+latex/

@@ -26,6 +26,7 @@ import socket as skt
 import sys
 from gi.repository import GLib as glib
 from gi.repository import GObject as gobject
+import logging
 
 HOST = "localhost"
 PORT = 8080
@@ -67,6 +68,7 @@ class Client():
         :return: Value that indicates if the client will keep its connection
         :rtype: boolean
         """
+        logging.info("At Client.py: Data received from socket")
         msg = self.socket.recv(100)                # Recibir el mensage de la red
         self.show_data(msg)                        # Enviar los datos a show_data
         return True                                # Queremos quedar activos
@@ -75,7 +77,7 @@ class Client():
         """Send message through socket.
 
         :param msg: The message to send
-        :type msg: str"""
+        :type msg: bytes"""
         self.socket.send(msg.encode())
 
     def show_status(self, msg):

@@ -69,7 +69,7 @@ int main(int argc, char *argv[]) {
             //  Read the interruption to clean
             rtc_tick();
             *vel_t = get_speed();
-            compute_pid(*desired_v, torque_t, vel_t);
+            compute_pid(*desired_v, torque_t, *vel_t);
             set_torque(*torque_t);
         } 
         if (FD_ISSET(fd_socket, &readfds)) {
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
                 set_variables(*kp, *ki, *kd);
                 //  Write to PID and get current speed and torque
                 *vel_t = get_speed();
-                compute_pid(*desired_v, torque_t, vel_t);
+                compute_pid(*desired_v, torque_t, *vel_t);
                 set_torque(*torque_t);
                 //  Send back
                 sprintf(msg, "%d,%d", *vel_t, *torque_t);

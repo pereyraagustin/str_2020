@@ -29,6 +29,7 @@ from gui.MainWindow import MainWindow
 from gui.Sliders import Sliders
 from gui.InfoLabels import InfoLabels
 from gui.Plot import Plot
+from SpeedObserver import SpeedObserver
 import logging
 import re
 
@@ -62,8 +63,11 @@ def main(argv):
     sliders.set_observer(connection.watch_slider, 'i')
     sliders.set_observer(connection.watch_slider, 'd')
     sliders.set_observer(connection.watch_slider, 'v')
+    #   Create and set speed observer
+    speed_observer = SpeedObserver()
+    sliders.set_observer(speed_observer.watch_slider, 'v')
     #   Create graph and get canvas
-    graphics = Graphics(connection)
+    graphics = Graphics(connection, speed_observer)
     graphics.create_animation()
     canvas = graphics.canvas
     canvas.set_size_request(800, 600)

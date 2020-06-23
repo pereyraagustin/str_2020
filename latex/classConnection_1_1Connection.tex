@@ -1,0 +1,113 @@
+\hypertarget{classConnection_1_1Connection}{}\doxysection{Connection.\+Connection Class Reference}
+\label{classConnection_1_1Connection}\index{Connection.Connection@{Connection.Connection}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classConnection_1_1Connection_ae6a7382903aaf26af40b926dac63abf9}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, client)
+\item 
+def \mbox{\hyperlink{classConnection_1_1Connection_aaa073f3989fcfb066b90a8100115560f}{watch\+\_\+slider}} (self, slider, name)
+\item 
+def \mbox{\hyperlink{classConnection_1_1Connection_ad22c771f837135d468ed020d73e14dd7}{read\+\_\+data}} (self, data)
+\item 
+def \mbox{\hyperlink{classConnection_1_1Connection_a52b79bfd278f9ac212b0a85d744f671e}{get\+\_\+updated\+\_\+data}} (self)
+\item 
+def \mbox{\hyperlink{classConnection_1_1Connection_a879c196404418f7c30e05ffb7bd1f4c7}{read\+\_\+last\+\_\+data}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConnection_1_1Connection_a388fd734c67a9cbbc3de28c9de595060}\label{classConnection_1_1Connection_a388fd734c67a9cbbc3de28c9de595060}} 
+{\bfseries sliders}
+\item 
+\mbox{\Hypertarget{classConnection_1_1Connection_a1f43df535fbc5a2caecc53cde95c63a5}\label{classConnection_1_1Connection_a1f43df535fbc5a2caecc53cde95c63a5}} 
+{\bfseries c\+Speed}
+\item 
+\mbox{\Hypertarget{classConnection_1_1Connection_aebb62fc42fc3990a692860a132ce0b88}\label{classConnection_1_1Connection_aebb62fc42fc3990a692860a132ce0b88}} 
+{\bfseries c\+Torque}
+\item 
+\mbox{\Hypertarget{classConnection_1_1Connection_a74a48ba31867950de5c3adb0eccdcd3d}\label{classConnection_1_1Connection_a74a48ba31867950de5c3adb0eccdcd3d}} 
+{\bfseries socket\+\_\+cli}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class that intermediates between GUI and motor through TCP socket. Be careful, as before use
+it needs sliders to be properly set.
+
+:param client: Socket client to connect to the motor.
+:type Client: class:`Client`
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConnection_1_1Connection_ae6a7382903aaf26af40b926dac63abf9}\label{classConnection_1_1Connection_ae6a7382903aaf26af40b926dac63abf9}} 
+\index{Connection.Connection@{Connection.Connection}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Connection.Connection@{Connection.Connection}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Connection.\+Connection.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{client }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor method\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConnection_1_1Connection_a52b79bfd278f9ac212b0a85d744f671e}\label{classConnection_1_1Connection_a52b79bfd278f9ac212b0a85d744f671e}} 
+\index{Connection.Connection@{Connection.Connection}!get\_updated\_data@{get\_updated\_data}}
+\index{get\_updated\_data@{get\_updated\_data}!Connection.Connection@{Connection.Connection}}
+\doxysubsubsection{\texorpdfstring{get\_updated\_data()}{get\_updated\_data()}}
+{\footnotesize\ttfamily def Connection.\+Connection.\+get\+\_\+updated\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send new Kp, Ki, Kd, Desired Speed through socket and get current speed and torque
+read from socket or (0, 0) if values were not initialized with it.
+
+:return: Tuple of (current_speed, current_torque) read from socket, or (0, 0) if nothing
+was received
+:rtype: tuple (int, int)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classConnection_1_1Connection_ad22c771f837135d468ed020d73e14dd7}\label{classConnection_1_1Connection_ad22c771f837135d468ed020d73e14dd7}} 
+\index{Connection.Connection@{Connection.Connection}!read\_data@{read\_data}}
+\index{read\_data@{read\_data}!Connection.Connection@{Connection.Connection}}
+\doxysubsubsection{\texorpdfstring{read\_data()}{read\_data()}}
+{\footnotesize\ttfamily def Connection.\+Connection.\+read\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called when data is received from socket. It parses and sets self.cSpeed and
+self.cTorque.
+
+:param data: The bytes of data read from the socket.
+:type data: bytes
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classConnection_1_1Connection_a879c196404418f7c30e05ffb7bd1f4c7}\label{classConnection_1_1Connection_a879c196404418f7c30e05ffb7bd1f4c7}} 
+\index{Connection.Connection@{Connection.Connection}!read\_last\_data@{read\_last\_data}}
+\index{read\_last\_data@{read\_last\_data}!Connection.Connection@{Connection.Connection}}
+\doxysubsubsection{\texorpdfstring{read\_last\_data()}{read\_last\_data()}}
+{\footnotesize\ttfamily def Connection.\+Connection.\+read\+\_\+last\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Method that returns the last read speed and torque. It is usefull if we want to read
+multiple times, that are close in time between each other (let's say around less than 50
+milisecs between reads). In that case, as reading too fast could cause trouble when
+decoding from the socket, it is better to use the method get_updated_data just once, and
+then use this method, that should have good enough data.
+
+:return: Tuple of (current_speed, current_torque) read from socket, or (0, 0) if nothing
+was received
+:rtype: tuple (int, int)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classConnection_1_1Connection_aaa073f3989fcfb066b90a8100115560f}\label{classConnection_1_1Connection_aaa073f3989fcfb066b90a8100115560f}} 
+\index{Connection.Connection@{Connection.Connection}!watch\_slider@{watch\_slider}}
+\index{watch\_slider@{watch\_slider}!Connection.Connection@{Connection.Connection}}
+\doxysubsubsection{\texorpdfstring{watch\_slider()}{watch\_slider()}}
+{\footnotesize\ttfamily def Connection.\+Connection.\+watch\+\_\+slider (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{slider,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Saves pointer to slider, under the declared name, so it will be able to read its value
+when sending data to the engine.
+
+:param slider: The slider to be read in future iterations. It can represent one of the four
+variables that the PID connected to the engine will use: kp, ki, kd, or desired_speed
+:type sliders: class:`gui.Sliders`
+:param name: The name of the passed slider. It can be: p, i, d or v
+:type name: str
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Connection.\+py\end{DoxyCompactItemize}

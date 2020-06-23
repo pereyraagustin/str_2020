@@ -1,0 +1,148 @@
+\hypertarget{classClient_1_1Client}{}\doxysection{Client.\+Client Class Reference}
+\label{classClient_1_1Client}\index{Client.Client@{Client.Client}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_adf52d8e2720a38f0ce90196da27618e0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, host, port)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_a342d2400f96b5ed96ad893e6b10b7c7c}{connect}} (self)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_a09879032b6bb8aebcc8502fde76b31c5}{process\+\_\+input}} (self, skt, cond)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_a1657cc6853d22b8de05c9cc35553033a}{send}} (self, msg)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_aa785dda484749bdfaabad1bed3305ba6}{show\+\_\+status}} (self, msg)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_a1557a754eef172a743119bbd5f650ca4}{show\+\_\+data}} (self, msg)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_a47b339fcf513ede954eba434482f6609}{set\+\_\+status\+\_\+show}} (self, show\+\_\+status\+\_\+cb)
+\item 
+def \mbox{\hyperlink{classClient_1_1Client_aa290a5aa0c7b1e29db18715390cf8694}{set\+\_\+data\+\_\+show}} (self, show\+\_\+data\+\_\+cb)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_a8b3f34395d8bd03ed77ae28b59b3f533}\label{classClient_1_1Client_a8b3f34395d8bd03ed77ae28b59b3f533}} 
+{\bfseries host}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_a53ee5218ad81022fcd79e0f849676bfa}\label{classClient_1_1Client_a53ee5218ad81022fcd79e0f849676bfa}} 
+{\bfseries port}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_a011d48d2c2a30c2e15af56810d60e49a}\label{classClient_1_1Client_a011d48d2c2a30c2e15af56810d60e49a}} 
+{\bfseries socket}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_ab8e47ee07b766aacd5084f28d45db1b2}\label{classClient_1_1Client_ab8e47ee07b766aacd5084f28d45db1b2}} 
+{\bfseries show\+\_\+status\+\_\+cb}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_a634b411e33019a51743beac9096d8a50}\label{classClient_1_1Client_a634b411e33019a51743beac9096d8a50}} 
+{\bfseries show\+\_\+data\+\_\+cb}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_aaf2985239b407a5db343caea4179d7ba}\label{classClient_1_1Client_aaf2985239b407a5db343caea4179d7ba}} 
+{\bfseries data}
+\item 
+\mbox{\Hypertarget{classClient_1_1Client_a2f768b9de3a87524eda3eb711c633ed2}\label{classClient_1_1Client_a2f768b9de3a87524eda3eb711c633ed2}} 
+{\bfseries fd}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The Client class takes care of communications through sockets.
+
+:param host: The IP address of the host to connect to
+:type host: str
+:param port: The port number to connect to
+:type port: str
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classClient_1_1Client_adf52d8e2720a38f0ce90196da27618e0}\label{classClient_1_1Client_adf52d8e2720a38f0ce90196da27618e0}} 
+\index{Client.Client@{Client.Client}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{host,  }\item[{}]{port }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create the socket, but do NOT connect yet. That way we
+    can still change some parameters.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classClient_1_1Client_a342d2400f96b5ed96ad893e6b10b7c7c}\label{classClient_1_1Client_a342d2400f96b5ed96ad893e6b10b7c7c}} 
+\index{Client.Client@{Client.Client}!connect@{connect}}
+\index{connect@{connect}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily def Client.\+Client.\+connect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Try to connect to the server.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_a09879032b6bb8aebcc8502fde76b31c5}\label{classClient_1_1Client_a09879032b6bb8aebcc8502fde76b31c5}} 
+\index{Client.Client@{Client.Client}!process\_input@{process\_input}}
+\index{process\_input@{process\_input}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{process\_input()}{process\_input()}}
+{\footnotesize\ttfamily def Client.\+Client.\+process\+\_\+input (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{skt,  }\item[{}]{cond }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function that is called asynchronously when data is received.
+
+:return: Value that indicates if the client will keep its connection
+:rtype: boolean
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_a1657cc6853d22b8de05c9cc35553033a}\label{classClient_1_1Client_a1657cc6853d22b8de05c9cc35553033a}} 
+\index{Client.Client@{Client.Client}!send@{send}}
+\index{send@{send}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily def Client.\+Client.\+send (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Send message through socket.
+
+:param msg: The message to send
+:type msg: str\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_aa290a5aa0c7b1e29db18715390cf8694}\label{classClient_1_1Client_aa290a5aa0c7b1e29db18715390cf8694}} 
+\index{Client.Client@{Client.Client}!set\_data\_show@{set\_data\_show}}
+\index{set\_data\_show@{set\_data\_show}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{set\_data\_show()}{set\_data\_show()}}
+{\footnotesize\ttfamily def Client.\+Client.\+set\+\_\+data\+\_\+show (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{show\+\_\+data\+\_\+cb }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the callback function to show data.
+
+:param show_data_cd: The callback function
+:type show_data_cd: function\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_a47b339fcf513ede954eba434482f6609}\label{classClient_1_1Client_a47b339fcf513ede954eba434482f6609}} 
+\index{Client.Client@{Client.Client}!set\_status\_show@{set\_status\_show}}
+\index{set\_status\_show@{set\_status\_show}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{set\_status\_show()}{set\_status\_show()}}
+{\footnotesize\ttfamily def Client.\+Client.\+set\+\_\+status\+\_\+show (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{show\+\_\+status\+\_\+cb }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the callback function to show status.
+
+:param show_status_cd: The callback function
+:type show_status_cd: function\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_a1557a754eef172a743119bbd5f650ca4}\label{classClient_1_1Client_a1557a754eef172a743119bbd5f650ca4}} 
+\index{Client.Client@{Client.Client}!show\_data@{show\_data}}
+\index{show\_data@{show\_data}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{show\_data()}{show\_data()}}
+{\footnotesize\ttfamily def Client.\+Client.\+show\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Show received messages, either on the terminal,
+or else by calling the callback installed by `Client.set_data_show()`.
+
+:param msg: The received message to show
+:type msg: bytes
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classClient_1_1Client_aa785dda484749bdfaabad1bed3305ba6}\label{classClient_1_1Client_aa785dda484749bdfaabad1bed3305ba6}} 
+\index{Client.Client@{Client.Client}!show\_status@{show\_status}}
+\index{show\_status@{show\_status}!Client.Client@{Client.Client}}
+\doxysubsubsection{\texorpdfstring{show\_status()}{show\_status()}}
+{\footnotesize\ttfamily def Client.\+Client.\+show\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Show status changes from this class, either on the terminal,
+   or else by calling the callback installed by `Client.set_status_show()`.
+
+:param msg: The status message to show
+:type msg: str
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Client.\+py\end{DoxyCompactItemize}

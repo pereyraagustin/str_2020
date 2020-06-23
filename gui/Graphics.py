@@ -10,8 +10,10 @@ class Graphics():
     :param connection: A handle to the class :class:`Connection` connection object that works as
     intermediary between the engine and the GUI.
     :type connection: class:`connection`
+    :param slider_observer: The slider observer to use to get the desired speed
+    :type slider_observer: class: `SpeedObserver`
     """
-    def __init__(self, connection):
+    def __init__(self, connection, slider_observer):
         """Constructor method"""
         self.fig = Figure(figsize=(5, 4), dpi=100)
         self.axis = self.fig.add_subplot()
@@ -23,7 +25,10 @@ class Graphics():
         self.time_show = 10
         self.vel_dynamic = []
         self.torque_dynamic = []
+        self.desired_speed = []
         self.time = []
+        #   Variable to store the function to call to get desired speed
+        self.slider_observer = slider_observer
 
     def create_animation(self):
         """Start animation loop to refresh graph."""
@@ -36,12 +41,14 @@ class Graphics():
         """
         self.vel_dynamic = []
         self.torque_dynamic = []
+        self.desired_speed = []
         self.time = []
         #   Only show delta time of self.time_show seconds
         for delta_t in range(0, self.time_show * 1000 // self.time_interval):
             self.time.append(delta_t * self.time_interval / 1000)
             self.vel_dynamic.append(0)   #   Initiate with 0s
             self.torque_dynamic.append(0)    #   Initiate with 0s
+            self.desired_speed.append(0)
 
     def animate(self, i):
         """Get new data from :variable:connection variable and re-draw graph with updated data.
@@ -58,13 +65,17 @@ class Graphics():
                                          #   bottom.
         #   Get data
         vel, torque = self.connection.get_updated_data()
+        desired_speed = self.slider_observer.get_desired_speed()
         #   Only keep self.time_show seconds window of data
         #   Overwrite last value
         self.vel_dynamic.pop(0)
         self.torque_dynamic.pop(0)
+        self.desired_speed.pop(0)
         self.vel_dynamic.append(vel)
         self.torque_dynamic.append(torque)
+        self.desired_speed.append(desired_speed)
         self.axis.plot(self.time, self.vel_dynamic, 'r')
         self.axis.plot(self.time, self.torque_dynamic, 'y')
+        self.axis.plot(self.time, self.desired_speed, 'c')
         #   Set legends here because before plotting doesn't work
-        self.axis.legend(['Speed', 'Torque'], loc='upper right')
+        self.axis.legend(['Speed', 'Torque', 'Desired Speed'], loc='upper right')
