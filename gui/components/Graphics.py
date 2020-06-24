@@ -16,7 +16,6 @@ class Graphics():
     """
     def __init__(self, connection, slider_observer):
         """Constructor method"""
-        #   Log measures to file
         self.fig = Figure(figsize=(5, 4), dpi=100)
         self.axis = self.fig.add_subplot()
         self.canvas = FigureCanvas(self.fig)
@@ -64,7 +63,7 @@ class Graphics():
         #   Rewrite axis
         self.axis.set_title("Dynamic Motor: Speed vs Time")
         self.axis.set_xlabel("Time (delta_t in seconds)")
-        self.axis.set_ylabel("Speed/Torque (0-255)")
+        self.axis.set_ylabel("Speed/Torque")
         self.axis.set_ylim([-1, 150])    #   Set Y limits between 0 and 255
                                          #   In this case, we use -1 to be able to visualize the
                                          #   bottom.

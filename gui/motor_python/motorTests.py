@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-
-import pylab as plt
-import numpy as np
-import scipy
-
 from simMotor import Simulated_motor
 import matplotlib.pyplot as plt
 import time
