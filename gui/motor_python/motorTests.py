@@ -13,6 +13,15 @@ import sys
 
 
 def main(args):
+    """Function that runs the static and dynamic tests of the simulated motor.
+
+    :param args: The parameters of the test, as:
+        1: Maximum speed of engine
+        2: Sensibility of engine
+        3: Inertia of engine
+        4: The time to wait between each measured speed
+    :type args: str
+    """
     input_vel = int(sys.argv[1])    #Max velocity for Engine
     input_sens = float(sys.argv[2]) #Sensibility of Engine
     input_inertia = float(sys.argv[3]) #Inertia of Engine
@@ -29,17 +38,29 @@ def main(args):
     graph(velStatic, velDynamic, torqueDynamic)
     return 0
 
-#Returns the velocity of the motor for each statically tested torque from 0 to 255
 def staticTest(motor):
+    """Returns the velocity of the motor for each statically tested torque from 0 to 255.
+
+    :param motor: The motor to test
+    :type motor: class: `Simulated_motor`
+    :return: An array of the measured static speeds
+    :rtype: list"""
     velStatic = []
     #Static behavior
     for torque in range(256):
         velStatic.append(motor.getVelocityStatic(torque))
     return velStatic
 
-#Returns the velocity of the motor for each tested torque from 0 to 255, waiting 'wait'
-#seconds between each torque measure and modification.
 def dynamicTest(motor, wait):
+    """Returns the velocity of the motor for each tested torque from 0 to 255, waiting 'wait'
+    seconds between each torque measure and modification.
+
+    :param wait: Time in seconds to wait between each measure
+    :type wait: number
+    :return: Two lists, of the measures of the dynamic speed and the applied torque for each of
+    them, in order
+    :rtype: tuple
+    """
     velDynamic = []
     torqueDynamic = []
 
@@ -56,6 +77,15 @@ def dynamicTest(motor, wait):
     return (velDynamic, torqueDynamic)
 
 def graph(velStatic, velDynamic, torqueDynamic):
+    """Generate and show the graph of the dynamic and static behavior of the motor.
+
+    :param velStatic: The list of the static measured speeds
+    :type velStatic: tuple or list
+    :param velDynamic: The list of the dynamically measured speeds
+    :type velDynamic: tuple or list
+    :param torqueDynamic: The torque used at the dynamic measures
+    :type torqueDynamic: tuple or list
+    """
     #Graphs
     t = range(256)
     #Static graph

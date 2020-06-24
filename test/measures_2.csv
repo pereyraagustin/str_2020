@@ -1,0 +1,9 @@
+Nuevo:
+KP=0.873
+KI=0.3520
+KD=0.885
+Viejo:
+KP = 0,653
+KI = 0,3263
+KD = 0,132
+Tick time in milliseconds: 50.0000
