@@ -1,4 +1,5 @@
 import logging
+from time import perf_counter
 
 class Connection():
     """Class that intermediates between GUI and motor through TCP socket. Be careful, as before use
@@ -21,6 +22,8 @@ class Connection():
         self.socket_cli = client
         self.socket_cli.set_data_show(self.read_data)
         self.socket_cli.connect()
+        #   Variable to log time differences between send and receive
+        self.t_prev = 0
 
     
     #   Sets pointer to slider
@@ -38,12 +41,16 @@ class Connection():
 
     def read_data (self, data):
         """Called when data is received from socket. It parses and sets self.cSpeed and
-        self.cTorque.
+        self.cTorque. It logs the relative time of call with respect with the last registered
+        time of call of this method or get_updated_data method, in miliseconds.
 
         :param data: The bytes of data read from the socket.
         :type data: bytes
         """
-        logging.debug("Received data at Connection.read_data: {}".format(data))
+        t_now = int(1000 * perf_counter())
+        delta_t = t_now - self.t_prev
+        self.t_prev = t_now
+        logging.info("Received data at Connection.read_data at relative time: {:4f}ms".format(delta_t))
         #   Expected format: 'int,int'.format(real_speed, real_torque)
         str_data = data.decode()
         #   TODO: Some checking for ints in range
@@ -53,7 +60,9 @@ class Connection():
 
     def get_updated_data (self):
         """Send new Kp, Ki, Kd, Desired Speed through socket and get current speed and torque
-        read from socket or (0, 0) if values were not initialized with it.
+        read from socket or (0, 0) if values were not initialized with it. It logs the relative
+        time of call with respect with the last registered time of call of this method or
+        read_data method, in miliseconds.
 
         :return: Tuple of (current_speed, current_torque) read from socket, or (0, 0) if nothing
         was received
@@ -72,6 +81,11 @@ class Connection():
         formated_data = '{:.0f},{:.2f},{:.2f},{:.2f}'.format(speed, kp, ki, kd) #   Note: Speed shouldn't be able to get float numbers, but just to be sure...
         #   Send it to PID
         self.socket_cli.send(formated_data)
+        #   Log send time
+        t_now = int(1000 * perf_counter())
+        delta_t = t_now - self.t_prev
+        self.t_prev = t_now
+        logging.info("Sent data at Connection.get_updated_data: {:4f}ms".format(delta_t))
         #   Return read data
         return (self.cSpeed, self.cTorque)
 

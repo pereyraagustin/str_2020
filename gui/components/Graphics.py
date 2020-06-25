@@ -31,7 +31,14 @@ class Graphics():
         #   Variable to store the function to call to get desired speed
         self.slider_observer = slider_observer
         #   Log time to use
-        logging.info("Tick time in milliseconds: {:.4f}".format(self.time_interval))
+        logging.info("At Graphiscs: Tick time in milliseconds set to: {:.4f}".format(self.time_interval))
+        #   Temporal variables to save to file measures at time of destruction
+        self.measures = {
+            "desired_speed": [],
+            "current_speed": [],
+            "current_torque": [],
+            "instant": []   #   Absolute time in milliseconds
+        }
 
     def create_animation(self):
         """Start animation loop to refresh graph.
@@ -81,7 +88,10 @@ class Graphics():
         self.axis.plot(self.time, self.vel_dynamic, 'r')
         self.axis.plot(self.time, self.torque_dynamic, 'y')
         self.axis.plot(self.time, self.desired_speed, 'c')
-        #   Log used data to file
-        logging.info("{:.0f},{:.0f},{:.0f}".format(self.vel_dynamic[0], self.torque_dynamic[0], self.desired_speed[0]))
+        #   Log used data
+        logging.info("At Graphics.animate: {:.0f},{:.0f},{:.0f},{:.4f}".format(self.vel_dynamic[0],
+                                                                                self.torque_dynamic[0],
+                                                                                self.desired_speed[0],
+                                                                                self.time_interval * i))
         #   Set legends here because before plotting doesn't work
         self.axis.legend(['Speed', 'Torque', 'Desired Speed'], loc='upper right')

@@ -1,0 +1,865 @@
+INFO:root:At Graphiscs: Tick time in milliseconds set to: 50.0000
+INFO:root:Sent data at Connection.get_updated_data: 9763647.000000ms
+INFO:root:At Graphics.animate: 0,0,0,0.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 94.000000ms
+INFO:root:At Graphics.animate: 0,0,0,50.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 81.000000ms
+INFO:root:At Graphics.animate: 0,0,0,100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 82.000000ms
+INFO:root:At Graphics.animate: 0,0,0,150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 85.000000ms
+INFO:root:At Graphics.animate: 0,0,0,250.0000
+INFO:root:Received data at Connection.read_data at relative time: 12.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 112.000000ms
+INFO:root:At Graphics.animate: 0,0,0,300.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 82.000000ms
+INFO:root:At Graphics.animate: 0,0,0,350.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,400.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,650.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,700.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,800.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 83.000000ms
+INFO:root:At Graphics.animate: 0,0,0,850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,900.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1000.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1100.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1250.0000
+INFO:root:Received data at Connection.read_data at relative time: 11.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1350.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1500.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1600.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 94.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 22.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,1950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2100.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2550.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2600.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2650.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2700.0000
+INFO:root:Received data at Connection.read_data at relative time: 11.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2800.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,2950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3000.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3100.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3250.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3500.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 83.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3550.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3600.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,3950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4000.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 93.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4250.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4350.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4500.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4550.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4600.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4750.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4900.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,4950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5100.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5350.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5400.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5550.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5650.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5800.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 68.000000ms
+INFO:root:At Graphics.animate: 0,0,0,5950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6000.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6050.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 90.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6600.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6650.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6800.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,6950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7100.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7400.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7600.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,7950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8100.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 69.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 88.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 58.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8250.0000
+INFO:root:Received data at Connection.read_data at relative time: 14.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 36.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 91.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 67.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8500.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 61.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8550.0000
+INFO:root:Received data at Connection.read_data at relative time: 13.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 60.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 29.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8650.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 92.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8700.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 91.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8750.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 88.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8800.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 86.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8850.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 88.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8900.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 87.000000ms
+INFO:root:At Graphics.animate: 0,0,0,8950.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 83.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9000.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9250.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9400.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9500.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9700.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9800.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,9950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10050.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 81.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10100.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10150.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10200.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10350.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10400.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10450.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 109.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10650.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10700.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 109.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 96.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10900.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,10950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 70.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11300.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11350.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11400.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11600.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11700.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 79.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11800.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11850.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11900.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,11950.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12000.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12100.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12150.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 78.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 80.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12250.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12300.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12350.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12450.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12500.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12550.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 77.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12600.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12700.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12800.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12850.0000
+INFO:root:Received data at Connection.read_data at relative time: 11.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12900.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,12950.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13000.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 92.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13050.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13100.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13200.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13250.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13350.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13400.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13450.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 71.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13500.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13550.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13600.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13650.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13700.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 0,0,0,13750.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 0,0,2,13800.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 76.000000ms
+INFO:root:At Graphics.animate: 0,1,9,13850.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 0,5,16,13900.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 3,11,18,13950.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 5,14,18,14000.0000
+INFO:root:Received data at Connection.read_data at relative time: 10.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 11,17,18,14050.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 17,18,18,14100.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 73.000000ms
+INFO:root:At Graphics.animate: 20,18,18,14150.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 25,15,18,14200.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 74.000000ms
+INFO:root:At Graphics.animate: 28,12,18,14250.0000
+INFO:root:Received data at Connection.read_data at relative time: 8.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 75.000000ms
+INFO:root:At Graphics.animate: 29,9,18,14300.0000
+INFO:root:Received data at Connection.read_data at relative time: 7.000000ms
+INFO:root:Sent data at Connection.get_updated_data: 72.000000ms
+INFO:root:At Graphics.animate: 29,5,18,14350.0000
+INFO:root:Received data at Connection.read_data at relative time: 9.000000ms

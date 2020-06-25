@@ -53,7 +53,7 @@ def main(argv):
     else:
         log_level = result.groupdict()['log_level'].upper()
     #   Set logging config
-    logging.basicConfig(level=log_level)
+    logging.basicConfig(filename="logs" ,level=log_level)
     #   Create socket client and inject to connection
     client = Client('localhost', 8080)
     connection = Connection(client)
