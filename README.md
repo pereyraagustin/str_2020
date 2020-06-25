@@ -54,8 +54,23 @@ Primero correr el módulo de tiempo real (PID + RTC + Motor). Para ello, según 
 `make demo_sim`  
 `sudo ./demo_sim`  
 
-Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020* (`cd ../`), y correr el comando 
-`python3 interfaz.py`
+Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020/gui* (`cd ../gui`), y correr el comando 
+`python3 main_gui.py`
+
+## Mediciones
+### Mediciones del motor
+Para analizar las mediciones del motor (torque y velocidad por instante, junto con la velocidad desea en cada instante), puede hacerlo pasandole por parámetros al comando de **main_gui.py** el valor `--log=INFO`, esto escribirá dicha información, junto con otra, en el archivo *logs*.
+
+Si desea poder leer sólo esa información, de manera más limpia, con el script **logs_to_csv.py**, pasando como primer argumento el path al archivo de logs, obtendrá dos archivos csv, uno con la información de las mediciones del motor, y otro con la diferencia de tiempos entre el envío y la recepción de paquetes.
+
+A su vez, si desea graficar la información del motor, lo mismo lo puede hacer con el script **csv_to_graph.py**, al que debe indicarle por parámetros el archivo a usar, y el formato.
+
+Actualmente se soportan dos formatos, uno denominado *def*, que es el que utiliza nuestro script **logs_to_csv.py**, y otro denominado *jcoppens*, que está descripto en el mismo script y en el manual de usuario.
+
+## Mediciones de tiempos entre paquetes
+Si quiere analizar los delays entre el envío y recepción de paquetes, puede hacerlo utilizando el parámetro de línea de comandos `--log=INFO` al ejecutar **main_gui.py**, como se indicó en la sección anterior.
+
+Esto cargará la información de tiempos relativa entre el envío y recepción de paquetes en el archivo *logs*. Si necesitara poder leer sólo esos datos de manera más simple, con el script **logs_to_csv.py**, pasando como primer argumento el path al archivo de logs, obtendrá dos archivos csv, uno con la información de las mediciones del motor, y otro con la diferencia de tiempos entre el envío y la recepción de paquetes.
 
 ## Solución de problemas
 A continuación se presenta una pequeña guía de cómo analizar la fuente de algunos problemas que podrían ocurrir al intentar arrancar la aplicación o al realizar cambios en la misma.
