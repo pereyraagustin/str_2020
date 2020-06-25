@@ -28,7 +28,7 @@ def graph(speed, torque, time, desired_speed=None):
         legends = ['Speed', 'Torque']
 
     plt.title("Velocidad en Tiempo")
-    plt.xlabel("Tiempo (en delta_t en milisegundos)")
+    plt.xlabel("Tiempo (en delta_t en segundos)")
     plt.ylabel("Velocidad/Torque")
     plt.tight_layout()
     plt.legend(legends, loc="upper right")

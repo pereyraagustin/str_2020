@@ -13,7 +13,7 @@
 #include "pid/pid.h"
 
 #define MAX_MSG 1024
-#define RTC_TICK 32
+#define RTC_TICK 16
 
 int main(int argc, char *argv[]) {
     // Initialize

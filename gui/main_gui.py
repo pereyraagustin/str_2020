@@ -83,7 +83,6 @@ def main(argv):
     :type argv: str
     """
     params_dict = get_params(argv)
-    print(params_dict)
     #   Set defaults or passed values
     if (params_dict == None):
         log_level = "WARNING"

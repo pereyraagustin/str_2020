@@ -58,6 +58,7 @@ Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020/gui*
 `python3 main_gui.py`
 
 ## Mediciones
+Para probar los comandos a continuación, se pueden utilizar los logs presentes en el directorio *logs/*
 ### Mediciones del motor
 Para analizar las mediciones del motor (torque y velocidad por instante, junto con la velocidad desea en cada instante), puede hacerlo pasandole por parámetros al comando de **main_gui.py** el valor `--log=INFO`, esto escribirá dicha información, junto con otra, en el archivo *logs*.
 
