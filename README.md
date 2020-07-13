@@ -1,4 +1,85 @@
 # Motor + GUI + PID
+This README is available in English and Spanish. The Spanish section is available after the Spanish one.
+
+## Description
+Project done under the framework of the subject *Real Time Systems*, which consists of managing the speed of an engine through a graphical interface. The project consists of three modules:
+
+1. Interface: implemented in python3, it makes available to the user the modification of the desired speed, and the variables P, I, D of the PID module, which is in charge of calibrating the motor torque.
+2. Real Time: which combines a PID module to calibrate the motor torque based on current and desired speed, an RTC module to perform cyclical motor controls, and a motor control module. This engine control module is implemented in two ways:
+    * A motor simulator.
+    * A motor controller that communicates by UDP with the real motor.
+3. The real engine, which is used only if the corresponding *real-time* module is used, and which is expected to be exposed through a server to the Internet, waiting for commands by UDP.
+
+## Communication protocol
+The interface sends a character string through the TCP socket in the format:
+'desired speed, kp, ki, kd'
+Where the desired velocity is an integer in the inclusive range [0-255], and kp, ki, kd are floating point numbers.
+
+The server sends the format string in response to this information as follows:
+'real speed, real torque'
+Where both are integers in the inclusive range [0-255].
+
+The server sends the string in the format:
+'torque, *value*'
+
+And receives from the engine the chain:
+'speed, *value*'
+
+## Workgroup
+* Members: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
+
+* Teacher: Coppens John.
+
+* Subject: Real Time Systems.
+
+* Year: 2020.
+
+* University: CRUC-IUA-UNDEF.
+
+## Requirements
+* Python3 or higher.
+* Python lybraries: Gtk, GooCanvas.
+* gcc
+* Makefile
+
+## To use
+First run the real time module (PID + RTC + Motor). To do this, depending on the engine you want to use, you must run the commands:
+
+* UDP engine:
+`cd real_time /`  
+`make demo_udp`  
+`sudo. / demo_udp`  
+
+* Simulated Engine:
+`cd real_time /`  
+`make demo_sim`  
+`sudo. / demo_sim`  
+
+Then, to use the interface, open the terminal in the *str_2020/gui* folder (`cd ../ gui`), and run the command  
+`python3 main_gui.py`  
+
+## Measurements
+To test the commands below, you can use the logs present in the *logs/* directory
+### Engine measurements
+To analyze the motor measurements (torque and speed per instant, along with the speed you want at each instant), you can do it by passing parameters to the command **python3 main_gui.py** the value `--log = INFO`, this will write the measures, along with other information, in the *logs* file.
+
+If you want to be able to read only that information, cleaner, with the script **logs_to_csv.py**, passing the path to the log file as the first argument, you will get two csv files, one with the information of the engine measurements, and another with the time difference between sending and receiving packages.
+
+In turn, if you want to graph the information of the engine, the same can be done with the script **csv_to_graph.py**, to which you must indicate by parameters the file to use, and the format.
+
+Two formats are currently supported, one called *def*, which is the one used by our **logs_to_csv.py** script, and the other called *jcoppens*, which is described in the same script and in the user manual.
+
+## Time measurements between packages
+If you want to parse delays between sending and receiving packets, you can do this using the command line parameter `--log = INFO` by running **python3 main_gui.py**, as indicated in the previous section.
+
+This will load the relative time information between sending and receiving packages in the *logs* file. If you needed to be able to read only that data in a simpler way, with the script **logs_to_csv.py**, passing the path to the log file as the first argument, you will get two csv files, one with the information of the engine measurements, and another with the time difference between sending and receiving packages.
+
+## Problem solving
+Below is a small guide on how to analyze the source of some problems that might occur when trying to start the application or making changes to it.
+
+### Interface graph not working
+Use `netcat -l 8080`, open the interface and move the sliders. If nothing appears in the terminal where netcat is, the connection to the socket is not being made. The problem is likely to be found in the *Client.py* or *Connection.py* classes. Less likely but also possible is that the *Graphics.py* class is not querying the data as it should, in the *animate (...)* function.
+
 
 ## Descripción
 Proyecto hecho bajo el marco de la materia *Sistemas en Tiempo Real*, que consiste en el manejo a través de una interfaz gráfica de la velocidad de un motor. El proyecto consiste en tres módulos:
@@ -45,9 +126,9 @@ Y recibe del motor la cadena:
 Primero correr el módulo de tiempo real (PID + RTC + Motor). Para ello, según el motor que se desée usar, se deberán correr los comandos:
 
 * Motor UDP:
-`cd real_time/`
-`make demo_udp`
-`sudo ./demo_udp`
+`cd real_time/`  
+`make demo_udp`  
+`sudo ./demo_udp`  
 
 * Motor Simulado:
 `cd real_time/`  
@@ -62,7 +143,7 @@ Para probar los comandos a continuación, se pueden utilizar los logs presentes 
 ### Mediciones del motor
 Para analizar las mediciones del motor (torque y velocidad por instante, junto con la velocidad desea en cada instante), puede hacerlo pasandole por parámetros al comando de **main_gui.py** el valor `--log=INFO`, esto escribirá dicha información, junto con otra, en el archivo *logs*.
 
-Si desea poder leer sólo esa información, de manera más limpia, con el script **logs_to_csv.py**, pasando como primer argumento el path al archivo de logs, obtendrá dos archivos csv, uno con la información de las mediciones del motor, y otro con la diferencia de tiempos entre el envío y la recepción de paquetes.
+Si desea poder leer sólo esa información, de manera más limpia, con el script **logs_to_csv.py** pasando como primer argumento el path al archivo de logs obtendrá dos archivos csv, uno con la información de las mediciones del motor, y otro con la diferencia de tiempos entre el envío y la recepción de paquetes.
 
 A su vez, si desea graficar la información del motor, lo mismo lo puede hacer con el script **csv_to_graph.py**, al que debe indicarle por parámetros el archivo a usar, y el formato.
 
