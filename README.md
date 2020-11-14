@@ -48,12 +48,12 @@ First run the real time module (PID + RTC + Motor). To do this, depending on the
 * UDP engine:
 `cd real_time /`  
 `make demo_udp`  
-`sudo. / demo_udp`  
+`sudo ./ demo_udp`  
 
 * Simulated Engine:
 `cd real_time /`  
 `make demo_sim`  
-`sudo. / demo_sim`  
+`sudo ./ demo_sim`  
 
 Then, to use the interface, open the terminal in the *str_2020/gui* folder (`cd ../ gui`), and run the command  
 `python3 main_gui.py`  
