@@ -1,6 +1,10 @@
 # Motor + GUI + PID
 This README is available in English and Spanish. The Spanish section is available after the Spanish one.
 
+## App running
+
+<img src="docs/media/str_sample.gif" width="50%" height="50%"/>
+
 ## Description
 Project done under the framework of the subject *Real Time Systems*, which consists of managing the speed of an engine through a graphical interface. The project consists of three modules:
 
@@ -19,22 +23,11 @@ The server sends the format string in response to this information as follows:
 'real speed, real torque'
 Where both are integers in the inclusive range [0-255].
 
-The server sends the string in the format:
+The server sends the string in the format:  
 'torque, *value*'
 
-And receives from the engine the chain:
+And receives from the engine the chain:  
 'speed, *value*'
-
-## Workgroup
-* Members: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
-
-* Teacher: Coppens John.
-
-* Subject: Real Time Systems.
-
-* Year: 2020.
-
-* University: CRUC-IUA-UNDEF.
 
 ## Requirements
 * Python3 or higher.
@@ -45,15 +38,15 @@ And receives from the engine the chain:
 ## To use
 First run the real time module (PID + RTC + Motor). To do this, depending on the engine you want to use, you must run the commands:
 
-* UDP engine:
+* UDP engine:  
 `cd real_time /`  
 `make demo_udp`  
-`sudo ./ demo_udp`  
+`sudo ./demo_udp.exe`  
 
-* Simulated Engine:
+* Simulated Engine:  
 `cd real_time /`  
 `make demo_sim`  
-`sudo ./ demo_sim`  
+`sudo ./demo_sim.exe`  
 
 Then, to use the interface, open the terminal in the *str_2020/gui* folder (`cd ../ gui`), and run the command  
 `python3 main_gui.py`  
@@ -80,6 +73,16 @@ Below is a small guide on how to analyze the source of some problems that might 
 ### Interface graph not working
 Use `netcat -l 8080`, open the interface and move the sliders. If nothing appears in the terminal where netcat is, the connection to the socket is not being made. The problem is likely to be found in the *Client.py* or *Connection.py* classes. Less likely but also possible is that the *Graphics.py* class is not querying the data as it should, in the *animate (...)* function.
 
+## Workgroup
+* Members: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
+
+* Teacher: Coppens John.
+
+* Subject: Real Time Systems.
+
+* Year: 2020.
+
+* University: CRUC-IUA-UNDEF.
 
 ## Descripción
 Proyecto hecho bajo el marco de la materia *Sistemas en Tiempo Real*, que consiste en el manejo a través de una interfaz gráfica de la velocidad de un motor. El proyecto consiste en tres módulos:
@@ -99,22 +102,11 @@ El servidor envía a la interfaz como respuesta a dicha información la cadena d
 'velocidad real,torque real'
 Donde ambos son enteros en el rango inclusivo [0,255].
 
-El servidor envía al motor la cadena con el formato:
+El servidor envía al motor la cadena con el formato:  
 'torque,*valor*'
 
-Y recibe del motor la cadena:
+Y recibe del motor la cadena:  
 'speed,*valor*'
-
-## Grupo de trabajo
-* Integrantes: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
-
-* Profesor: Coppens John.
-
-* Materia: Sistemas en Tiempo Real.
-
-* Año: 2020.
-
-* Universidad: UNDEF-CRUC-IUA.
 
 ## Requerimientos
 * Python3 o superior.
@@ -125,15 +117,15 @@ Y recibe del motor la cadena:
 ## Para usar
 Primero correr el módulo de tiempo real (PID + RTC + Motor). Para ello, según el motor que se desée usar, se deberán correr los comandos:
 
-* Motor UDP:
+* Motor UDP:  
 `cd real_time/`  
 `make demo_udp`  
-`sudo ./demo_udp`  
+`sudo ./demo_udp.exe`  
 
-* Motor Simulado:
+* Motor Simulado:  
 `cd real_time/`  
 `make demo_sim`  
-`sudo ./demo_sim`  
+`sudo ./demo_sim.exe`  
 
 Luego, para utilizar la interfaz, abrir la terminal en la carpeta *str_2020/gui* (`cd ../gui`), y correr el comando 
 `python3 main_gui.py`
@@ -160,9 +152,13 @@ A continuación se presenta una pequeña guía de cómo analizar la fuente de al
 ### Gráfico de la interfaz no funcionando
 Usar `netcat -l 8080`, abrir la interfaz y mover los deslizadores. Si en la terminal donde está netcat no aparece nada, la conexión al socket no se está realizando. Es probable que el problema se encuentre en las clases *Client.py* o *Connection.py*. Menos probable pero también posible es que la clase *Graphics.py* no esté consultando los datos como debería, en la función *animate(...)*.
 
-## TODO:
-* Refactorizar codigo (esquema get_speed->calcular tque nuevo->set_torque)
-* Pasar torque y speed de int a unsigned byte.
-* Documentar tests y debuggin.
-* Interfaz: adaptacion de espacio entre columnas automatico?
-* Pasar print a logging
+## Grupo de trabajo
+* Integrantes: Brambilla Nicolás Gabriel, Perez Sardi Walter Gabriel, Pereyra Agustín Ezequiel.
+
+* Profesor: Coppens John.
+
+* Materia: Sistemas en Tiempo Real.
+
+* Año: 2020.
+
+* Universidad: UNDEF-CRUC-IUA.
