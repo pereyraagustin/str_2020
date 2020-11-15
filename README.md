@@ -3,7 +3,7 @@ This README is available in English and Spanish. The Spanish section is availabl
 
 ## App running
 
-<img src="docs/media/str_sample.gif" width="50%" height="50%"/>
+<img src="docs/media/str_sample.gif" width="75%" height="75%"/>
 
 ## Description
 Project done under the framework of the subject *Real Time Systems*, which consists of managing the speed of an engine through a graphical interface. The project consists of three modules:
